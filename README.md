@@ -37,5 +37,18 @@ print(output.shape)
 ```
 
 
+### Self Attention Usage
 
-### 
+```python
+from SimplifiedSelfAttention import SimplifiedScaledDotProductAttention
+import torch
+
+input=torch.randn(50,49,512)
+ssa = SimplifiedScaledDotProductAttention(d_model=512, h=8)
+output=ssa(input,input,input)
+print(output.shape)
+
+```
+
+
+
