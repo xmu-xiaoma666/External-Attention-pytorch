@@ -37,7 +37,7 @@ print(output.shape)
 ```
 
 
-### Self Attention Usage
+### Simplified Self Attention Usage
 
 ```python
 from SimplifiedSelfAttention import SimplifiedScaledDotProductAttention
