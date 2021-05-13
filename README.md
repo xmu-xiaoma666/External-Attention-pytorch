@@ -31,7 +31,7 @@ print(output.shape)
 ***
 
 
-### 2.Self Attention Usage
+### 2. Self Attention Usage
 #### 2.1. Paper
 ["Attention Is All You Need"](https://arxiv.org/pdf/1706.03762.pdf)
 
@@ -51,7 +51,7 @@ print(output.shape)
 
 ***
 
-### 3.Simplified Self Attention Usage
+### 3. Simplified Self Attention Usage
 #### 3.1. Paper
 [None]()
 
