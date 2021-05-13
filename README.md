@@ -1,10 +1,10 @@
 # External-Attention-pytorch
 
-Pytorch implementation of ["Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks"](https://arxiv.org/abs/2105.02358)\\
+Pytorch implementation of ["Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks"](https://arxiv.org/abs/2105.02358)
 
-Pytorch implementation of ["Attention Is All You Need"](https://arxiv.org/pdf/1706.03762.pdf)\\
+Pytorch implementation of ["Attention Is All You Need"](https://arxiv.org/pdf/1706.03762.pdf)
 
-Pytorch implementation of ["Squeeze-and-Excitation Networks"](https://arxiv.org/abs/1709.01507)\\
+Pytorch implementation of ["Squeeze-and-Excitation Networks"](https://arxiv.org/abs/1709.01507)
 
 
 
