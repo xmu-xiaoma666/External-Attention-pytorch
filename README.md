@@ -7,11 +7,7 @@ Pytorch implementation of ["Attention Is All You Need"](https://arxiv.org/pdf/17
 Pytorch implementation of ["Squeeze-and-Excitation Networks"](https://arxiv.org/abs/1709.01507)
 
 
-
-### Overview
-
-![](./img/ExternalAttention.png)
-
+***
 
 
 ### 1. External Attention Usage
@@ -32,6 +28,7 @@ output=ea(input)
 print(output.shape)
 ```
 
+***
 
 
 ### 2.Self Attention Usage
@@ -52,15 +49,16 @@ output=sa(input,input,input)
 print(output.shape)
 ```
 
+***
 
-### Simplified Self Attention Usage
-#### 2.1. Paper
-["None"]()
+### 3.Simplified Self Attention Usage
+#### 3.1. Paper
+[None]()
 
-#### 1.2. Overview
+#### 3.2. Overview
 ![](./img/SSA.png)
 
-#### 1.3. Code
+#### 3.3. Code
 ```python
 from SimplifiedSelfAttention import SimplifiedScaledDotProductAttention
 import torch
@@ -72,16 +70,16 @@ print(output.shape)
 
 ```
 
+***
 
-
-### 3. Squeeze-and-Excitation Attention Usage
-#### 3.1. Paper
+### 4. Squeeze-and-Excitation Attention Usage
+#### 4.1. Paper
 ["Squeeze-and-Excitation Networks"](https://arxiv.org/abs/1709.01507)
 
-#### 3.2. Overview
+#### 4.2. Overview
 ![](./img/SE.png)
 
-#### 3.3. Code
+#### 4.3. Code
 ```python
 from SEAttention import SEAttention
 import torch
