@@ -6,12 +6,18 @@ Pytorch implementation of ["Beyond Self-attention: External Attention using Two 
 
 ### Overview
 
-![](./External-Attention.png)
+![](./img/External-Attention.png)
 
 
 
-### External Attention Usage
+### 1. External Attention Usage
+#### 1.1. Paper
+["Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks"](https://arxiv.org/abs/2105.02358)
 
+#### 1.2. Overview
+![](./img/ExternalAttention.png)
+
+#### 1.3. Code
 ```python
 from ExternalAttention import ExternalAttention
 import torch
@@ -24,8 +30,14 @@ print(output.shape)
 
 
 
-### Self Attention Usage
+### 2.Self Attention Usage
+#### 2.1. Paper
+["Attention Is All You Need"](https://arxiv.org/pdf/1706.03762.pdf)
 
+#### 1.2. Overview
+![](./img/SA.png)
+
+#### 1.3. Code
 ```python
 from SelfAttention import ScaledDotProductAttention
 import torch
@@ -38,7 +50,13 @@ print(output.shape)
 
 
 ### Simplified Self Attention Usage
+#### 2.1. Paper
+["None"]()
 
+#### 1.2. Overview
+![](./img/SSA.png)
+
+#### 1.3. Code
 ```python
 from SimplifiedSelfAttention import SimplifiedScaledDotProductAttention
 import torch
@@ -52,3 +70,21 @@ print(output.shape)
 
 
 
+### Squeeze-and-Excitation Attention Usage
+#### 2.1. Paper
+["Squeeze-and-Excitation Networks"](https://arxiv.org/abs/1709.01507)
+
+#### 1.2. Overview
+![](./img/SE.png)
+
+#### 1.3. Code
+```python
+from SEAttention import SEAttention
+import torch
+
+input=torch.randn(50,512,7,7)
+se = SEAttention(channel=512,reduction=8)
+output=se(input)
+print(output.shape)
+
+```
