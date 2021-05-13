@@ -1,12 +1,14 @@
 # External-Attention-pytorch
 
 Pytorch implementation of ["Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks"](https://arxiv.org/abs/2105.02358)
+Pytorch implementation of ["Attention Is All You Need"](https://arxiv.org/pdf/1706.03762.pdf)
+Pytorch implementation of ["Squeeze-and-Excitation Networks"](https://arxiv.org/abs/1709.01507)
 
 
 
 ### Overview
 
-![](./img/External-Attention.png)
+![](./img/ExternalAttention.png)
 
 
 
@@ -15,7 +17,7 @@ Pytorch implementation of ["Beyond Self-attention: External Attention using Two 
 ["Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks"](https://arxiv.org/abs/2105.02358)
 
 #### 1.2. Overview
-![](./img/ExternalAttention.png)
+![](./img/External_Attention.png)
 
 #### 1.3. Code
 ```python
@@ -70,14 +72,14 @@ print(output.shape)
 
 
 
-### Squeeze-and-Excitation Attention Usage
-#### 2.1. Paper
+### 3. Squeeze-and-Excitation Attention Usage
+#### 3.1. Paper
 ["Squeeze-and-Excitation Networks"](https://arxiv.org/abs/1709.01507)
 
-#### 1.2. Overview
+#### 3.2. Overview
 ![](./img/SE.png)
 
-#### 1.3. Code
+#### 3.3. Code
 ```python
 from SEAttention import SEAttention
 import torch
