@@ -2,9 +2,11 @@
 
 Pytorch implementation of ["Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks"](https://arxiv.org/abs/2105.02358)
 
-Pytorch implementation of ["Attention Is All You Need"](https://arxiv.org/pdf/1706.03762.pdf)
+Pytorch implementation of ["Attention Is All You Need---NIPS2017"](https://arxiv.org/pdf/1706.03762.pdf)
 
-Pytorch implementation of ["Squeeze-and-Excitation Networks"](https://arxiv.org/abs/1709.01507)
+Pytorch implementation of ["Squeeze-and-Excitation Networks---CVPR2018"](https://arxiv.org/abs/1709.01507)
+
+Pytorch implementation of ["Selective Kernel Networks---CVPR2019"](https://arxiv.org/pdf/1903.06586.pdf)
 
 
 ***
@@ -86,6 +88,27 @@ import torch
 
 input=torch.randn(50,512,7,7)
 se = SEAttention(channel=512,reduction=8)
+output=se(input)
+print(output.shape)
+
+```
+
+***
+
+### 4. SK Attention Usage
+#### 4.1. Paper
+["Selective Kernel Networks"](https://arxiv.org/pdf/1903.06586.pdf)
+
+#### 4.2. Overview
+![](./img/SK.png)
+
+#### 4.3. Code
+```python
+from SKAttention import SKAttention
+import torch
+
+input=torch.randn(50,512,7,7)
+se = SKAttention(channel=512,reduction=8)
 output=se(input)
 print(output.shape)
 
