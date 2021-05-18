@@ -116,7 +116,7 @@ output=se(input)
 print(output.shape)
 
 ```
-
+***
 
 ### 6. CBAM Attention Usage
 #### 6.1. Paper
@@ -140,7 +140,7 @@ print(output.shape)
 
 ```
 
-
+***
 
 ### 7. BAM Attention Usage
 #### 7.1. Paper
