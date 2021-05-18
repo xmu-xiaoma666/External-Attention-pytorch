@@ -1,4 +1,22 @@
-# External-Attention-pytorch
+- [Attention Series](#attention-series)
+    - [1. External Attention Usage](#1-external-attention-usage)
+
+    - [2. Self Attention Usage](#2-self-attention-usage)
+
+    - [3. Simplified Self Attention Usage](#3-simplified-self-attention-usage)
+
+    - [4. Squeeze-and-Excitation Attention Usage](#4-squeeze-and-excitation-attention-usage)
+
+    - [5. SK Attention Usage](#5-sk-attention-usage)
+
+    - [6. CBAM Attention Usage](#6-cbam-attention-usage)
+
+    - [7. BAM Attention Usage](#7-bam-attention-usage)
+
+- [MLP Series](#mlp-series)
+    - [1. RepMLP Usage](#1-RepMLP-Usage)
+
+# Attention Series
 
 Pytorch implementation of ["Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks"](https://arxiv.org/abs/2105.02358)
 
@@ -159,4 +177,59 @@ bam = BAMBlock(channel=512,reduction=16,dia_val=2)
 output=bam(input)
 print(output.shape)
 
+```
+
+
+
+
+
+***
+
+# MLP Series
+
+Pytorch implementation of ["RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition"](https://arxiv.org/pdf/2105.01883v1.pdf)
+
+
+### 1. RepMLP Usage
+#### 1.1. Paper
+["RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition"](https://arxiv.org/pdf/2105.01883v1.pdf)
+
+#### 1.2. Overview
+![](./img/repmlp.png)
+
+#### 1.3. Code
+```python
+from mlp.repmlp import RepMLP
+import torch
+from torch import nn
+
+N=4 #batch size
+C=512 #input dim
+O=1024 #output dim
+H=14 #image height
+W=14 #image width
+h=7 #patch height
+w=7 #patch width
+fc1_fc2_reduction=1 #reduction ratio
+fc3_groups=8 # groups
+repconv_kernels=[1,3,5,7] #kernel list
+repmlp=RepMLP(C,O,H,W,h,w,fc1_fc2_reduction,fc3_groups,repconv_kernels=repconv_kernels)
+x=torch.randn(N,C,H,W)
+repmlp.eval()
+for module in repmlp.modules():
+    if isinstance(module, nn.BatchNorm2d) or isinstance(module, nn.BatchNorm1d):
+        nn.init.uniform_(module.running_mean, 0, 0.1)
+        nn.init.uniform_(module.running_var, 0, 0.1)
+        nn.init.uniform_(module.weight, 0, 0.1)
+        nn.init.uniform_(module.bias, 0, 0.1)
+
+#training result
+out=repmlp(x)
+
+
+#inference result
+repmlp.switch_to_deploy()
+deployout = repmlp(x)
+
+print(((deployout-out)**2).sum())
 ```
