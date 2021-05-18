@@ -22,7 +22,7 @@ Pytorch implementation of ["CBAM: Convolutional Block Attention Module---ECCV201
 
 #### 1.3. Code
 ```python
-from ExternalAttention import ExternalAttention
+from attention.ExternalAttention import ExternalAttention
 import torch
 
 input=torch.randn(50,49,512)
@@ -43,7 +43,7 @@ print(output.shape)
 
 #### 1.3. Code
 ```python
-from SelfAttention import ScaledDotProductAttention
+from attention.SelfAttention import ScaledDotProductAttention
 import torch
 
 input=torch.randn(50,49,512)
@@ -63,7 +63,7 @@ print(output.shape)
 
 #### 3.3. Code
 ```python
-from SimplifiedSelfAttention import SimplifiedScaledDotProductAttention
+from attention.SimplifiedSelfAttention import SimplifiedScaledDotProductAttention
 import torch
 
 input=torch.randn(50,49,512)
@@ -84,7 +84,7 @@ print(output.shape)
 
 #### 4.3. Code
 ```python
-from SEAttention import SEAttention
+from attention.SEAttention import SEAttention
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -96,16 +96,16 @@ print(output.shape)
 
 ***
 
-### 4. SK Attention Usage
-#### 4.1. Paper
+### 5. SK Attention Usage
+#### 5.1. Paper
 ["Selective Kernel Networks"](https://arxiv.org/pdf/1903.06586.pdf)
 
-#### 4.2. Overview
+#### 5.2. Overview
 ![](./img/SK.png)
 
-#### 4.3. Code
+#### 5.3. Code
 ```python
-from SKAttention import SKAttention
+from attention.SKAttention import SKAttention
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -116,18 +116,18 @@ print(output.shape)
 ```
 
 
-### 5. CBAM Attention Usage
-#### 5.1. Paper
+### 6. CBAM Attention Usage
+#### 6.1. Paper
 ["CBAM: Convolutional Block Attention Module"](https://openaccess.thecvf.com/content_ECCV_2018/papers/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.pdf)
 
-#### 5.2. Overview
+#### 6.2. Overview
 ![](./img/CBAM1.png)
 
 ![](./img/CBAM2.png)
 
-#### 5.3. Code
+#### 6.3. Code
 ```python
-from CBAM import CBAMBlock
+from attention.CBAM import CBAMBlock
 import torch
 
 input=torch.randn(50,512,7,7)
