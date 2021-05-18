@@ -19,6 +19,8 @@
 
     - [2. MLP-Mixer Usage](#2-MLP-Mixer-Usage)
 
+    - [3. MLP-Mixer Usage](#3-ResMLP-Usage)
+
 
 
 
@@ -198,6 +200,9 @@ print(output.shape)
 
 - Pytorch implementation of ["RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition"](https://arxiv.org/pdf/2105.01883v1.pdf)
 
+- Pytorch implementation of ["MLP-Mixer: An all-MLP Architecture for Vision"](https://arxiv.org/pdf/2105.01601.pdf)
+
+- Pytorch implementation of ["ResMLP: Feedforward networks for image classification with data-efficient training"](https://arxiv.org/pdf/2105.03404.pdf)
 
 ### 1. RepMLP Usage
 #### 1.1. Paper
@@ -256,4 +261,24 @@ mlp_mixer=MlpMixer(num_classes=1000,num_blocks=10,patch_size=10,tokens_hidden_di
 input=torch.randn(50,3,40,40)
 output=mlp_mixer(input)
 print(output.shape)
+```
+
+
+
+### 3. ResMLP Usage
+#### 3.1. Paper
+["ResMLP: Feedforward networks for image classification with data-efficient training"](https://arxiv.org/pdf/2105.03404.pdf)
+
+#### 3.2. Overview
+![](./img/resmlp.png)
+
+#### 3.3. Code
+```python
+from mlp.resmlp import ResMLP
+import torch
+
+input=torch.randn(50,3,14,14)
+resmlp=ResMLP(dim=128,image_size=14,patch_size=7,class_num=1000)
+out=resmlp(input)
+print(out.shape) #the last dimention is class_num
 ```
