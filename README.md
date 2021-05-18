@@ -116,16 +116,16 @@ print(output.shape)
 ```
 
 
-### 4. CBAM Attention Usage
-#### 4.1. Paper
+### 5. CBAM Attention Usage
+#### 5.1. Paper
 ["CBAM: Convolutional Block Attention Module"](https://openaccess.thecvf.com/content_ECCV_2018/papers/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.pdf)
 
-#### 4.2. Overview
+#### 5.2. Overview
 ![](./img/CBAM1.png)
 
 ![](./img/CBAM2.png)
 
-#### 4.3. Code
+#### 5.3. Code
 ```python
 from CBAM import CBAMBlock
 import torch
