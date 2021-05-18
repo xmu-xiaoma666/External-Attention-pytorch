@@ -19,7 +19,7 @@
 
     - [2. MLP-Mixer Usage](#2-MLP-Mixer-Usage)
 
-    - [3. MLP-Mixer Usage](#3-ResMLP-Usage)
+    - [3. ResMLP Usage](#3-ResMLP-Usage)
 
 
 
