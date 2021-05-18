@@ -10,6 +10,8 @@ Pytorch implementation of ["Selective Kernel Networks---CVPR2019"](https://arxiv
 
 Pytorch implementation of ["CBAM: Convolutional Block Attention Module---ECCV2018"](https://openaccess.thecvf.com/content_ECCV_2018/papers/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.pdf)
 
+Pytorch implementation of ["BAM: Bottleneck Attention Module---BMCV2018"](https://arxiv.org/pdf/1807.06514.pdf)
+
 ***
 
 
@@ -134,6 +136,27 @@ input=torch.randn(50,512,7,7)
 kernel_size=input.shape[2]
 cbam = CBAMBlock(channel=512,reduction=16,kernel_size=kernel_size)
 output=cbam(input)
+print(output.shape)
+
+```
+
+
+
+### 7. BAM Attention Usage
+#### 7.1. Paper
+["BAM: Bottleneck Attention Module---BMCV2018"](https://arxiv.org/pdf/1807.06514.pdf)
+
+#### 7.2. Overview
+![](./img/BAM.png)
+
+#### 7.3. Code
+```python
+from attention.BAM import BAMBlock
+import torch
+
+input=torch.randn(50,512,7,7)
+bam = BAMBlock(channel=512,reduction=16,dia_val=2)
+output=bam(input)
 print(output.shape)
 
 ```
