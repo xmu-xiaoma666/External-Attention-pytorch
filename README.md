@@ -14,7 +14,16 @@
     - [7. BAM Attention Usage](#7-bam-attention-usage)
 
 - [MLP Series](#mlp-series)
+
     - [1. RepMLP Usage](#1-RepMLP-Usage)
+
+    - [2. MLP-Mixer Usage](#2-MLP-Mixer-Usage)
+
+
+
+
+***
+
 
 # Attention Series
 
@@ -225,11 +234,26 @@ for module in repmlp.modules():
 
 #training result
 out=repmlp(x)
-
-
 #inference result
 repmlp.switch_to_deploy()
 deployout = repmlp(x)
 
 print(((deployout-out)**2).sum())
+```
+
+### 2. MLP-Mixer Usage
+#### 2.1. Paper
+["MLP-Mixer: An all-MLP Architecture for Vision"](https://arxiv.org/pdf/2105.01601.pdf)
+
+#### 2.2. Overview
+![](./img/mlpmixer.png)
+
+#### 2.3. Code
+```python
+from mlp.mlp_mixer import MlpMixer
+import torch
+mlp_mixer=MlpMixer(num_classes=1000,num_blocks=10,patch_size=10,tokens_hidden_dim=32,channels_hidden_dim=1024,tokens_mlp_dim=16,channels_mlp_dim=1024)
+input=torch.randn(50,3,40,40)
+output=mlp_mixer(input)
+print(output.shape)
 ```
