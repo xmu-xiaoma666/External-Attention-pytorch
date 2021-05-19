@@ -12,6 +12,8 @@
     - [6. CBAM Attention Usage](#6-cbam-attention-usage)
 
     - [7. BAM Attention Usage](#7-bam-attention-usage)
+    
+    - [8. ECA Attention Usage](#8-eca-attention-usage)
 
 - [MLP Series](#mlp-series)
 
@@ -40,6 +42,8 @@
 - Pytorch implementation of ["CBAM: Convolutional Block Attention Module---ECCV2018"](https://openaccess.thecvf.com/content_ECCV_2018/papers/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.pdf)
 
 - Pytorch implementation of ["BAM: Bottleneck Attention Module---BMCV2018"](https://arxiv.org/pdf/1807.06514.pdf)
+
+- Pytorch implementation of ["ECA-Net: Efficient Channel Attention for Deep Convolutional Neural Networks---CVPR2020"](https://arxiv.org/pdf/1910.03151.pdf)
 
 ***
 
@@ -173,7 +177,7 @@ print(output.shape)
 
 ### 7. BAM Attention Usage
 #### 7.1. Paper
-["BAM: Bottleneck Attention Module---BMCV2018"](https://arxiv.org/pdf/1807.06514.pdf)
+["BAM: Bottleneck Attention Module"](https://arxiv.org/pdf/1807.06514.pdf)
 
 #### 7.2. Overview
 ![](./img/BAM.png)
@@ -191,6 +195,24 @@ print(output.shape)
 ```
 
 
+### 8. ECA Attention Usage
+#### 8.1. Paper
+["ECA-Net: Efficient Channel Attention for Deep Convolutional Neural Networks"](https://arxiv.org/pdf/1910.03151.pdf)
+
+#### 8.2. Overview
+![](./img/ECA.png)
+
+#### 8.3. Code
+```python
+from attention.ECAAttention import ECAAttention
+import torch
+
+input=torch.randn(50,512,7,7)
+eca = ECAAttention(kernel_size=3)
+output=eca(input)
+print(output.shape)
+
+```
 
 
 

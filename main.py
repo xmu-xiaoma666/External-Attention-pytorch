@@ -1,8 +1,7 @@
-from mlp.resmlp import ResMLP
+from attention.ECAAttention import ECAAttention
 import torch
 
-
-input=torch.randn(50,3,14,14)
-resmlp=ResMLP(dim=128,image_size=14,patch_size=7,class_num=1000)
-out=resmlp(input)
-print(out.shape)
+input=torch.randn(50,512,7,7)
+eca = ECAAttention(kernel_size=3)
+output=eca(input)
+print(output.shape)
