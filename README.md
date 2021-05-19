@@ -23,6 +23,8 @@
 
     - [3. ResMLP Usage](#3-ResMLP-Usage)
 
+    - [4. ResMLP Usage](#4-gMLP-Usage)
+
 
 
 
@@ -226,6 +228,9 @@ print(output.shape)
 
 - Pytorch implementation of ["ResMLP: Feedforward networks for image classification with data-efficient training"](https://arxiv.org/pdf/2105.03404.pdf)
 
+
+- Pytorch implementation of ["Pay Attention to MLPs"](https://arxiv.org/abs/2105.08050)
+
 ### 1. RepMLP Usage
 #### 1.1. Paper
 ["RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition"](https://arxiv.org/pdf/2105.01883v1.pdf)
@@ -303,4 +308,27 @@ input=torch.randn(50,3,14,14)
 resmlp=ResMLP(dim=128,image_size=14,patch_size=7,class_num=1000)
 out=resmlp(input)
 print(out.shape) #the last dimention is class_num
+```
+
+
+### 4. gMLP Usage
+#### 4.1. Paper
+["Pay Attention to MLPs"](https://arxiv.org/abs/2105.08050)
+
+#### 4.2. Overview
+![](./img/gMLP.jpg)
+
+#### 4.3. Code
+```python
+from mlp.g_mlp import gMLP
+import torch
+
+num_tokens=10000
+bs=50
+len_sen=49
+num_layers=6
+input=torch.randint(num_tokens,(bs,len_sen)) #bs,len_sen
+gmlp = gMLP(num_tokens=num_tokens,len_sen=len_sen,dim=512,d_ff=1024)
+output=gmlp(input)
+print(output.shape)
 ```
