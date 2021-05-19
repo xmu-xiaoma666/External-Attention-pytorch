@@ -23,7 +23,7 @@
 
     - [3. ResMLP Usage](#3-ResMLP-Usage)
 
-    - [4. ResMLP Usage](#4-gMLP-Usage)
+    - [4. gMLP Usage](#4-gMLP-Usage)
 
 
 
