@@ -17,6 +17,8 @@
     
     - [8. ECA Attention Usage](#8-eca-attention-usage)
 
+    - [9. DANet Attention Usage](#9-danet-attention-usage)
+
 - [MLP Series](#mlp-series)
 
     - [1. RepMLP Usage](#1-RepMLP-Usage)
@@ -48,6 +50,8 @@
 - Pytorch implementation of ["BAM: Bottleneck Attention Module---BMCV2018"](https://arxiv.org/pdf/1807.06514.pdf)
 
 - Pytorch implementation of ["ECA-Net: Efficient Channel Attention for Deep Convolutional Neural Networks---CVPR2020"](https://arxiv.org/pdf/1910.03151.pdf)
+
+- Pytorch implementation of ["Dual Attention Network for Scene Segmentation---CVPR2019"](https://arxiv.org/pdf/1809.02983.pdf)
 
 ***
 
@@ -198,6 +202,7 @@ print(output.shape)
 
 ```
 
+***
 
 ### 8. ECA Attention Usage
 #### 8.1. Paper
@@ -218,7 +223,26 @@ print(output.shape)
 
 ```
 
+***
 
+### 9. DANet Attention Usage
+#### 9.1. Paper
+["Dual Attention Network for Scene Segmentation---CVPR2019"](https://arxiv.org/pdf/1809.02983.pdf)
+
+#### 9.2. Overview
+![](./img/danet.png)
+
+#### 9.3. Code
+```python
+from attention.DANet import DAModule
+import torch
+
+if __name__ == '__main__':
+    input=torch.randn(50,512,7,7)
+    danet=DAModule(d_model=512,kernel_size=3,H=7,W=7)
+    print(danet(input).shape)
+
+```
 
 ***
 
@@ -229,7 +253,6 @@ print(output.shape)
 - Pytorch implementation of ["MLP-Mixer: An all-MLP Architecture for Vision"](https://arxiv.org/pdf/2105.01601.pdf)
 
 - Pytorch implementation of ["ResMLP: Feedforward networks for image classification with data-efficient training"](https://arxiv.org/pdf/2105.03404.pdf)
-
 
 - Pytorch implementation of ["Pay Attention to MLPs"](https://arxiv.org/abs/2105.08050)
 
