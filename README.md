@@ -19,6 +19,9 @@
 
     - [9. DANet Attention Usage](#9-danet-attention-usage)
 
+    - [10. Pyramid Split Attention (PSA) Attention Usage](#10-Pyramid-Split-Attention-(PSA)-attention-usage)
+
+
 - [MLP Series](#mlp-series)
 
     - [1. RepMLP Usage](#1-RepMLP-Usage)
@@ -246,15 +249,40 @@ if __name__ == '__main__':
 
 ***
 
+### 10. Pyramid Split Attention (PSA) Attention Usage
+
+#### 10.1. Paper
+["EPSANet: An Efficient Pyramid Split Attention Block on Convolutional Neural Network---arXiv 2020.05.30"](https://arxiv.org/pdf/2105.14447.pdf)
+
+#### 10.2. Overview
+![](./img/psa.png)
+
+#### 10.3. Code
+```python
+from attention.PSA import PSA
+import torch
+
+if __name__ == '__main__':
+    input=torch.randn(50,512,7,7)
+    psa = PSA(channel=512,reduction=8)
+    output=psa(input)
+    print(output.shape)
+
+
+```
+
+***
+
+
 # MLP Series
 
-- Pytorch implementation of ["RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition"](https://arxiv.org/pdf/2105.01883v1.pdf)
+- Pytorch implementation of ["RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition---arXiv 2020.05.05"](https://arxiv.org/pdf/2105.01883v1.pdf)
 
-- Pytorch implementation of ["MLP-Mixer: An all-MLP Architecture for Vision"](https://arxiv.org/pdf/2105.01601.pdf)
+- Pytorch implementation of ["MLP-Mixer: An all-MLP Architecture for Vision---arXiv 2020.05.17"](https://arxiv.org/pdf/2105.01601.pdf)
 
-- Pytorch implementation of ["ResMLP: Feedforward networks for image classification with data-efficient training"](https://arxiv.org/pdf/2105.03404.pdf)
+- Pytorch implementation of ["ResMLP: Feedforward networks for image classification with data-efficient training---arXiv 2020.05.07"](https://arxiv.org/pdf/2105.03404.pdf)
 
-- Pytorch implementation of ["Pay Attention to MLPs"](https://arxiv.org/abs/2105.08050)
+- Pytorch implementation of ["Pay Attention to MLPs---arXiv 2020.05.17"](https://arxiv.org/abs/2105.08050)
 
 ### 1. RepMLP Usage
 #### 1.1. Paper
