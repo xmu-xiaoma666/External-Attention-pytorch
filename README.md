@@ -40,7 +40,7 @@
 
 # Attention Series
 
-- Pytorch implementation of ["Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks"](https://arxiv.org/abs/2105.02358)
+- Pytorch implementation of ["Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks---arXiv 2020.05.05"](https://arxiv.org/abs/2105.02358)
 
 - Pytorch implementation of ["Attention Is All You Need---NIPS2017"](https://arxiv.org/pdf/1706.03762.pdf)
 
@@ -55,6 +55,8 @@
 - Pytorch implementation of ["ECA-Net: Efficient Channel Attention for Deep Convolutional Neural Networks---CVPR2020"](https://arxiv.org/pdf/1910.03151.pdf)
 
 - Pytorch implementation of ["Dual Attention Network for Scene Segmentation---CVPR2019"](https://arxiv.org/pdf/1809.02983.pdf)
+
+- Pytorch implementation of ["EPSANet: An Efficient Pyramid Split Attention Block on Convolutional Neural Network---arXiv 2020.05.30"](https://arxiv.org/pdf/2105.14447.pdf)
 
 ***
 
@@ -230,7 +232,7 @@ print(output.shape)
 
 ### 9. DANet Attention Usage
 #### 9.1. Paper
-["Dual Attention Network for Scene Segmentation---CVPR2019"](https://arxiv.org/pdf/1809.02983.pdf)
+["Dual Attention Network for Scene Segmentation"](https://arxiv.org/pdf/1809.02983.pdf)
 
 #### 9.2. Overview
 ![](./img/danet.png)
@@ -252,7 +254,7 @@ if __name__ == '__main__':
 ### 10. Pyramid Split Attention (PSA) Attention Usage
 
 #### 10.1. Paper
-["EPSANet: An Efficient Pyramid Split Attention Block on Convolutional Neural Network---arXiv 2020.05.30"](https://arxiv.org/pdf/2105.14447.pdf)
+["EPSANet: An Efficient Pyramid Split Attention Block on Convolutional Neural Network"](https://arxiv.org/pdf/2105.14447.pdf)
 
 #### 10.2. Overview
 ![](./img/psa.png)
