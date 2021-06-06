@@ -33,6 +33,13 @@
     - [4. gMLP Usage](#4-gMLP-Usage)
 
 
+- [Re-Parameter(ReP) Series](#Re-Parameter(ReP)-series)
+
+    - [1. RepVGG Usage](#1-RepVGG-Usage)
+
+
+
+
 
 
 ***
@@ -345,7 +352,7 @@ output=mlp_mixer(input)
 print(output.shape)
 ```
 
-
+***
 
 ### 3. ResMLP Usage
 #### 3.1. Paper
@@ -365,6 +372,7 @@ out=resmlp(input)
 print(out.shape) #the last dimention is class_num
 ```
 
+***
 
 ### 4. gMLP Usage
 #### 4.1. Paper
@@ -386,4 +394,37 @@ input=torch.randint(num_tokens,(bs,len_sen)) #bs,len_sen
 gmlp = gMLP(num_tokens=num_tokens,len_sen=len_sen,dim=512,d_ff=1024)
 output=gmlp(input)
 print(output.shape)
+```
+
+
+
+# Re-Parameter(ReP) Series
+
+- Pytorch implementation of ["RepVGG: Making VGG-style ConvNets Great Again---CVPR2021"](https://arxiv.org/abs/2101.03697)
+
+
+***
+
+### 1. RepVGG Usage
+#### 1.1. Paper
+["RepVGG: Making VGG-style ConvNets Great Again"](https://arxiv.org/abs/2101.03697)
+
+#### 1.2. Overview
+![](./img/repvgg.png)
+
+#### 1.3. Code
+```python
+
+from rep.repvgg import RepBlock
+import torch
+
+
+input=torch.randn(50,512,49,49)
+repblock=RepBlock(512,512)
+repblock.eval()
+out=repblock(input)
+repblock._switch_to_deploy()
+out2=repblock(input)
+print('difference between vgg and repvgg')
+print(((out2-out)**2).sum())
 ```
