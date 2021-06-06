@@ -37,7 +37,7 @@
 
     - [1. RepVGG Usage](#1-RepVGG-Usage)
 
-
+    - [2. ACNet Usage](#2-ACNet-Usage)
 
 
 
@@ -402,6 +402,8 @@ print(output.shape)
 
 - Pytorch implementation of ["RepVGG: Making VGG-style ConvNets Great Again---CVPR2021"](https://arxiv.org/abs/2101.03697)
 
+- Pytorch implementation of ["ACNet: Strengthening the Kernel Skeletons for Powerful CNN via Asymmetric Convolution Blocks---ICCV2019"](https://arxiv.org/abs/1908.03930)
+
 
 ***
 
@@ -427,4 +429,32 @@ repblock._switch_to_deploy()
 out2=repblock(input)
 print('difference between vgg and repvgg')
 print(((out2-out)**2).sum())
+```
+
+
+
+***
+
+### 2. ACNet Usage
+#### 2.1. Paper
+["ACNet: Strengthening the Kernel Skeletons for Powerful CNN via Asymmetric Convolution Blocks"](https://arxiv.org/abs/1908.03930)
+
+#### 2.2. Overview
+![](./img/acnet.png)
+
+#### 2.3. Code
+```python
+from rep.acnet import ACNet
+import torch
+from torch import nn
+
+input=torch.randn(50,512,49,49)
+acnet=ACNet(512,512)
+acnet.eval()
+out=acnet(input)
+acnet._switch_to_deploy()
+out2=acnet(input)
+print('difference:')
+print(((out2-out)**2).sum())
+
 ```

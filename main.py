@@ -1,14 +1,16 @@
-from rep.repvgg import RepBlock
+from rep.acnet import ACNet
 import torch
-
+from torch import nn
+from torch.nn import functional as F
 
 if __name__ == '__main__':
     input=torch.randn(50,512,49,49)
-    repblock=RepBlock(512,512)
-    repblock.eval()
-    out=repblock(input)
-    repblock._switch_to_deploy()
-    out2=repblock(input)
-    print('difference between vgg and repvgg')
+    acnet=ACNet(512,512)
+    acnet.eval()
+    out=acnet(input)
+    acnet._switch_to_deploy()
+    out2=acnet(input)
+    print('difference:')
     print(((out2-out)**2).sum())
+    
     
