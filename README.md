@@ -34,7 +34,7 @@
     - [4. gMLP Usage](#4-gMLP-Usage)
 
 
-- [Re-Parameter(ReP) Series](#Re-Parameter\(ReP\)-series)
+- [Re-Parameter(ReP) Series](#Re-Parameter-series)
 
     - [1. RepVGG Usage](#1-RepVGG-Usage)
 
@@ -428,7 +428,7 @@ print(output.shape)
 
 
 
-# Re-Parameter(ReP) Series
+# Re-Parameter Series
 
 - Pytorch implementation of ["RepVGG: Making VGG-style ConvNets Great Again---CVPR2021"](https://arxiv.org/abs/2101.03697)
 
