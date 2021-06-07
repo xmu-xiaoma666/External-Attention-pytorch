@@ -34,7 +34,7 @@
     - [4. gMLP Usage](#4-gMLP-Usage)
 
 
-- [Re-Parameter(ReP) Series](#Re-Parameter(ReP)-series)
+- [Re-Parameter(ReP) Series](#Re-Parameter\(ReP\)-series)
 
     - [1. RepVGG Usage](#1-RepVGG-Usage)
 
