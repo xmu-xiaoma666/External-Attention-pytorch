@@ -19,9 +19,9 @@
 
     - [9. DANet Attention Usage](#9-danet-attention-usage)
 
-    - [10. Pyramid Split Attention (PSA) Attention Usage](#10-Pyramid-Split-Attention-(PSA)-Attention-Usage)
+    - [10. Pyramid Split Attention (PSA) Attention Usage](#10-Pyramid-Split-Attention-Attention-Usage)
 
-    - [11. Efficient Multi-Head Self-Attention(EMSA) Usage](#11-Efficient-Multi-Head-Self-Attention(EMSA)-Usage)
+    - [11. Efficient Multi-Head Self-Attention(EMSA) Usage](#11-Efficient-Multi-Head-Self-Attention-Usage)
 
 - [MLP Series](#mlp-series)
 
@@ -263,7 +263,7 @@ if __name__ == '__main__':
 
 ***
 
-### 10. Pyramid Split Attention (PSA) Attention Usage
+### 10. Pyramid Split Attention Attention Usage
 
 #### 10.1. Paper
 ["EPSANet: An Efficient Pyramid Split Attention Block on Convolutional Neural Network"](https://arxiv.org/pdf/2105.14447.pdf)
@@ -287,7 +287,7 @@ if __name__ == '__main__':
 ***
 
 
-### 11. Efficient Multi-Head Self-Attention(EMSA) Usage
+### 11. Efficient Multi-Head Self-Attention Usage
 
 #### 11.1. Paper
 ["ResT: An Efficient Transformer for Visual Recognition"](https://arxiv.org/abs/2105.13677)
