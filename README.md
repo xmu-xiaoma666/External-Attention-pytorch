@@ -19,8 +19,9 @@
 
     - [9. DANet Attention Usage](#9-danet-attention-usage)
 
-    - [10. Pyramid Split Attention (PSA) Attention Usage](#10-Pyramid-Split-Attention-(PSA)-attention-usage)
+    - [10. Pyramid Split Attention (PSA) Attention Usage](#10-Pyramid-Split-Attention-(PSA)-Attention-Usage)
 
+    - [11. Efficient Multi-Head Self-Attention(EMSA) Usage](#11-Efficient-Multi-Head-Self-Attention(EMSA)-Usage)
 
 - [MLP Series](#mlp-series)
 
@@ -64,6 +65,10 @@
 - Pytorch implementation of ["Dual Attention Network for Scene Segmentation---CVPR2019"](https://arxiv.org/pdf/1809.02983.pdf)
 
 - Pytorch implementation of ["EPSANet: An Efficient Pyramid Split Attention Block on Convolutional Neural Network---arXiv 2020.05.30"](https://arxiv.org/pdf/2105.14447.pdf)
+
+- Pytorch implementation of ["ResT: An Efficient Transformer for Visual Recognition---arXiv 2020.05.28"](https://arxiv.org/abs/2105.13677)
+
+
 
 ***
 
@@ -277,11 +282,36 @@ if __name__ == '__main__':
     output=psa(input)
     print(output.shape)
 
-
 ```
 
 ***
 
+
+### 11. Efficient Multi-Head Self-Attention(EMSA) Usage
+
+#### 11.1. Paper
+["ResT: An Efficient Transformer for Visual Recognition"](https://arxiv.org/abs/2105.13677)
+
+#### 11.2. Overview
+![](./img/EMSA.png)
+
+#### 11.3. Code
+```python
+
+from attention.EMSA import EMSA
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+if __name__ == '__main__':
+    input=torch.randn(50,64,512)
+    emsa = EMSA(d_model=512, d_k=512, d_v=512, h=8,H=8,W=8,ratio=2,apply_transform=True)
+    output=emsa(input,input,input)
+    print(output.shape)
+    
+```
+
+***
 
 # MLP Series
 
