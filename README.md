@@ -19,7 +19,7 @@
 
     - [9. DANet Attention Usage](#9-danet-attention-usage)
 
-    - [10. Pyramid Split Attention (PSA) Attention Usage](#10-Pyramid-Split-Attention-Attention-Usage)
+    - [10. Pyramid Split Attention (PSA) Usage](#10-Pyramid-Split-Attention-Usage)
 
     - [11. Efficient Multi-Head Self-Attention(EMSA) Usage](#11-Efficient-Multi-Head-Self-Attention-Usage)
 
@@ -254,16 +254,15 @@ print(output.shape)
 from attention.DANet import DAModule
 import torch
 
-if __name__ == '__main__':
-    input=torch.randn(50,512,7,7)
-    danet=DAModule(d_model=512,kernel_size=3,H=7,W=7)
-    print(danet(input).shape)
+input=torch.randn(50,512,7,7)
+danet=DAModule(d_model=512,kernel_size=3,H=7,W=7)
+print(danet(input).shape)
 
 ```
 
 ***
 
-### 10. Pyramid Split Attention Attention Usage
+### 10. Pyramid Split Attention Usage
 
 #### 10.1. Paper
 ["EPSANet: An Efficient Pyramid Split Attention Block on Convolutional Neural Network"](https://arxiv.org/pdf/2105.14447.pdf)
@@ -276,11 +275,10 @@ if __name__ == '__main__':
 from attention.PSA import PSA
 import torch
 
-if __name__ == '__main__':
-    input=torch.randn(50,512,7,7)
-    psa = PSA(channel=512,reduction=8)
-    output=psa(input)
-    print(output.shape)
+input=torch.randn(50,512,7,7)
+psa = PSA(channel=512,reduction=8)
+output=psa(input)
+print(output.shape)
 
 ```
 
@@ -303,11 +301,10 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-if __name__ == '__main__':
-    input=torch.randn(50,64,512)
-    emsa = EMSA(d_model=512, d_k=512, d_v=512, h=8,H=8,W=8,ratio=2,apply_transform=True)
-    output=emsa(input,input,input)
-    print(output.shape)
+input=torch.randn(50,64,512)
+emsa = EMSA(d_model=512, d_k=512, d_v=512, h=8,H=8,W=8,ratio=2,apply_transform=True)
+output=emsa(input,input,input)
+print(output.shape)
     
 ```
 
