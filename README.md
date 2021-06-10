@@ -23,6 +23,10 @@
 
     - [11. Efficient Multi-Head Self-Attention(EMSA) Usage](#11-Efficient-Multi-Head-Self-Attention-Usage)
 
+    - [12. Shuffle Attention Usage](#12-Shuffle-Attention-Usage)
+  
+
+
 - [MLP Series](#mlp-series)
 
     - [1. RepMLP Usage](#1-RepMLP-Usage)
@@ -67,6 +71,8 @@
 - Pytorch implementation of ["EPSANet: An Efficient Pyramid Split Attention Block on Convolutional Neural Network---arXiv 2020.05.30"](https://arxiv.org/pdf/2105.14447.pdf)
 
 - Pytorch implementation of ["ResT: An Efficient Transformer for Visual Recognition---arXiv 2020.05.28"](https://arxiv.org/abs/2105.13677)
+
+- Pytorch implementation of ["SA-NET: SHUFFLE ATTENTION FOR DEEP CONVOLUTIONAL NEURAL NETWORKS---ICASSP 2021"](https://arxiv.org/pdf/2102.00240.pdf)
 
 
 
@@ -307,6 +313,37 @@ output=emsa(input,input,input)
 print(output.shape)
     
 ```
+
+***
+
+
+### 12. Shuffle Attention Usage
+
+#### 12.1. Paper
+["SA-NET: SHUFFLE ATTENTION FOR DEEP CONVOLUTIONAL NEURAL NETWORKS"](https://arxiv.org/pdf/2102.00240.pdf)
+
+#### 12.2. Overview
+![](./img/ShuffleAttention.jpg)
+
+#### 12.3. Code
+```python
+
+from attention.ShuffleAttention import ShuffleAttention
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+
+input=torch.randn(50,512,7,7)
+se = ShuffleAttention(channel=512,G=8)
+output=se(input)
+print(output.shape)
+
+    
+```
+
+
+
 
 ***
 
