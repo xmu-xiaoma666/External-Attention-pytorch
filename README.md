@@ -5,6 +5,7 @@
 
 *Don't forget to ***follow*** me to learn about project updates.*
 
+***
 
 **【June 12，2021】** For the convenience use of this project, the *pip installation* method is provided. However, it is highly recommended that you **git clone** this project, because **pip install** may not be updated in a timely manner.
 
