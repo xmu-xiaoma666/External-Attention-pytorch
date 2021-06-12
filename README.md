@@ -1,5 +1,7 @@
 
-### Updates
+# Updates
+
+<font size=4> If this project is helpful to you, welcome to give a <font  size=6 color=green>***star***</font>. Don't forget to <font  size=6 color=green>***follow***</font> me to learn about project updates. </font>
 
 **【June 12，2021】** For the convenience use of this project, the *pip installation* method is provided. However, it is highly recommended that you **git clone** this project, because **pip install** may not be updated in a timely manner.
 
