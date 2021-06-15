@@ -48,6 +48,7 @@ $ pip install dlutils_add
     
     - [13. MUSE Attention Usage](#13-MUSE-Attention-Usage)
   
+    - [14. SGE Attention Usage](#14-SGE-Attention-Usage)
 
 
 - [MLP Series](#mlp-series)
@@ -98,8 +99,9 @@ $ pip install dlutils_add
 
 - Pytorch implementation of ["SA-NET: SHUFFLE ATTENTION FOR DEEP CONVOLUTIONAL NEURAL NETWORKS---ICASSP 2021"](https://arxiv.org/pdf/2102.00240.pdf)
 
-- Pytorch implementation of ["MUSE: Parallel Multi-Scale Attention for Sequence to Sequence Learning---arXiv 2019.05.30"](https://arxiv.org/abs/1911.09483)
+- Pytorch implementation of ["MUSE: Parallel Multi-Scale Attention for Sequence to Sequence Learning---arXiv 2019.11.17"](https://arxiv.org/abs/1911.09483)
 
+- Pytorch implementation of ["Spatial Group-wise Enhance: Improving Semantic Feature Learning in Convolutional Networks---arXiv 2019.05.23"](https://arxiv.org/pdf/1905.09646.pdf)
 
 ***
 
@@ -394,6 +396,30 @@ print(output.shape)
 
 ```
 
+***
+
+
+### 14. SGE Attention Usage
+
+#### 14.1. Paper
+[Spatial Group-wise Enhance: Improving Semantic Feature Learning in Convolutional Networks](https://arxiv.org/pdf/1905.09646.pdf)
+
+#### 14.2. Overview
+![](./img/SGE.png)
+
+#### 14.3. Code
+```python
+from attention.SGE import SpatialGroupEnhance
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(50,512,7,7)
+sge = SpatialGroupEnhance(groups=8)
+output=sge(input)
+print(output.shape)
+
+```
 
 
 
