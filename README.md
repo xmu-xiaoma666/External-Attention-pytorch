@@ -10,14 +10,11 @@
 
 For the convenience use of this project, the *pip installation* method is provided. You can run the following command directly:
 
-(However, it is highly recommended that you **git clone** this project, because **pip install** may not be updated in a timely manner.)
-
-
 ```
 $ pip install dlutils_add
 ```
 
-(.whl file can also be downloaded by [BaiDuYun](https://pan.baidu.com/s/11Ky_JwLolIVLDhMslumkng) (Access code: **c56j**).)
+(***However, it is highly recommended that you **git clone** this project, because **pip install** may not be updated in a timely manner.*** .whl file can also be downloaded by [BaiDuYun](https://pan.baidu.com/s/11Ky_JwLolIVLDhMslumkng) (Access code: **c56j**).)
 
 
 ***
