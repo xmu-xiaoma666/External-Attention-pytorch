@@ -1,5 +1,6 @@
 
-# Updates
+
+***
 
 *If this project is helpful to you, welcome to give a ***star***.* 
 
@@ -7,14 +8,16 @@
 
 ***
 
-**【June 12，2021】** For the convenience use of this project, the *pip installation* method is provided. However, it is highly recommended that you **git clone** this project, because **pip install** may not be updated in a timely manner.
+For the convenience use of this project, the *pip installation* method is provided. You can run the following command directly:
 
-You can run the following command directly:
+(However, it is highly recommended that you **git clone** this project, because **pip install** may not be updated in a timely manner.)
+
+
 ```
-pip install dlutils_add
+$ pip install dlutils_add
 ```
 
-(.whl file can also be downloaded by [BaiDuYun](https://pan.baidu.com/s/11Ky_JwLolIVLDhMslumkng) (Extraction code: **c56j**).)
+(.whl file can also be downloaded by [BaiDuYun](https://pan.baidu.com/s/11Ky_JwLolIVLDhMslumkng) (Access code: **c56j**).)
 
 
 ***
@@ -45,6 +48,8 @@ pip install dlutils_add
     - [11. Efficient Multi-Head Self-Attention(EMSA) Usage](#11-Efficient-Multi-Head-Self-Attention-Usage)
 
     - [12. Shuffle Attention Usage](#12-Shuffle-Attention-Usage)
+    
+    - [13. MUSE Attention Usage](#13-MUSE-Attention-Usage)
   
 
 
@@ -73,7 +78,7 @@ pip install dlutils_add
 
 # Attention Series
 
-- Pytorch implementation of ["Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks---arXiv 2020.05.05"](https://arxiv.org/abs/2105.02358)
+- Pytorch implementation of ["Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks---arXiv 2021.05.05"](https://arxiv.org/abs/2105.02358)
 
 - Pytorch implementation of ["Attention Is All You Need---NIPS2017"](https://arxiv.org/pdf/1706.03762.pdf)
 
@@ -89,12 +94,13 @@ pip install dlutils_add
 
 - Pytorch implementation of ["Dual Attention Network for Scene Segmentation---CVPR2019"](https://arxiv.org/pdf/1809.02983.pdf)
 
-- Pytorch implementation of ["EPSANet: An Efficient Pyramid Split Attention Block on Convolutional Neural Network---arXiv 2020.05.30"](https://arxiv.org/pdf/2105.14447.pdf)
+- Pytorch implementation of ["EPSANet: An Efficient Pyramid Split Attention Block on Convolutional Neural Network---arXiv 2021.05.30"](https://arxiv.org/pdf/2105.14447.pdf)
 
-- Pytorch implementation of ["ResT: An Efficient Transformer for Visual Recognition---arXiv 2020.05.28"](https://arxiv.org/abs/2105.13677)
+- Pytorch implementation of ["ResT: An Efficient Transformer for Visual Recognition---arXiv 2021.05.28"](https://arxiv.org/abs/2105.13677)
 
 - Pytorch implementation of ["SA-NET: SHUFFLE ATTENTION FOR DEEP CONVOLUTIONAL NEURAL NETWORKS---ICASSP 2021"](https://arxiv.org/pdf/2102.00240.pdf)
 
+- Pytorch implementation of ["MUSE: Parallel Multi-Scale Attention for Sequence to Sequence Learning---arXiv 2019.05.30"](https://arxiv.org/abs/1911.09483)
 
 
 ***
@@ -364,19 +370,46 @@ print(output.shape)
 ```
 
 
+***
+
+
+### 13. MUSE Attention Usage
+
+#### 13.1. Paper
+["MUSE: Parallel Multi-Scale Attention for Sequence to Sequence Learning"](https://arxiv.org/abs/1911.09483)
+
+#### 13.2. Overview
+![](./img/MUSE.png)
+
+#### 13.3. Code
+```python
+from attention.MUSEAttention import MUSEAttention
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+
+input=torch.randn(50,49,512)
+sa = MUSEAttention(d_model=512, d_k=512, d_v=512, h=8)
+output=sa(input,input,input)
+print(output.shape)
+
+```
+
+
 
 
 ***
 
 # MLP Series
 
-- Pytorch implementation of ["RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition---arXiv 2020.05.05"](https://arxiv.org/pdf/2105.01883v1.pdf)
+- Pytorch implementation of ["RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition---arXiv 2021.05.05"](https://arxiv.org/pdf/2105.01883v1.pdf)
 
-- Pytorch implementation of ["MLP-Mixer: An all-MLP Architecture for Vision---arXiv 2020.05.17"](https://arxiv.org/pdf/2105.01601.pdf)
+- Pytorch implementation of ["MLP-Mixer: An all-MLP Architecture for Vision---arXiv 2021.05.17"](https://arxiv.org/pdf/2105.01601.pdf)
 
-- Pytorch implementation of ["ResMLP: Feedforward networks for image classification with data-efficient training---arXiv 2020.05.07"](https://arxiv.org/pdf/2105.03404.pdf)
+- Pytorch implementation of ["ResMLP: Feedforward networks for image classification with data-efficient training---arXiv 2021.05.07"](https://arxiv.org/pdf/2105.03404.pdf)
 
-- Pytorch implementation of ["Pay Attention to MLPs---arXiv 2020.05.17"](https://arxiv.org/abs/2105.08050)
+- Pytorch implementation of ["Pay Attention to MLPs---arXiv 2021.05.17"](https://arxiv.org/abs/2105.08050)
 
 ### 1. RepMLP Usage
 #### 1.1. Paper
