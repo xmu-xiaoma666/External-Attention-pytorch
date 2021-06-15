@@ -67,6 +67,7 @@ $ pip install dlutils_add
 
     - [2. ACNet Usage](#2-ACNet-Usage)
 
+    - [3. Diverse Branch Block(DDB) Usage](#3-Diverse-Branch-Block-Usage)
 
 
 
@@ -519,6 +520,8 @@ print(output.shape)
 
 - Pytorch implementation of ["ACNet: Strengthening the Kernel Skeletons for Powerful CNN via Asymmetric Convolution Blocks---ICCV2019"](https://arxiv.org/abs/1908.03930)
 
+- Pytorch implementation of ["Diverse Branch Block: Building a Convolution as an Inception-like Unit---CVPR2021"](https://arxiv.org/abs/2103.13425)
+
 
 ***
 
@@ -572,4 +575,147 @@ out2=acnet(input)
 print('difference:')
 print(((out2-out)**2).sum())
 
+```
+
+
+
+***
+
+### 2. Diverse Branch Block Usage
+#### 2.1. Paper
+["Diverse Branch Block: Building a Convolution as an Inception-like Unit"](https://arxiv.org/abs/2103.13425)
+
+#### 2.2. Overview
+![](./img/ddb.png)
+
+#### 2.3. Code
+##### 2.3.1 Transform I
+```python
+from rep.ddb import transI_conv_bn
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(1,64,7,7)
+#conv+bn
+conv1=nn.Conv2d(64,64,3,padding=1)
+bn1=nn.BatchNorm2d(64)
+bn1.eval()
+out1=bn1(conv1(input))
+
+#conv_fuse
+conv_fuse=nn.Conv2d(64,64,3,padding=1)
+conv_fuse.weight.data,conv_fuse.bias.data=transI_conv_bn(conv1,bn1)
+out2=conv_fuse(input)
+
+print("difference:",((out2-out1)**2).sum().item())
+```
+
+##### 2.3.2 Transform II
+```python
+from rep.ddb import transII_conv_branch
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(1,64,7,7)
+
+#conv+conv
+conv1=nn.Conv2d(64,64,3,padding=1)
+conv2=nn.Conv2d(64,64,3,padding=1)
+out1=conv1(input)+conv2(input)
+
+#conv_fuse
+conv_fuse=nn.Conv2d(64,64,3,padding=1)
+conv_fuse.weight.data,conv_fuse.bias.data=transII_conv_branch(conv1,conv2)
+out2=conv_fuse(input)
+
+print("difference:",((out2-out1)**2).sum().item())
+```
+
+##### 2.3.3 Transform III
+```python
+from rep.ddb import transIII_conv_sequential
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(1,64,7,7)
+
+#conv+conv
+conv1=nn.Conv2d(64,64,1,padding=0,bias=False)
+conv2=nn.Conv2d(64,64,3,padding=1,bias=False)
+out1=conv2(conv1(input))
+
+
+#conv_fuse
+conv_fuse=nn.Conv2d(64,64,3,padding=1,bias=False)
+conv_fuse.weight.data=transIII_conv_sequential(conv1,conv2)
+out2=conv_fuse(input)
+
+print("difference:",((out2-out1)**2).sum().item())
+```
+
+##### 2.3.4 Transform IV
+```python
+from rep.ddb import transIV_conv_concat
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(1,64,7,7)
+
+#conv+conv
+conv1=nn.Conv2d(64,32,3,padding=1)
+conv2=nn.Conv2d(64,32,3,padding=1)
+out1=torch.cat([conv1(input),conv2(input)],dim=1)
+
+#conv_fuse
+conv_fuse=nn.Conv2d(64,64,3,padding=1)
+conv_fuse.weight.data,conv_fuse.bias.data=transIV_conv_concat(conv1,conv2)
+out2=conv_fuse(input)
+
+print("difference:",((out2-out1)**2).sum().item())
+```
+
+##### 2.3.5 Transform V
+```python
+from rep.ddb import transV_avg
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(1,64,7,7)
+
+avg=nn.AvgPool2d(kernel_size=3,stride=1)
+out1=avg(input)
+
+conv=transV_avg(64,3)
+out2=conv(input)
+
+print("difference:",((out2-out1)**2).sum().item())
+```
+
+
+##### 2.3.6 Transform VI
+```python
+from rep.ddb import transVI_conv_scale
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(1,64,7,7)
+
+#conv+conv
+conv1x1=nn.Conv2d(64,64,1)
+conv1x3=nn.Conv2d(64,64,(1,3),padding=(0,1))
+conv3x1=nn.Conv2d(64,64,(3,1),padding=(1,0))
+out1=conv1x1(input)+conv1x3(input)+conv3x1(input)
+
+#conv_fuse
+conv_fuse=nn.Conv2d(64,64,3,padding=1)
+conv_fuse.weight.data,conv_fuse.bias.data=transVI_conv_scale(conv1x1,conv1x3,conv3x1)
+out2=conv_fuse(input)
+
+print("difference:",((out2-out1)**2).sum().item())
 ```
