@@ -1,12 +1,13 @@
 
+# A Codebase For ***Attention***, ***MLP***, ***Re-parameter(ReP)***
 
-***
 
 *If this project is helpful to you, welcome to give a ***star***.* 
 
 *Don't forget to ***follow*** me to learn about project updates.*
 
-***
+
+# Installation ***(Optional)***
 
 For the convenience use of this project, the *pip installation* method is provided. You can run the following command directly:
 
