@@ -1,9 +1,9 @@
-from attention.A2Atttention import DoubleAttention
+from attention.AFT import AFT_FULL
 import torch
 from torch import nn
 from torch.nn import functional as F
 
-input=torch.randn(50,512,7,7)
-a2 = DoubleAttention(512,128,128,True)
-output=a2(input)
+input=torch.randn(50,49,512)
+aft_full = AFT_FULL(d_model=512, n=49)
+output=aft_full(input)
 print(output.shape)

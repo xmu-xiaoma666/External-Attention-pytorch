@@ -53,6 +53,9 @@ $ pip install dlutils_add
 
     - [15. A2 Attention Usage](#15-A2-Attention-Usage)
 
+    - [16. AFT Attention Usage](#16-AFT-Attention-Usage)
+
+
 - [MLP Series](#mlp-series)
 
     - [1. RepMLP Usage](#1-RepMLP-Usage)
@@ -106,6 +109,9 @@ $ pip install dlutils_add
 - Pytorch implementation of ["Spatial Group-wise Enhance: Improving Semantic Feature Learning in Convolutional Networks---arXiv 2019.05.23"](https://arxiv.org/pdf/1905.09646.pdf)
 
 - Pytorch implementation of ["A2-Nets: Double Attention Networks---NIPS2018"](https://arxiv.org/pdf/1810.11579.pdf)
+
+
+- Pytorch implementation of ["An Attention Free Transformer---ICLR2021 (Apple New Work)"](https://arxiv.org/pdf/2105.14103v1.pdf)
 
 ***
 
@@ -446,6 +452,30 @@ from torch.nn import functional as F
 input=torch.randn(50,512,7,7)
 a2 = DoubleAttention(512,128,128,True)
 output=a2(input)
+print(output.shape)
+
+```
+
+
+
+### 16. AFT Attention Usage
+
+#### 16.1. Paper
+[An Attention Free Transformer](https://arxiv.org/pdf/2105.14103v1.pdf)
+
+#### 16.2. Overview
+![](./img/AFT.jpg)
+
+#### 16.3. Code
+```python
+from attention.AFT import AFT_FULL
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(50,49,512)
+aft_full = AFT_FULL(d_model=512, n=49)
+output=aft_full(input)
 print(output.shape)
 
 ```
