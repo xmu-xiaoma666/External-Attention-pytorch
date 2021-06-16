@@ -34,7 +34,7 @@ Address：[https://arxiv.org/abs/2105.02358](https://arxiv.org/abs/2105.02358)
 
 ### 1.2. Model Structure
 
-![](https://pic1.zhimg.com/80/v2-ab18545bd81de5ea00cd163720866a2f_720w.png)
+![](./img/External_Attention.png)
 
 ### 1.3. Brief
 This is an article on arXiv in May. It mainly solves two pain points of Self-Attention (SA): (1) O(n^2) computational complexity; (2) SA is in the same sample The above calculates Attention based on different positions, ignoring the relationship between different samples. Therefore, this paper uses two serial MLP structures as memory units, which reduces the computational complexity to O(n); in addition, these two memory units are learned based on all training data, so they also implicitly consider the differences. The connection between the samples.
@@ -66,7 +66,7 @@ Address：[https://arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)
 
 ### 2.2. Model Structure
 
-![](https://pic2.zhimg.com/80/v2-68a978a5a7ce603607b3215307adf0e7_720w.png)
+![](./img/SA.png)
 
 ### 2.3. Brief
 This is an article published by Google in NeurIPS2017. It has a great influence in various fields such as CV, NLP, and multi-modality. The current citation volume has been 2.2w+. The Self-Attention proposed in Transformer is a kind of Attention, which is used to calculate the weight between different positions in the feature, so as to achieve the effect of updating the feature. First, the input feature is mapped into three features of Q, K, and V through FC, and then Q and K are dot-multiplied to obtain the attention map, and the attention map and V are dot-multiplied to obtain the weighted feature. Finally, the feature is mapped through FC, and a new feature is obtained. (There are many very good explanations about Transformer and Self-Attention on the Internet, so I won’t give a detailed introduction here)
@@ -97,7 +97,7 @@ Address：[https://arxiv.org/abs/1709.01507](https://arxiv.org/abs/1709.01507)
 
 ### 3.2. Model Structure
 
-![](https://pic1.zhimg.com/80/v2-2ce17a52c759776e88339ba7a3bb60e3_720w.jpeg)
+![](./img/SE.png)
 
 ### 3.3. Brief
 This is an article of CVPR2018, which is also very influential. The current citation volume is 7k+. This article is for channel attention. Because of its simple structure and effectiveness, it has set off a wave of channel attention. From the avenue to the simple, the idea of this article can be said to be very simple. First, the spatial dimension is applied to AdaptiveAvgPool, and then the channel attention is learned through two FCs, and the Sigmoid is used for normalization to obtain the Channel Attention Map, and finally the Channel Attention Map is combined with the original Multiply the features to get the weighted features.
@@ -128,7 +128,7 @@ Address：[https://arxiv.org/pdf/1903.06586.pdf](https://arxiv.org/pdf/1903.0658
 
 ### 4.2. Model Structure
 
-![](https://pic1.zhimg.com/80/v2-2d7c52398127cf7e76e763e0d7659687_720w.jpeg)
+![](./img/SK.png)
 
 ### 4.3. Brief
 This is an article from CVPR2019, which pays tribute to SENet's thoughts. In traditional CNN, each convolutional layer uses the same size convolution kernel, which limits the expressive ability of the model; and the "wider" model structure of Inception is also verified, using multiple different convolution kernels. Learning can indeed improve the expressive ability of the model. The author draws on the idea of ​​SENet, obtains the weight of the channel by dynamically calculating each convolution kernel, and dynamically merges the results of each convolution kernel.
@@ -163,9 +163,9 @@ Address：[https://openaccess.thecvf.com/content_ECCV_2018/papers/Sanghyun_Woo_C
 
 ### 5.2. Model Structure
 
-![](https://pic1.zhimg.com/80/v2-0749535fc4bec54a91e338fe6ddfc881_720w.png)
+![](./img/CBAM1.png)
 
-![](https://pic4.zhimg.com/80/v2-73c5b56372ace4349255a384f0c89aff_720w.png)
+![](./img/CBAM2.png)
 
 ### 5.3. Brief
 This is an ECCV2018 paper. This article uses Channel Attention and Spatial Attention at the same time and connects the two in series (the article also does ablation experiments in parallel and two series).
@@ -201,7 +201,7 @@ Address：[https://arxiv.org/pdf/1807.06514.pdf](https://arxiv.org/pdf/1807.0651
 
 ### 6.2. Model Structure
 
-![](https://pic1.zhimg.com/80/v2-157180419c125e51943154b2647e8778_720w.jpeg)
+![](./img/BAM.png)
 
 ### 6.3. Brief
 This is the work of CBAM and the author at the same time. The work is very similar to CBAM, and it is also dual attention. The difference is that CBAM connects the results of two attention in series; while BAM directly adds two attention matrices.
@@ -236,7 +236,7 @@ Address：[https://arxiv.org/pdf/1910.03151.pdf](https://arxiv.org/pdf/1910.0315
 
 ### 7.2. Model Structure
 
-![](https://pic2.zhimg.com/80/v2-69740e3cdf6101fb7bd087bd7108d95a_720w.jpeg)
+![](./img/ECA.png)
 
 ### 7.3. Brief
 This is an article of CVPR2020.
@@ -270,9 +270,8 @@ Address：[https://arxiv.org/pdf/1809.02983.pdf](https://arxiv.org/pdf/1809.0298
 
 ### 8.2. Model Structure
 
-![](https://pic1.zhimg.com/80/v2-080e29cf4ec9f0dc60448575804e30d5_720w.jpeg)
+![](./img/danet.png)
 
-![](https://pic1.zhimg.com/80/v2-df0024185529ad609a7d1b703be1c16a_720w.png)
 
 ### 8.3. Brief
 This is an article by CVPR2019. The idea is very simple, that is, self-attention is used in the task of scene segmentation. The difference is that self-attention is to pay attention to the attention between each position, and this article will make a self-attention. To expand, we also made a branch of channel attention. The operation is the same as self-attention. The three Linears that generate Q, K, and V are removed from different channel attention. Finally, the features after the two attentions are summed element-wise.
@@ -302,9 +301,8 @@ Address：[https://arxiv.org/pdf/2105.14447.pdf](https://arxiv.org/pdf/2105.1444
 
 ### 9.2. Model Structure
 
-![](https://pic3.zhimg.com/80/v2-cc73d337d7eb1bf73b8f840533c83b2c_720w.jpeg)
+![](./img/psa.png)
 
-![](https://pic4.zhimg.com/80/v2-bf70742687809daa8d5807e9aaa6abaa_720w.jpeg)
 
 ### 9.3. Brief
 This is an article uploaded by Shenzhen University on arXiv on May 30. The purpose of this article is how to obtain and explore spatial information of different scales to enrich the feature space. The network structure is relatively simple, mainly divided into four steps. In the first part, the original feature is divided into n groups according to the channel, and then the different groups are convolved with different scales to obtain the new feature W1; the second part is SE performs SE on the original features to obtain different Aheadache Tony; the third part is to perform softmax on different groups; the fourth part is to multiply the obtained attention with the original feature W1.
@@ -334,7 +332,7 @@ Address：[https://arxiv.org/abs/2105.13677](https://arxiv.org/abs/2105.13677)
 
 ### 10.2. Model Structure
 
-![](https://pic1.zhimg.com/80/v2-f6f07115dffa71dcaa60cf02c3d8f656_720w.jpeg)
+![](./img/EMSA.png)
 
 ### 10.3. Brief
 
