@@ -1,6 +1,7 @@
 
 # A Codebase For ***Attention***, ***MLP***, ***Re-parameter(ReP)***
 
+***Part of model descriptions can be found in*** **[【中文版】](./中文版.md) | [【English Version】](./EnglishVersion.md)**
 
 *If this project is helpful to you, welcome to give a ***star***.* 
 
