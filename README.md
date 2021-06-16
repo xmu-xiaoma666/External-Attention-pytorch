@@ -105,7 +105,7 @@ $ pip install dlutils_add
 
 - Pytorch implementation of ["Spatial Group-wise Enhance: Improving Semantic Feature Learning in Convolutional Networks---arXiv 2019.05.23"](https://arxiv.org/pdf/1905.09646.pdf)
 
-- Pytorch implementation of ["$A^2$-Nets: Double Attention Networks---NIPS2018"](https://arxiv.org/pdf/1810.11579.pdf)
+- Pytorch implementation of ["A2-Nets: Double Attention Networks---NIPS2018"](https://arxiv.org/pdf/1810.11579.pdf)
 
 ***
 
@@ -431,7 +431,7 @@ print(output.shape)
 ### 15. A2 Attention Usage
 
 #### 15.1. Paper
-[$A^2$-Nets: Double Attention Networks](https://arxiv.org/pdf/1810.11579.pdf)
+[A2-Nets: Double Attention Networks](https://arxiv.org/pdf/1810.11579.pdf)
 
 #### 15.2. Overview
 ![](./img/A2.png)
