@@ -357,5 +357,4 @@ print(output.shape)
  
 
 ## Write at the end
-
-目前该项目整理的Attention的工作确实还不够全面，后面随着阅读量的提高，会不断对本项目进行完善，欢迎大家star支持。若在文章中有表述不恰、代码实现有误的地方，欢迎大家指出~
+At present, the Attention work organized by this project is indeed not comprehensive enough. As the amount of reading increases, we will continue to improve this project. Welcome everyone star to support. If there are incorrect statements or incorrect code implementations in the article, you are welcome to point out~
