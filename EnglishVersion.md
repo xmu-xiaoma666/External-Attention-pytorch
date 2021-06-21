@@ -305,7 +305,7 @@ Address：[https://arxiv.org/pdf/2105.14447.pdf](https://arxiv.org/pdf/2105.1444
 
 
 ### 9.3. Brief
-This is an article uploaded by Shenzhen University on arXiv on May 30. The purpose of this article is how to obtain and explore spatial information of different scales to enrich the feature space. The network structure is relatively simple, mainly divided into four steps. In the first part, the original feature is divided into n groups according to the channel, and then the different groups are convolved with different scales to obtain the new feature W1; the second part is SE performs SE on the original features to obtain different Aheadache Tony; the third part is to perform softmax on different groups; the fourth part is to multiply the obtained attention with the original feature W1.
+This is an article uploaded by Shenzhen University on arXiv on May 30. The purpose of this article is how to obtain and explore spatial information of different scales to enrich the feature space. The network structure is relatively simple, mainly divided into four steps. In the first part, the original feature is divided into n groups according to the channel, and then the different groups are convolved with different scales to obtain the new feature W1; the second part is SE performs SE on the original features to obtain different Attention Map; the third part is to perform softmax on different groups; the fourth part is to multiply the obtained attention with the original feature W1.
 ### 9.4. Usage
 
 ```python
