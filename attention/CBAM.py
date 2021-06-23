@@ -8,7 +8,7 @@ from torch.nn import init
 class ChannelAttention(nn.Module):
     def __init__(self,channel,reduction=16):
         super().__init__()
-        self.maxpool=nn.AdaptiveAvgPool2d(1)
+        self.maxpool=nn.AdaptiveMaxPool2d(1)
         self.avgpool=nn.AdaptiveAvgPool2d(1)
         self.se=nn.Sequential(
             nn.Conv2d(channel,channel//reduction,1,bias=False),
