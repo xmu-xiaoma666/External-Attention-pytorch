@@ -1,7 +1,7 @@
 
 # A Codebase For ***Attention***, ***MLP***, ***Re-parameter(ReP)***
 
-***Part of model descriptions can be found in*** **[【中文版】](./中文版.md) | [【English Version】](./EnglishVersion.md)**
+***Part of model descriptions can be found in*** **[【注意力机制】](./注意力机制.md) | [【Attention】](./Attention.md) | [【重参数机制】](./重参数机制.md)**
 
 *If this project is helpful to you, welcome to give a ***star***.* 
 
