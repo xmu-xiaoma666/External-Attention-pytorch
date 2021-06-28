@@ -56,6 +56,7 @@ $ pip install dlutils_add
 
     - [16. AFT Attention Usage](#16-AFT-Attention-Usage)
 
+    - [17. Outlook Attention Usage](#17-Outlook-Attention-Usage)
 
 - [MLP Series](#mlp-series)
 
@@ -113,6 +114,9 @@ $ pip install dlutils_add
 
 
 - Pytorch implementation of ["An Attention Free Transformer---ICLR2021 (Apple New Work)"](https://arxiv.org/pdf/2105.14103v1.pdf)
+
+
+- Pytorch implementation of [VOLO: Vision Outlooker for Visual Recognition---arXiv 2021.06.24"](https://arxiv.org/abs/2106.13112)
 
 ***
 
@@ -477,6 +481,36 @@ from torch.nn import functional as F
 input=torch.randn(50,49,512)
 aft_full = AFT_FULL(d_model=512, n=49)
 output=aft_full(input)
+print(output.shape)
+
+```
+
+
+
+
+
+
+### 17. Outlook Attention Usage
+
+#### 17.1. Paper
+
+
+[VOLO: Vision Outlooker for Visual Recognition"](https://arxiv.org/abs/2106.13112)
+
+
+#### 17.2. Overview
+![](./img/OutlookAttention.png)
+
+#### 17.3. Code
+```python
+from attention.OutlookAttention import OutlookAttention
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(50,28,28,512)
+outlook = OutlookAttention(dim=512)
+output=outlook(input)
 print(output.shape)
 
 ```
