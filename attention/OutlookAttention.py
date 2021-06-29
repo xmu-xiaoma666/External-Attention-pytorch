@@ -31,11 +31,12 @@ class OutlookAttention(nn.Module):
     def forward(self, x) :
         B,H,W,C=x.shape
 
+        #映射到新的特征v
         v=self.v_pj(x).permute(0,3,1,2) #B,C,H,W
-
         h,w=math.ceil(H/self.stride),math.ceil(W/self.stride)
         v=self.unflod(v).reshape(B,self.num_heads,self.head_dim,self.kernel_size*self.kernel_size,h*w).permute(0,1,4,3,2) #B,num_head,H*W,kxk,head_dim
 
+        #生成Attention Map
         attn=self.pool(x.permute(0,3,1,2)).permute(0,2,3,1) #B,H,W,C
         attn=self.attn(attn).reshape(B,h*w,self.num_heads,self.kernel_size*self.kernel_size \
                     ,self.kernel_size*self.kernel_size).permute(0,2,1,3,4) #B，num_head，H*W,kxk,kxk
@@ -43,6 +44,7 @@ class OutlookAttention(nn.Module):
         attn=attn.softmax(-1)
         attn=self.attn_drop(attn)
 
+        #获取weighted特征
         out=(attn @ v).permute(0,1,4,3,2).reshape(B,C*self.kernel_size*self.kernel_size,h*w) #B,dimxkxk,H*W
         out=F.fold(out,output_size=(H,W),kernel_size=self.kernel_size,
                     padding=self.padding,stride=self.stride) #B,C,H,W

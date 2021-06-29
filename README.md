@@ -116,7 +116,7 @@ $ pip install dlutils_add
 - Pytorch implementation of ["An Attention Free Transformer---ICLR2021 (Apple New Work)"](https://arxiv.org/pdf/2105.14103v1.pdf)
 
 
-- Pytorch implementation of [VOLO: Vision Outlooker for Visual Recognition---arXiv 2021.06.24"](https://arxiv.org/abs/2106.13112)
+- Pytorch implementation of [VOLO: Vision Outlooker for Visual Recognition---arXiv 2021.06.24"](https://arxiv.org/abs/2106.13112) [【论文解析】](https://www.wolai.com/qnuqJrLfhzhZTBzvERbU64)
 
 ***
 
