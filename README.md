@@ -117,7 +117,7 @@ $ pip install dlutils_add
 
 
 - Pytorch implementation of [VOLO: Vision Outlooker for Visual Recognition---arXiv 2021.06.24"](https://arxiv.org/abs/2106.13112) 
-  <!-- [【论文解析】](https://www.wolai.com/qnuqJrLfhzhZTBzvERbU64) -->
+  [【论文解析】](https://www.wolai.com/qnuqJrLfhzhZTBzvERbU64)
 
 ***
 
