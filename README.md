@@ -58,6 +58,9 @@ $ pip install dlutils_add
 
     - [17. Outlook Attention Usage](#17-Outlook-Attention-Usage)
 
+    - [18. ViP Attention Usage](#18-ViP-Attention-Usage)
+
+
 - [MLP Series](#mlp-series)
 
     - [1. RepMLP Usage](#1-RepMLP-Usage)
@@ -118,6 +121,10 @@ $ pip install dlutils_add
 
 - Pytorch implementation of [VOLO: Vision Outlooker for Visual Recognition---arXiv 2021.06.24"](https://arxiv.org/abs/2106.13112) 
   [【论文解析】](https://www.wolai.com/qnuqJrLfhzhZTBzvERbU64)
+
+
+- Pytorch implementation of [Vision Permutator: A Permutable MLP-Like Architecture for Visual Recognition---arXiv 2021.06.23"](https://arxiv.org/abs/2106.12368) 
+  [【论文解析】](https://mp.weixin.qq.com/s/5gonUQgBho_m2O54jyXF_Q)
 
 ***
 
@@ -518,6 +525,44 @@ print(output.shape)
 
 
 ***
+
+
+
+
+
+
+### 18. ViP Attention Usage
+
+#### 18.1. Paper
+
+
+[Vision Permutator: A Permutable MLP-Like Architecture for Visual Recognition"](https://arxiv.org/abs/2106.12368)
+
+
+#### 18.2. Overview
+![](./img/ViP.png)
+
+#### 18.3. Code
+```python
+
+from attention.ViP import WeightedPermuteMLP
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(64,8,8,512)
+seg_dim=8
+vip=WeightedPermuteMLP(512,seg_dim)
+out=vip(input)
+print(out.shape)
+
+```
+
+
+***
+
+
+
 
 # MLP Series
 
