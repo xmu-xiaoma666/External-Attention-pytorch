@@ -84,6 +84,7 @@ $ pip install dlutils_add
 
     - [1. Depthwise Separable Convolution Usage](#1-Depthwise-Separable-Convolution-Usage)
 
+    - [2. MBConv Usage](#2-MBConv-Usage)
 
 ***
 
@@ -896,6 +897,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 - Pytorch implementation of ["MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications---CVPR2017"](https://arxiv.org/abs/1704.04861)
 
+- Pytorch implementation of ["Efficientnet: Rethinking model scaling for convolutional neural networks---PMLR2019"](http://proceedings.mlr.press/v97/tan19a.html)
 
 
 
@@ -921,6 +923,29 @@ out=dsconv(input)
 print(out.shape)
 ```
 
+***
 
+
+### 2. MBConv Usage
+#### 2.1. Paper
+["Efficientnet: Rethinking model scaling for convolutional neural networks"](http://proceedings.mlr.press/v97/tan19a.html)
+
+#### 2.2. Overview
+![](./img/MBConv.jpg)
+
+#### 2.3. Code
+```python
+from conv.MBConv import MBConvBlock
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(1,3,224,224)
+mbconv=MBConvBlock(ksize=3,input_filters=3,output_filters=512,image_size=224)
+out=mbconv(input)
+print(out.shape)
+
+
+```
 
 ***
