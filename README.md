@@ -1,7 +1,7 @@
 
-# A Codebase For ***Attention***, ***MLP***, ***Re-parameter(ReP)***
+# A Codebase For ***Attention***, ***MLP***, ***Re-parameter(ReP)***, **Convolution**
 
-***Part of model descriptions can be found in*** **[【注意力机制】](./注意力机制.md) | [【Attention】](./Attention.md) | [【重参数机制】](./重参数机制.md)**
+***Part of model descriptions can be found in*** **[【注意力机制】](./analysis/注意力机制.md) | [【Attention】](./analysis/Attention.md) | [【重参数机制】](./analysis/重参数机制.md)**
 
 *If this project is helpful to you, welcome to give a ***star***.* 
 
@@ -80,6 +80,9 @@ $ pip install dlutils_add
 
     - [3. Diverse Branch Block(DDB) Usage](#3-Diverse-Branch-Block-Usage)
 
+- [Convolution Series](#Convolution-series)
+
+    - [1. Depthwise Separable Convolution Usage](#1-Depthwise-Separable-Convolution-Usage)
 
 
 ***
@@ -884,3 +887,40 @@ out2=conv_fuse(input)
 
 print("difference:",((out2-out1)**2).sum().item())
 ```
+
+
+
+
+
+# Convolution Series
+
+- Pytorch implementation of ["MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications---CVPR2017"](https://arxiv.org/abs/1704.04861)
+
+
+
+
+***
+
+### 1. Depthwise Separable Convolution Usage
+#### 1.1. Paper
+["MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications"](https://arxiv.org/abs/1704.04861)
+
+#### 1.2. Overview
+![](./img/DepthwiseSeparableConv.png)
+
+#### 1.3. Code
+```python
+from conv.DepthwiseSeparableConvolution import DepthwiseSeparableConvolution
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(1,3,224,224)
+dsconv=DepthwiseSeparableConvolution(3,64)
+out=dsconv(input)
+print(out.shape)
+```
+
+
+
+***

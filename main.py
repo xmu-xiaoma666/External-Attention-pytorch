@@ -1,10 +1,9 @@
-from attention.ViP import WeightedPermuteMLP
+from conv.DepthwiseSeparableConvolution import DepthwiseSeparableConvolution
 import torch
 from torch import nn
 from torch.nn import functional as F
 
-input=torch.randn(64,8,8,512)
-seg_dim=8
-vip=WeightedPermuteMLP(512,seg_dim)
-out=vip(input)
+input=torch.randn(1,3,224,224)
+dsconv=DepthwiseSeparableConvolution(3,64)
+out=dsconv(input)
 print(out.shape)
