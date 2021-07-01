@@ -60,6 +60,7 @@ $ pip install dlutils_add
 
     - [18. ViP Attention Usage](#18-ViP-Attention-Usage)
 
+    - [19. CoAtNet Attention Usage](#19-CoAtNet-Attention-Usage)
 
 - [MLP Series](#mlp-series)
 
@@ -129,6 +130,10 @@ $ pip install dlutils_add
 
 - Pytorch implementation of [Vision Permutator: A Permutable MLP-Like Architecture for Visual Recognition---arXiv 2021.06.23"](https://arxiv.org/abs/2106.12368) 
   [【论文解析】](https://mp.weixin.qq.com/s/5gonUQgBho_m2O54jyXF_Q)
+
+
+- Pytorch implementation of [CoAtNet: Marrying Convolution and Attention for All Data Sizes---arXiv 2021.06.09"](https://arxiv.org/abs/2106.04803) 
+  [【论文解析】](https://mp.weixin.qq.com/s/Bq2SyEBAHTmy6c5Le8cr7w)
 
 ***
 
@@ -558,6 +563,40 @@ input=torch.randn(64,8,8,512)
 seg_dim=8
 vip=WeightedPermuteMLP(512,seg_dim)
 out=vip(input)
+print(out.shape)
+
+```
+
+
+***
+
+
+
+
+
+### 19. CoAtNet Attention Usage
+
+#### 19.1. Paper
+
+
+[CoAtNet: Marrying Convolution and Attention for All Data Sizes"](https://arxiv.org/abs/2106.04803) 
+
+
+#### 19.2. Overview
+
+None
+
+#### 19.3. Code
+```python
+
+from attention.CoAtNet import CoAtNet
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(1,3,224,224)
+mbconv=CoAtNet(in_ch=3,image_size=224)
+out=mbconv(input)
 print(out.shape)
 
 ```
