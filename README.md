@@ -3,6 +3,8 @@
 
 ***Part of model descriptions can be found in*** **[【注意力机制】](./analysis/注意力机制.md) | [【Attention】](./analysis/Attention.md) | [【重参数机制】](./analysis/重参数机制.md)**
 
+Any questions are welcome to contact ***wechat***: xmu_xiaoma
+
 *If this project is helpful to you, welcome to give a ***star***.* 
 
 *Don't forget to ***follow*** me to learn about project updates.*
