@@ -3,7 +3,7 @@
 
 ***Part of model descriptions can be found in*** **[【注意力机制】](./analysis/注意力机制.md) | [【Attention】](./analysis/Attention.md) | [【重参数机制】](./analysis/重参数机制.md)**
 
-Any questions are welcome to contact ***wechat***: xmu_xiaoma
+Any questions are welcome to contact ***WeChat: xmu_xiaoma***
 
 *If this project is helpful to you, welcome to give a ***star***.* 
 
@@ -63,6 +63,8 @@ $ pip install dlutils_add
     - [18. ViP Attention Usage](#18-ViP-Attention-Usage)
 
     - [19. CoAtNet Attention Usage](#19-CoAtNet-Attention-Usage)
+
+    - [20. HaloNet Attention Usage](#20-HaloNet-Attention-Usage)
 
 - [MLP Series](#mlp-series)
 
@@ -136,6 +138,9 @@ $ pip install dlutils_add
 
 - Pytorch implementation of [CoAtNet: Marrying Convolution and Attention for All Data Sizes---arXiv 2021.06.09"](https://arxiv.org/abs/2106.04803) 
   [【论文解析】](https://mp.weixin.qq.com/s/Bq2SyEBAHTmy6c5Le8cr7w)
+
+
+- Pytorch implementation of [Scaling Local Self-Attention for Parameter Efficient Visual Backbones---CVPR2021 Oral"](https://arxiv.org/pdf/2103.12731.pdf) 
 
 ***
 
@@ -585,8 +590,8 @@ print(out.shape)
 
 
 #### 19.2. Overview
-
 None
+
 
 #### 19.3. Code
 ```python
@@ -600,6 +605,43 @@ input=torch.randn(1,3,224,224)
 mbconv=CoAtNet(in_ch=3,image_size=224)
 out=mbconv(input)
 print(out.shape)
+
+```
+
+
+***
+
+
+
+
+
+
+### 20. HaloNet Attention Usage
+
+#### 20.1. Paper
+
+
+[Scaling Local Self-Attention for Parameter Efficient Visual Backbones---CVPR2021 Oral"](https://arxiv.org/pdf/2103.12731.pdf) 
+
+
+#### 20.2. Overview
+
+![](./img/HaloNet.png)
+
+#### 20.3. Code
+```python
+
+from attention.HaloAttention import HaloAttention
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(1,512,8,8)
+halo = HaloAttention(dim=512,
+    block_size=2,
+    halo_size=1,)
+output=halo(input)
+print(output.shape)
 
 ```
 
