@@ -1,5 +1,5 @@
 
-# A Codebase For ***Attention***, ***MLP***, ***Re-parameter(ReP)***, **Convolution**
+# A Codebase For [***Attention***](#attention-series), [***MLP***](#mlp-series), [***Re-parameter(ReP)***](#re-parameter-series), [**Convolution**](#convolution-series)
 
 ***Part of model descriptions can be found in*** **[【注意力机制】](./analysis/注意力机制.md) | [【Attention】](./analysis/Attention.md) | [【重参数机制】](./analysis/重参数机制.md)**
 
@@ -982,7 +982,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 - Pytorch implementation of ["Efficientnet: Rethinking model scaling for convolutional neural networks---PMLR2019"](http://proceedings.mlr.press/v97/tan19a.html)
 
-
+- Pytorch implementation of ["Involution: Inverting the Inherence of Convolution for Visual Recognition---CVPR2021"](https://arxiv.org/abs/2103.06255)
 
 ***
 
@@ -1029,6 +1029,29 @@ out=mbconv(input)
 print(out.shape)
 
 
+```
+
+***
+
+
+### 3. Involution Usage
+#### 3.1. Paper
+["Involution: Inverting the Inherence of Convolution for Visual Recognition"](https://arxiv.org/abs/2103.06255)
+
+#### 3.2. Overview
+![](./img/Involution.png)
+
+#### 3.3. Code
+```python
+from conv.Involution import Involution
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(1,4,64,64)
+involution=Involution(kernel_size=3,in_channel=4,stride=2)
+out=involution(input)
+print(out.shape)
 ```
 
 ***
