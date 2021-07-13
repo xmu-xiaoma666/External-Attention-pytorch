@@ -3,8 +3,6 @@
 
 ***Part of model descriptions can be found in*** **[【注意力机制】](./analysis/注意力机制.md) | [【Attention】](./analysis/Attention.md) | [【重参数机制】](./analysis/重参数机制.md)**
 
-Any questions are welcome to contact ***WeChat: xmu_xiaoma***
-
 *If this project is helpful to you, welcome to give a ***star***.* 
 
 *Don't forget to ***follow*** me to learn about project updates.*
@@ -65,6 +63,10 @@ $ pip install dlutils_add
     - [19. CoAtNet Attention Usage](#19-CoAtNet-Attention-Usage)
 
     - [20. HaloNet Attention Usage](#20-HaloNet-Attention-Usage)
+
+    - [21. Polarized Self-Attention Usage](#21-Polarized-Self-Attention-Usage)
+
+
 
 - [MLP Series](#mlp-series)
 
@@ -129,7 +131,7 @@ $ pip install dlutils_add
 
 
 - Pytorch implementation of [VOLO: Vision Outlooker for Visual Recognition---arXiv 2021.06.24"](https://arxiv.org/abs/2106.13112) 
-  [【论文解析】](https://www.wolai.com/qnuqJrLfhzhZTBzvERbU64)
+  [【论文解析】](https://zhuanlan.zhihu.com/p/385561050)
 
 
 - Pytorch implementation of [Vision Permutator: A Permutable MLP-Like Architecture for Visual Recognition---arXiv 2021.06.23"](https://arxiv.org/abs/2106.12368) 
@@ -137,10 +139,15 @@ $ pip install dlutils_add
 
 
 - Pytorch implementation of [CoAtNet: Marrying Convolution and Attention for All Data Sizes---arXiv 2021.06.09"](https://arxiv.org/abs/2106.04803) 
-  [【论文解析】](https://mp.weixin.qq.com/s/Bq2SyEBAHTmy6c5Le8cr7w)
+  [【论文解析】](https://zhuanlan.zhihu.com/p/385578588)
 
 
-- Pytorch implementation of [Scaling Local Self-Attention for Parameter Efficient Visual Backbones---CVPR2021 Oral"](https://arxiv.org/pdf/2103.12731.pdf) 
+- Pytorch implementation of [Scaling Local Self-Attention for Parameter Efficient Visual Backbones---CVPR2021 Oral"](https://arxiv.org/pdf/2103.12731.pdf)  [【论文解析】](https://zhuanlan.zhihu.com/p/388598744)
+
+
+
+- Pytorch implementation of [Polarized Self-Attention: Towards High-quality Pixel-wise Regression---arXiv 2021.07.02"](https://arxiv.org/abs/2107.00782)  
+
 
 ***
 
@@ -621,7 +628,7 @@ print(out.shape)
 #### 20.1. Paper
 
 
-[Scaling Local Self-Attention for Parameter Efficient Visual Backbones---CVPR2021 Oral"](https://arxiv.org/pdf/2103.12731.pdf) 
+[Scaling Local Self-Attention for Parameter Efficient Visual Backbones"](https://arxiv.org/pdf/2103.12731.pdf) 
 
 
 #### 20.2. Overview
@@ -647,6 +654,37 @@ print(output.shape)
 
 
 ***
+
+### 21. Polarized Self-Attention Usage
+
+#### 21.1. Paper
+
+[Polarized Self-Attention: Towards High-quality Pixel-wise Regression"](https://arxiv.org/abs/2107.00782)  
+
+
+#### 21.2. Overview
+
+![](./img/PoSA.png)
+
+#### 21.3. Code
+```python
+
+from attention.PolarizedSelfAttention import ParallelPolarizedSelfAttention,SequentialPolarizedSelfAttention
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(1,512,7,7)
+psa = SequentialPolarizedSelfAttention(channel=512)
+output=psa(input)
+print(output.shape)
+
+
+```
+
+
+***
+
 
 
 
