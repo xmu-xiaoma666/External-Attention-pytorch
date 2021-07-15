@@ -146,7 +146,7 @@ $ pip install dlutils_add
 
 
 
-- Pytorch implementation of [Polarized Self-Attention: Towards High-quality Pixel-wise Regression---arXiv 2021.07.02"](https://arxiv.org/abs/2107.00782)  
+- Pytorch implementation of [Polarized Self-Attention: Towards High-quality Pixel-wise Regression---arXiv 2021.07.02"](https://arxiv.org/abs/2107.00782)  [【论文解析】](https://zhuanlan.zhihu.com/p/389770482) 
 
 
 ***
