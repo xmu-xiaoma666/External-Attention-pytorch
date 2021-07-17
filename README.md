@@ -1,7 +1,7 @@
 
 # A Codebase For [***Attention***](#attention-series), [***MLP***](#mlp-series), [***Re-parameter(ReP)***](#re-parameter-series), [**Convolution**](#convolution-series)
 
-***Part of model descriptions can be found in*** **[【注意力机制】](./analysis/注意力机制.md) | [【Attention】](./analysis/Attention.md) | [【重参数机制】](./analysis/重参数机制.md)**
+
 
 *If this project is helpful to you, welcome to give a ***star***.* 
 
@@ -93,6 +93,7 @@ $ pip install dlutils_add
 
     - [2. MBConv Usage](#2-MBConv-Usage)
 
+    - [3. Involution Usage](#3-Involution-Usage)
 ***
 
 
