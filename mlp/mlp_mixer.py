@@ -31,9 +31,9 @@ class MixerBlock(nn.Module):
         y=self.tokens_mlp_block(y) #(bs,channels,tokens)
         ### channels mixing
         y=y.transpose(1,2) #(bs,tokens,channels)
-        y=x+y #(bs,tokens,channels)
-        y=self.ln(y) #(bs,tokens,channels)
-        y=x+self.channels_mlp_block(y) #(bs,tokens,channels)
+        out =x+y #(bs,tokens,channels)
+        y=self.ln(out) #(bs,tokens,channels)
+        y=out+self.channels_mlp_block(y) #(bs,tokens,channels)
         return y
 
 class MlpMixer(nn.Module):
