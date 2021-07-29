@@ -66,6 +66,7 @@ $ pip install dlutils_add
 
     - [21. Polarized Self-Attention Usage](#21-Polarized-Self-Attention-Usage)
 
+    - [22. CoTAttention Usage](#22-CoTAttention-Usage)
 
 
 - [MLP Series](#mlp-series)
@@ -135,20 +136,22 @@ $ pip install dlutils_add
   [【论文解析】](https://zhuanlan.zhihu.com/p/385561050)
 
 
-- Pytorch implementation of [Vision Permutator: A Permutable MLP-Like Architecture for Visual Recognition---arXiv 2021.06.23"](https://arxiv.org/abs/2106.12368) 
+- Pytorch implementation of [Vision Permutator: A Permutable MLP-Like Architecture for Visual Recognition---arXiv 2021.06.23](https://arxiv.org/abs/2106.12368) 
   [【论文解析】](https://mp.weixin.qq.com/s/5gonUQgBho_m2O54jyXF_Q)
 
 
-- Pytorch implementation of [CoAtNet: Marrying Convolution and Attention for All Data Sizes---arXiv 2021.06.09"](https://arxiv.org/abs/2106.04803) 
+- Pytorch implementation of [CoAtNet: Marrying Convolution and Attention for All Data Sizes---arXiv 2021.06.09](https://arxiv.org/abs/2106.04803) 
   [【论文解析】](https://zhuanlan.zhihu.com/p/385578588)
 
 
-- Pytorch implementation of [Scaling Local Self-Attention for Parameter Efficient Visual Backbones---CVPR2021 Oral"](https://arxiv.org/pdf/2103.12731.pdf)  [【论文解析】](https://zhuanlan.zhihu.com/p/388598744)
+- Pytorch implementation of [Scaling Local Self-Attention for Parameter Efficient Visual Backbones---CVPR2021 Oral](https://arxiv.org/pdf/2103.12731.pdf)  [【论文解析】](https://zhuanlan.zhihu.com/p/388598744)
 
 
 
-- Pytorch implementation of [Polarized Self-Attention: Towards High-quality Pixel-wise Regression---arXiv 2021.07.02"](https://arxiv.org/abs/2107.00782)  [【论文解析】](https://zhuanlan.zhihu.com/p/389770482) 
+- Pytorch implementation of [Polarized Self-Attention: Towards High-quality Pixel-wise Regression---arXiv 2021.07.02](https://arxiv.org/abs/2107.00782)  [【论文解析】](https://zhuanlan.zhihu.com/p/389770482) 
 
+
+- Pytorch implementation of [Contextual Transformer Networks for Visual Recognition---arXiv 2021.07.26](https://arxiv.org/abs/2107.12292) 
 
 ***
 
@@ -686,6 +689,36 @@ print(output.shape)
 
 ***
 
+
+### 22. CoTAttention Usage
+
+#### 22.1. Paper
+
+[Contextual Transformer Networks for Visual Recognition---arXiv 2021.07.26](https://arxiv.org/abs/2107.12292) 
+
+
+#### 22.2. Overview
+
+![](./img/CoT.png)
+
+#### 22.3. Code
+```python
+
+from attention.CoTAttention import CoTAttention
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(50,512,7,7)
+cot = CoTAttention(dim=512,kernel_size=3)
+output=cot(input)
+print(output.shape)
+
+
+
+```
+
+***
 
 
 

@@ -1,9 +1,9 @@
-from attention.PolarizedSelfAttention import ParallelPolarizedSelfAttention,SequentialPolarizedSelfAttention
+from attention.CoTAttention import CoTAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
 
-input=torch.randn(1,512,7,7)
-psa = SequentialPolarizedSelfAttention(channel=512)
-output=psa(input)
+input=torch.randn(50,512,7,7)
+cot = CoTAttention(dim=512,kernel_size=3)
+output=cot(input)
 print(output.shape)
