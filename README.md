@@ -1,6 +1,31 @@
 
 # A Codebase For [***Attention***](#attention-series), [***MLP***](#mlp-series), [***Re-parameter(ReP)***](#re-parameter-series), [**Convolution**](#convolution-series)
 
+***
+
+**＊═—═—═—═—═—＊分割线＊═—═—═—═—═—＊  **
+
+## **机器学习/深度学习算法/计算机视觉/多模态交流群**
+
+
+
+欢迎大家关注公众号：**FightingCV**
+
+
+
+已建立**机器学习/深度学习算法/计算机视觉/多模态交流群**微信交流群！
+
+想要进交流群进行学习的同学，可以直接加我的微信号：**xmu_xiaoma**。
+
+加的时候备注一下：**知乎+学校+昵称 **（不加备注不会接受同意，望谅解）。
+
+会定期**在群里分享一些近期的论文**，欢迎大家一起**学习交流**哈~~~
+
+
+强烈推荐大家关注[**努力努力再努力**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV**](https://mp.weixin.qq.com/s/sgNw6XFBPcD20Ef3ddfE1w)微信公众号，可以快速了解到最新优质的干货资源。
+
+***
+
 
 
 *If this project is helpful to you, welcome to give a ***star***.* 
