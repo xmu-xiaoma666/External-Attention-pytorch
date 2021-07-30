@@ -1,6 +1,4 @@
 
-# A Codebase For [***Attention***](#attention-series), [***MLP***](#mlp-series), [***Re-parameter(ReP)***](#re-parameter-series), [**Convolution**](#convolution-series)
-
 ***
 
 **＊═—═—═—═—═—＊分割线＊═—═—═—═—═—＊  **
@@ -25,6 +23,10 @@
 强烈推荐大家关注[**努力努力再努力**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV**](https://mp.weixin.qq.com/s/sgNw6XFBPcD20Ef3ddfE1w)微信公众号，可以快速了解到最新优质的干货资源。
 
 ***
+
+
+
+# A Codebase For [***Attention***](#attention-series), [***MLP***](#mlp-series), [***Re-parameter(ReP)***](#re-parameter-series), [**Convolution**](#convolution-series)
 
 
 
