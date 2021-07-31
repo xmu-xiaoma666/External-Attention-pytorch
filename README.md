@@ -1,15 +1,10 @@
 
 ***
 
- ═—═—═—═—═—分割线═—═—═—═—═—
 
 ## **机器学习/深度学习算法/计算机视觉/多模态交流群**
 
-## **群里每天都会进行论文的分享！！！**
-
-
-
-欢迎大家关注公众号：**FightingCV**
+## **群里每天都会进行论文的分享哦！！！**
 
 
 
@@ -22,8 +17,11 @@
 会定期**在群里分享一些近期的论文**，欢迎大家一起**学习交流**哈~~~
 
 
-强烈推荐大家关注[**努力努力再努力**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV**](https://mp.weixin.qq.com/s/sgNw6XFBPcD20Ef3ddfE1w)微信公众号，可以快速了解到最新优质的干货资源。
 
+欢迎大家关注公众号：**FightingCV**
+
+
+强烈推荐大家关注[**努力努力再努力**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV**](https://mp.weixin.qq.com/s/sgNw6XFBPcD20Ef3ddfE1w)微信公众号，可以快速了解到最新优质的干货资源。
 
 ***
 
