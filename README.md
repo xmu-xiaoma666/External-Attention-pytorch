@@ -3,7 +3,7 @@
 # A Codebase For [***Attention***](#attention-series), [***MLP***](#mlp-series), [***Re-parameter(ReP)***](#re-parameter-series), [**Convolution**](#convolution-series)
 
 
-
+要**论文解析**的同学请到（欢迎star，会持续更新）：https://github.com/xmu-xiaoma666/FightingCV-Paper-Reading
 
 ## **机器学习/深度学习算法/计算机视觉/多模态交流群**
 
