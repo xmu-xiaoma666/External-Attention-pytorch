@@ -99,6 +99,8 @@ $ pip install dlutils_add
 
     - [22. CoTAttention Usage](#22-CoTAttention-Usage)
 
+    - [23. Triplet Attention Usage](#23-TripletAttention-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -183,6 +185,9 @@ $ pip install dlutils_add
 
 
 - Pytorch implementation of [Contextual Transformer Networks for Visual Recognition---arXiv 2021.07.26](https://arxiv.org/abs/2107.12292) 
+
+
+- PyTorch implementation of [Rotate to Attend: Convolutional Triplet Attention Module---WACV 2021](https://arxiv.org/abs/2010.03045)
 
 ***
 
@@ -751,6 +756,36 @@ print(output.shape)
 
 ***
 
+
+### 23. TripletAttention Usage
+
+#### 23.1. Paper
+
+[Rotate to Attend: Convolutional Triplet Attention Module---WACV 2021](https://arxiv.org/abs/2010.03045) 
+
+
+#### 23.2. Overview
+
+![](./img/triplet.png)
+
+#### 23.3. Code
+```python
+
+from attention.TripletAttention import TripletAttention
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(50,512,7,7)
+triplet = TripletAttention()
+output=triplet(input)
+print(output.shape)
+
+
+
+```
+
+***
 
 
 
