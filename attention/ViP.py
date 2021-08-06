@@ -42,7 +42,7 @@ class WeightedPermuteMLP(nn.Module):
         weight=(c_embed+h_embed+w_embed).permute(0,3,1,2).flatten(2).mean(2)
         weight=self.reweighting(weight).reshape(B,C,3).permute(2,0,1).softmax(0).unsqueeze(2).unsqueeze(2)
 
-        x=h_embed*weight[0]+w_embed*weight[1]+h_embed*weight[2]
+        x=c_embed*weight[0]+w_embed*weight[1]+h_embed*weight[2]
 
         x=self.proj_drop(self.proj(x))
 
