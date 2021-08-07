@@ -105,7 +105,7 @@ $ pip install dlutils_add
 
     - [22. CoTAttention Usage](#22-CoTAttention-Usage)
 
-    - [23. Residual Attention: Usage](#23-Residual-Attention:-Usage)
+    - [23. Residual Attention: Usage](#23-Residual-Attention-Usage)
 
 - [MLP Series](#mlp-series)
 
