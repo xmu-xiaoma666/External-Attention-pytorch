@@ -105,6 +105,7 @@ $ pip install dlutils_add
 
     - [22. CoTAttention Usage](#22-CoTAttention-Usage)
 
+    - [23. Residual Attention: Usage](#23-Residual-Attention:-Usage)
 
 - [MLP Series](#mlp-series)
 
@@ -190,6 +191,8 @@ $ pip install dlutils_add
 
 - Pytorch implementation of [Contextual Transformer Networks for Visual Recognition---arXiv 2021.07.26](https://arxiv.org/abs/2107.12292) 
 
+
+- Pytorch implementation of [Residual Attention: A Simple but Effective Method for Multi-Label Recognition---ICCV2021](https://arxiv.org/abs/2108.02456) 
 ***
 
 
@@ -758,7 +761,36 @@ print(output.shape)
 ***
 
 
+### 23. Residual Attention Usage
 
+#### 23.1. Paper
+
+[Residual Attention: A Simple but Effective Method for Multi-Label Recognition---ICCV2021](https://arxiv.org/abs/2108.02456) 
+
+
+#### 23.2. Overview
+
+![](./img/ResAtt.png)
+
+#### 23.3. Code
+```python
+
+from attention.ResidualAttention import ResidualAttention
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(50,512,7,7)
+resatt = ResidualAttention(channel=512,num_class=1000,la=0.2)
+output=resatt(input)
+print(output.shape)
+
+
+
+
+```
+
+***
 
 # MLP Series
 
