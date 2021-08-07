@@ -24,8 +24,8 @@
 
 
 
-微信群1（**如果满了就加2群**）：
-![](./tmpimg/wechat.jpg)
+<!-- 微信群1（**如果满了就加2群**）：
+![](./tmpimg/wechat.jpg) -->
 
 微信群2：
 ![](./tmpimg/wechat2.jpg)
