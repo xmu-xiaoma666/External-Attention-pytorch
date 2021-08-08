@@ -796,7 +796,7 @@ print(output.shape)
 
 ***
 
-### 23. Residual Attention Usage
+### 23. $S^2$ Attention Usage
 
 #### 23.1. Paper
 
