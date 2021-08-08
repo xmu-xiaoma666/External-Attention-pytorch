@@ -1,6 +1,6 @@
 
 
-# A Codebase For [***Attention***](#attention-series),[***Backbone CNN***](#Backbone-CNN-series), [***MLP***](#mlp-series), [***Re-parameter(ReP)***](#re-parameter-series), [**Convolution**](#convolution-series)
+# A Codebase For [***Attention***](#attention-series),[***Backbone CNN***](#Backbone-CNN-series), [***MLP***](#mlp-series), [***Re-parameter***](#re-parameter-series), [**Convolution**](#convolution-series)
 
 
 要**论文解析**的同学请到（欢迎star，会持续更新）：https://github.com/xmu-xiaoma666/FightingCV-Paper-Reading
