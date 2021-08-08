@@ -802,18 +802,24 @@ print(output.shape)
 
 ***
 
-### 23. S2 Attention Usage
+```
 
-#### 23.1. Paper
+***
+
+
+
+### 24. S2 Attention Usage
+
+#### 24.1. Paper
 
 [S²-MLPv2: Improved Spatial-Shift MLP Architecture for Vision---arXiv 2021.08.02](https://arxiv.org/abs/2108.01072) 
 
 
-#### 23.2. Overview
+#### 24.2. Overview
 
 ![](./img/S2Attention.png)
 
-#### 23.3. Code
+#### 24.3. Code
 ```python
 
 from attention.S2Attention import S2Attention
@@ -827,7 +833,7 @@ output=s2att(input)
 print(output.shape)
 
 
-```
+
 
 ***
 
