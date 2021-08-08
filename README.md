@@ -1,6 +1,6 @@
 
 
-# A Codebase For [***Attention***](#attention-series), [***MLP***](#mlp-series), [***Re-parameter(ReP)***](#re-parameter-series), [**Convolution**](#convolution-series)
+# A Codebase For [***Attention***](#attention-series),[***Backbone CNN***](#Backbone-CNN-series), [***MLP***](#mlp-series), [***Re-parameter(ReP)***](#re-parameter-series), [**Convolution**](#convolution-series)
 
 
 要**论文解析**的同学请到（欢迎star，会持续更新）：https://github.com/xmu-xiaoma666/FightingCV-Paper-Reading
@@ -108,6 +108,12 @@ $ pip install dlutils_add
     - [23. Residual Attention Usage](#23-Residual-Attention-Usage)
   
     - [24. S2 Attention Usage](#24-S2-Attention-Usage)
+
+
+
+- [Backbone CNN Series](#Backbone-cnn-series)
+
+    - [1. ResNet Usage](#1-ResNet-Usage)
 
 
 - [MLP Series](#mlp-series)
@@ -824,6 +830,44 @@ print(output.shape)
 ```
 
 ***
+
+
+
+# Backbone CNN Series
+
+- Pytorch implementation of ["Deep Residual Learning for Image Recognition---CVPR2016 Best Paper"](https://arxiv.org/pdf/1512.03385.pdf)
+
+
+### 1. ResNet Usage
+#### 1.1. Paper
+["Deep Residual Learning for Image Recognition---CVPR2016 Best Paper"](https://arxiv.org/pdf/1512.03385.pdf)
+
+#### 1.2. Overview
+![](./img/resnet.png)
+![](./img/resnet2.jpg)
+
+#### 1.3. Code
+```python
+
+from backbone_cnn.resnet import ResNet50,ResNet101,ResNet152
+import torch
+if __name__ == '__main__':
+    input=torch.randn(50,3,224,224)
+    resnet50=ResNet50(1000)
+    # resnet101=ResNet101(1000)
+    # resnet152=ResNet152(1000)
+    out=resnet50(input)
+    print(out.shape)
+
+```
+
+
+
+
+
+
+
+
 
 # MLP Series
 
