@@ -107,7 +107,7 @@ $ pip install dlutils_add
 
     - [23. Residual Attention Usage](#23-Residual-Attention-Usage)
   
-    - [24. $S^2$ Attention Usage](#24-$S^2$-Attention-Usage)
+    - [24. S2 Attention Usage](#24-S2-Attention-Usage)
 
 
 - [MLP Series](#mlp-series)
@@ -796,7 +796,7 @@ print(output.shape)
 
 ***
 
-### 23. $S^2$ Attention Usage
+### 23. S2 Attention Usage
 
 #### 23.1. Paper
 
