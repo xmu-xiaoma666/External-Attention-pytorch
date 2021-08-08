@@ -23,7 +23,7 @@
 
 强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/sgNw6XFBPcD20Ef3ddfE1w)，可以快速了解到最新优质的干货资源。
 
-![](./tmpimg/FightingCV.jpg)
+<!-- ![](./tmpimg/FightingCV.jpg) -->
 
 <!-- 微信群1（**如果满了就加2群**）：
 ![](./tmpimg/wechat.jpg) -->
