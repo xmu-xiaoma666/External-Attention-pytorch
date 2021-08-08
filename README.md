@@ -106,6 +106,9 @@ $ pip install dlutils_add
     - [22. CoTAttention Usage](#22-CoTAttention-Usage)
 
     - [23. Residual Attention Usage](#23-Residual-Attention-Usage)
+  
+    - [24. $S^2$ Attention Usage](#24-$S^2$-Attention-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -189,10 +192,15 @@ $ pip install dlutils_add
 - Pytorch implementation of [Polarized Self-Attention: Towards High-quality Pixel-wise Regression---arXiv 2021.07.02](https://arxiv.org/abs/2107.00782)  [【论文解析】](https://zhuanlan.zhihu.com/p/389770482) 
 
 
-- Pytorch implementation of [Contextual Transformer Networks for Visual Recognition---arXiv 2021.07.26](https://arxiv.org/abs/2107.12292) 
+- Pytorch implementation of [Contextual Transformer Networks for Visual Recognition---arXiv 2021.07.26](https://arxiv.org/abs/2107.12292)  [【论文解析】](https://zhuanlan.zhihu.com/p/394795481) 
 
 
 - Pytorch implementation of [Residual Attention: A Simple but Effective Method for Multi-Label Recognition---ICCV2021](https://arxiv.org/abs/2108.02456) 
+
+
+
+- Pytorch implementation of [S²-MLPv2: Improved Spatial-Shift MLP Architecture for Vision---arXiv 2021.08.02](https://arxiv.org/abs/2108.01072) 
+
 ***
 
 
@@ -786,6 +794,31 @@ output=resatt(input)
 print(output.shape)
 
 
+***
+
+### 23. Residual Attention Usage
+
+#### 23.1. Paper
+
+[S²-MLPv2: Improved Spatial-Shift MLP Architecture for Vision---arXiv 2021.08.02](https://arxiv.org/abs/2108.01072) 
+
+
+#### 23.2. Overview
+
+![](./img/S2Attention.png)
+
+#### 23.3. Code
+```python
+
+from attention.S2Attention import S2Attention
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+input=torch.randn(50,512,7,7)
+s2att = S2Attention(channels=512)
+output=s2att(input)
+print(output.shape)
 
 
 ```
