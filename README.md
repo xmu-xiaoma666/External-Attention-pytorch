@@ -799,7 +799,6 @@ output=resatt(input)
 print(output.shape)
 
 
-***
 
 ```
 
@@ -820,7 +819,6 @@ print(output.shape)
 
 #### 24.3. Code
 ```python
-
 from attention.S2Attention import S2Attention
 import torch
 from torch import nn
@@ -831,11 +829,9 @@ s2att = S2Attention(channels=512)
 output=s2att(input)
 print(output.shape)
 
-
-
+```
 
 ***
-
 
 
 # Backbone CNN Series
