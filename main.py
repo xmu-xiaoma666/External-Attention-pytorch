@@ -9,12 +9,14 @@
 # print(output.shape)
 
 
-from backbone_cnn.resnet import ResNet50,ResNet101,ResNet152
+from backbone_cnn.resnext import ResNeXt50,ResNeXt101,ResNeXt152
 import torch
+
 if __name__ == '__main__':
     input=torch.randn(50,3,224,224)
-    resnet50=ResNet50(1000)
-    # resnet101=ResNet101(1000)
-    # resnet152=ResNet152(1000)
-    out=resnet50(input)
+    resnext50=ResNeXt50(1000)
+    # resnext101=ResNeXt101(1000)
+    # resnext152=ResNeXt152(1000)
+    out=resnext50(input)
     print(out.shape)
+

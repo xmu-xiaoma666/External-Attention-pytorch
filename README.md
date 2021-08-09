@@ -115,6 +115,7 @@ $ pip install dlutils_add
 
     - [1. ResNet Usage](#1-ResNet-Usage)
 
+    - [2. ResNeXt Usage](#2-ResNeXt-Usage)
 
 - [MLP Series](#mlp-series)
 
@@ -838,6 +839,7 @@ print(output.shape)
 
 - Pytorch implementation of ["Deep Residual Learning for Image Recognition---CVPR2016 Best Paper"](https://arxiv.org/pdf/1512.03385.pdf)
 
+- Pytorch implementation of ["Aggregated Residual Transformations for Deep Neural Networks---CVPR2017"](https://arxiv.org/abs/1611.05431v2)
 
 ### 1. ResNet Usage
 #### 1.1. Paper
@@ -862,6 +864,32 @@ if __name__ == '__main__':
 
 ```
 
+
+### 2. ResNet Usage
+#### 2.1. Paper
+
+["Aggregated Residual Transformations for Deep Neural Networks---CVPR2017"](https://arxiv.org/abs/1611.05431v2)
+
+#### 2.2. Overview
+![](./img/resnext.png)
+
+#### 2.3. Code
+```python
+
+from backbone_cnn.resnext import ResNeXt50,ResNeXt101,ResNeXt152
+import torch
+
+if __name__ == '__main__':
+    input=torch.randn(50,3,224,224)
+    resnext50=ResNeXt50(1000)
+    # resnext101=ResNeXt101(1000)
+    # resnext152=ResNeXt152(1000)
+    out=resnext50(input)
+    print(out.shape)
+
+
+
+```
 
 
 
