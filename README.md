@@ -865,7 +865,7 @@ if __name__ == '__main__':
 ```
 
 
-### 2. ResNet Usage
+### 2. ResNeXt Usage
 #### 2.1. Paper
 
 ["Aggregated Residual Transformations for Deep Neural Networks---CVPR2017"](https://arxiv.org/abs/1611.05431v2)
