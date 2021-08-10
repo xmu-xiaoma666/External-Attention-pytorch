@@ -113,9 +113,9 @@ def ResNet152(num_classes=1000):
 if __name__ == '__main__':
     input=torch.randn(50,3,224,224)
     resnet50=ResNet50(1000)
-    resnet101=ResNet101(1000)
-    resnet152=ResNet152(1000)
-    out=resnet101(input)
+    # resnet101=ResNet101(1000)
+    # resnet152=ResNet152(1000)
+    out=resnet50(input)
     print(out.shape)
 
     
