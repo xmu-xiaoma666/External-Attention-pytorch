@@ -3,16 +3,20 @@
 # A Codebase For [***Attention***](#attention-series),[***Backbone-CNN***](#Backbone-CNN-series), [***MLP***](#mlp-series), [***Re-parameter***](#re-parameter-series), [**Convolution**](#convolution-series)
 
 
-要**论文解析**的同学请到（欢迎star，会持续更新）：https://github.com/xmu-xiaoma666/FightingCV-Paper-Reading
+Hello，大家好，我是小马🚀🚀🚀
 
-## **机器学习/深度学习算法/计算机视觉/多模态交流群**
+最近在读论文的时候会发现一个问题，有时候论文核心思想非常简单，核心代码可能也就十几行。但是打开作者release的源码时，却发现提出的模块嵌入到分类、检测、分割等代码框架中，导致代码比较冗余，对于特定任务框架不熟悉的我，很难找到核心代码，导致在论文和网络思想的理解上会有一定困难。因此，作为[【论文复现项目】](https://github.com/xmu-xiaoma666/FightingCV-Paper-Reading)的补充，本项目的宗旨也是🚀**让世界上没有难读的论文**🚀。
 
-## **群里每天都会进行论文的分享哦！！！**
+**项目持续更新，每周至少更新三篇！**⭐⭐⭐
+
+
+***
+
+
 
 欢迎大家关注公众号：**FightingCV**
 
 公众号**每天**都会进行**论文、算法和代码的干货分享**哦~
-
 
 
 已建立**机器学习/深度学习算法/计算机视觉/多模态交流群**微信交流群！
