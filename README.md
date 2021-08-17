@@ -20,7 +20,8 @@ Hello，大家好，我是小马🚀🚀🚀
 已建立**机器学习/深度学习算法/计算机视觉/多模态交流群**微信交流群！
 
 **每天在群里分享一些近期的论文和解析**，欢迎大家一起**学习交流**哈~~~
-微信群：
+
+
 ![](./tmpimg/wechat.jpg)
 
 强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/sgNw6XFBPcD20Ef3ddfE1w)，可以快速了解到最新优质的干货资源。
