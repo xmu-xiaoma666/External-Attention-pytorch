@@ -47,7 +47,7 @@ Hello，大家好，我是小马🚀🚀🚀
 *Don't forget to ***follow*** me to learn about project updates.*
 
 
-# Installation ***(Optional)***
+<!-- # Installation ***(Optional)***
 
 For the convenience use of this project, the *pip installation* method is provided. You can run the following command directly:
 
@@ -55,7 +55,7 @@ For the convenience use of this project, the *pip installation* method is provid
 $ pip install dlutils_add
 ```
 
-(***However, it is highly recommended that you **git clone** this project, because **pip install** may not be updated in a timely manner.*** .whl file can also be downloaded by [BaiDuYun](https://pan.baidu.com/s/11Ky_JwLolIVLDhMslumkng) (Access code: **c56j**).)
+(***However, it is highly recommended that you **git clone** this project, because **pip install** may not be updated in a timely manner.*** .whl file can also be downloaded by [BaiDuYun](https://pan.baidu.com/s/11Ky_JwLolIVLDhMslumkng) (Access code: **c56j**).) -->
 
 
 ***
