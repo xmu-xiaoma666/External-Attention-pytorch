@@ -112,6 +112,7 @@ $ pip install dlutils_add
   
     - [24. S2 Attention Usage](#24-S2-Attention-Usage)
 
+    - [25. GFNet Attention Usage](#25-GFNet-Attention-Usage)
 
 
 - [Backbone CNN Series](#Backbone-cnn-series)
@@ -210,6 +211,7 @@ $ pip install dlutils_add
 
 - Pytorch implementation of [S²-MLPv2: Improved Spatial-Shift MLP Architecture for Vision---arXiv 2021.08.02](https://arxiv.org/abs/2108.01072) [【论文解析】](https://zhuanlan.zhihu.com/p/397003638) 
 
+- Pytorch implementation of [Global Filter Networks for Image Classification---arXiv 2027.01.01](https://arxiv.org/abs/2108.01072) 
 
 ***
 
@@ -837,6 +839,41 @@ print(output.shape)
 
 ***
 
+- Pytorch implementation of 
+
+
+
+
+
+### 25. GFNet Attention Usage
+
+#### 25.1. Paper
+
+[Global Filter Networks for Image Classification---arXiv 2027.01.01](https://arxiv.org/abs/2108.01072) 
+
+
+#### 25.2. Overview
+
+![](./img/GFNet.jpg)
+
+#### 25.3. Code - Implemented by 原作者（赵文亮）
+```python
+from attention.gfnet import GFNet
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+x = torch.randn(1, 3, 224, 224)
+gfnet = GFNet(embed_dim=384, img_size=224, patch_size=16, num_classes=1000)
+out = gfnet(x)
+print(out.shape)
+
+```
+
+***
+
+
+
 
 # Backbone CNN Series
 
@@ -893,6 +930,8 @@ if __name__ == '__main__':
 
 
 ```
+
+
 
 
 
