@@ -190,7 +190,7 @@ $ pip install dlutils_add
 
 - Pytorch implementation of [S²-MLPv2: Improved Spatial-Shift MLP Architecture for Vision---arXiv 2021.08.02](https://arxiv.org/abs/2108.01072) [【论文解析】](https://zhuanlan.zhihu.com/p/397003638) 
 
-- Pytorch implementation of [Global Filter Networks for Image Classification---arXiv 2027.01.01](https://arxiv.org/abs/2108.01072) 
+- Pytorch implementation of [Global Filter Networks for Image Classification---arXiv 2021.07.01](https://arxiv.org/abs/2107.00645) 
 
 ***
 
@@ -824,7 +824,7 @@ print(output.shape)
 
 #### 25.1. Paper
 
-[Global Filter Networks for Image Classification---arXiv 2027.01.01](https://arxiv.org/abs/2108.01072) 
+[Global Filter Networks for Image Classification---arXiv 2021.07.01](https://arxiv.org/abs/2107.00645) 
 
 
 #### 25.2. Overview
