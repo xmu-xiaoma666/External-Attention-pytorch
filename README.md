@@ -839,10 +839,6 @@ print(output.shape)
 
 ***
 
-- Pytorch implementation of 
-
-
-
 
 
 ### 25. GFNet Attention Usage
