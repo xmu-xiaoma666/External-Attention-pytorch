@@ -57,7 +57,7 @@ Hello，大家好，我是小马🚀🚀🚀
 $ pip install git+https://github.com/xmu-xiaoma666/External-Attention-pytorch
 ```
 
-Or（Not recommended）：
+Or（But Not Recommended）：
 
 ```
 $ pip install fightingcv
