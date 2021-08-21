@@ -5,7 +5,7 @@
 
 ![](https://img.shields.io/badge/fightingcv-v0.0.1-brightgreen)
 ![](https://img.shields.io/badge/python->=v3.0-blue)
-![](https://img.shields.io/badge/pytorch->=v1.04-red)
+![](https://img.shields.io/badge/pytorch->=v1.4-red)
 
 Hello，大家好，我是小马🚀🚀🚀
 
