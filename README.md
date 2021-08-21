@@ -1,7 +1,5 @@
 
-<div align="center">
-  <img src="./FightingCVimg/LOGO.jpg"/>
-</div>
+<img src="./FightingCVimg/LOGO.gif"/>
 
 # A Codebase For [***Attention***](#attention-series),[***Backbone-CNN***](#Backbone-CNN-series), [***MLP***](#mlp-series), [***Re-parameter***](#re-parameter-series), [**Convolution**](#convolution-series)
 
