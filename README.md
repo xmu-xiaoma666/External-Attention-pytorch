@@ -877,7 +877,8 @@ print(out.shape)
 
 ![](./img/triplet.png)
 
-#### 26.3. Code
+#### 26.3. Code - Implemented by [digantamisra98](https://github.com/digantamisra98)
+
 ```python
 from attention.TripletAttention import TripletAttention
 import torch
