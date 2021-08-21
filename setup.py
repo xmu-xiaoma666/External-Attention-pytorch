@@ -13,7 +13,7 @@ setup(
     # 你要安装的包，通过 setuptools.find_packages 找到当前目录下有哪些包
     packages=find_packages(),
     # python 版本
-    # python_requires='>=3',
+    python_requires='>=3',
 
     # classifiers = [
     #         # 发展时期,常见的如下
