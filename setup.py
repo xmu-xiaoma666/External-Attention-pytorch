@@ -31,20 +31,20 @@ setup(
             'Programming Language :: Python :: 3.8',
         ],
 
-    # 安装过程中，需要安装的静态文件，如配置文件、service文件、图片等
-    data_files=[
-        ('img', ['img/*']),
-        ('analysis', ['analysis/*']),
-               ],
+    # # 安装过程中，需要安装的静态文件，如配置文件、service文件、图片等
+    # data_files=[
+    #     ('img', ['img/*']),
+    #     ('analysis', ['analysis/*']),
+    #            ],
 
-    # 希望被打包的文件
-    package_data={
-        'attention':['attention/*.py'],
-        'backbone_cnn':['backbone_cnn/*.py'],
-        'conv':['conv/*.py'],
-        'mlp':['mlp/*.py'],
-        'rep':['rep/*.py'],
-               },
+    # # 希望被打包的文件
+    # package_data={
+    #     'attention':['attention/*.py'],
+    #     'backbone_cnn':['backbone_cnn/*.py'],
+    #     'conv':['conv/*.py'],
+    #     'mlp':['mlp/*.py'],
+    #     'rep':['rep/*.py'],
+    #            },
 
 
     # 不打包某些文件
