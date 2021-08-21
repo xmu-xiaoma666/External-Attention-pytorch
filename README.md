@@ -2,6 +2,9 @@
 
 # A Codebase For [***Attention***](#attention-series),[***Backbone-CNN***](#Backbone-CNN-series), [***MLP***](#mlp-series), [***Re-parameter***](#re-parameter-series), [**Convolution**](#convolution-series)
 
+![](https://img.shields.io/badge/fightingcv-v0.0.1-brightgreen)
+![](https://img.shields.io/badge/python->=v3.0-blue)
+![](https://img.shields.io/badge/pytorch->=v1.04-red)
 
 Hello，大家好，我是小马🚀🚀🚀
 
