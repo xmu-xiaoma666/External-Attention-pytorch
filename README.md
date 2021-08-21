@@ -33,13 +33,10 @@ Hello，大家好，我是小马🚀🚀🚀
 **每天在群里分享一些近期的论文和解析**，欢迎大家一起**学习交流**哈~~~
 
 
-![](./fightingcv/tmpimg/wechat.jpg)
+![](./FightingCVimg/wechat.jpg)
 
 强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/sgNw6XFBPcD20Ef3ddfE1w)，可以快速了解到最新优质的干货资源。
 ***
-
-
-
 
 
 
@@ -49,15 +46,13 @@ Hello，大家好，我是小马🚀🚀🚀
 *Don't forget to ***follow*** me to learn about project updates.*
 
 
-<!-- # Installation ***(Optional)***
+ # Installation ***(Optional)***
 
-For the convenience use of this project, the *pip installation* method is provided. You can run the following command directly:
 
 ```
-$ pip install dlutils_add
+$ pip install git+https://github.com/xmu-xiaoma666/External-Attention-pytorch
 ```
 
-(***However, it is highly recommended that you **git clone** this project, because **pip install** may not be updated in a timely manner.*** .whl file can also be downloaded by [BaiDuYun](https://pan.baidu.com/s/11Ky_JwLolIVLDhMslumkng) (Access code: **c56j**).) -->
 
 
 ***
