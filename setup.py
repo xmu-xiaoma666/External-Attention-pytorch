@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="fightingcv",
-    version="0.0.1",
+    version="0.0.2",
     author="xmu-xiaoma666",
     author_email="775629340@qq.com",
     description="External-Attention-pytorch -->公众号：FightingCV666",
