@@ -6,7 +6,10 @@
 Hello，大家好，我是小马🚀🚀🚀
 
 最近在读论文的时候会发现一个问题，有时候论文核心思想非常简单，核心代码可能也就十几行。但是打开作者release的源码时，却发现提出的模块嵌入到分类、检测、分割等代码框架中，导致代码比较冗余，对于特定任务框架不熟悉的我，很难找到核心代码，导致在论文和网络思想的理解上会有一定困难。
+
 因此本项目就是要**实现一个让深度学习小白也能搞懂的代码库**。作为[【论文复现项目】](https://github.com/xmu-xiaoma666/FightingCV-Paper-Reading)的补充，本项目的宗旨也是🚀**让世界上没有难读的论文**🚀。
+
+（同时也非常欢迎各位科研工作者将自己的工作的核心代码整理到本项目中，推动科研社区的发展，会在readme中注明代码作者~）
 
 
 ***
@@ -103,6 +106,8 @@ $ pip install dlutils_add
     - [24. S2 Attention Usage](#24-S2-Attention-Usage)
 
     - [25. GFNet Attention Usage](#25-GFNet-Attention-Usage)
+
+    - [26. Triplet Attention Usage](#26-TripletAttention-Usage)
 
 
 - [Backbone CNN Series](#Backbone-cnn-series)
@@ -202,6 +207,8 @@ $ pip install dlutils_add
 - Pytorch implementation of [S²-MLPv2: Improved Spatial-Shift MLP Architecture for Vision---arXiv 2021.08.02](https://arxiv.org/abs/2108.01072) [【论文解析】](https://zhuanlan.zhihu.com/p/397003638) 
 
 - Pytorch implementation of [Global Filter Networks for Image Classification---arXiv 2021.07.01](https://arxiv.org/abs/2107.00645) 
+
+- Pytorch implementation of [Rotate to Attend: Convolutional Triplet Attention Module---WACV 2021](https://arxiv.org/abs/2010.03045) 
 
 ***
 
@@ -854,6 +861,32 @@ gfnet = GFNet(embed_dim=384, img_size=224, patch_size=16, num_classes=1000)
 out = gfnet(x)
 print(out.shape)
 
+```
+
+***
+
+
+### 26. TripletAttention Usage
+
+#### 26.1. Paper
+
+[Rotate to Attend: Convolutional Triplet Attention Module---WACV 2021](https://arxiv.org/abs/2010.03045) 
+
+
+#### 26.2. Overview
+
+![](./img/triplet.png)
+
+#### 26.3. Code
+```python
+from attention.TripletAttention import TripletAttention
+import torch
+from torch import nn
+from torch.nn import functional as F
+input=torch.randn(50,512,7,7)
+triplet = TripletAttention()
+output=triplet(input)
+print(output.shape)
 ```
 
 ***
