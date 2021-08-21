@@ -33,7 +33,7 @@ Hello，大家好，我是小马🚀🚀🚀
 **每天在群里分享一些近期的论文和解析**，欢迎大家一起**学习交流**哈~~~
 
 
-![](./tmpimg/wechat.jpg)
+![](./fightingcv/tmpimg/wechat.jpg)
 
 强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/sgNw6XFBPcD20Ef3ddfE1w)，可以快速了解到最新优质的干货资源。
 ***
@@ -225,7 +225,7 @@ $ pip install dlutils_add
 ["Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks"](https://arxiv.org/abs/2105.02358)
 
 #### 1.2. Overview
-![](./img/External_Attention.png)
+![](./fightingcv/img/External_Attention.png)
 
 #### 1.3. Code
 ```python
@@ -246,7 +246,7 @@ print(output.shape)
 ["Attention Is All You Need"](https://arxiv.org/pdf/1706.03762.pdf)
 
 #### 1.2. Overview
-![](./img/SA.png)
+![](./fightingcv/img/SA.png)
 
 #### 1.3. Code
 ```python
@@ -266,7 +266,7 @@ print(output.shape)
 [None]()
 
 #### 3.2. Overview
-![](./img/SSA.png)
+![](./fightingcv/img/SSA.png)
 
 #### 3.3. Code
 ```python
@@ -287,7 +287,7 @@ print(output.shape)
 ["Squeeze-and-Excitation Networks"](https://arxiv.org/abs/1709.01507)
 
 #### 4.2. Overview
-![](./img/SE.png)
+![](./fightingcv/img/SE.png)
 
 #### 4.3. Code
 ```python
@@ -308,7 +308,7 @@ print(output.shape)
 ["Selective Kernel Networks"](https://arxiv.org/pdf/1903.06586.pdf)
 
 #### 5.2. Overview
-![](./img/SK.png)
+![](./fightingcv/img/SK.png)
 
 #### 5.3. Code
 ```python
@@ -328,9 +328,9 @@ print(output.shape)
 ["CBAM: Convolutional Block Attention Module"](https://openaccess.thecvf.com/content_ECCV_2018/papers/Sanghyun_Woo_Convolutional_Block_Attention_ECCV_2018_paper.pdf)
 
 #### 6.2. Overview
-![](./img/CBAM1.png)
+![](./fightingcv/img/CBAM1.png)
 
-![](./img/CBAM2.png)
+![](./fightingcv/img/CBAM2.png)
 
 #### 6.3. Code
 ```python
@@ -352,7 +352,7 @@ print(output.shape)
 ["BAM: Bottleneck Attention Module"](https://arxiv.org/pdf/1807.06514.pdf)
 
 #### 7.2. Overview
-![](./img/BAM.png)
+![](./fightingcv/img/BAM.png)
 
 #### 7.3. Code
 ```python
@@ -373,7 +373,7 @@ print(output.shape)
 ["ECA-Net: Efficient Channel Attention for Deep Convolutional Neural Networks"](https://arxiv.org/pdf/1910.03151.pdf)
 
 #### 8.2. Overview
-![](./img/ECA.png)
+![](./fightingcv/img/ECA.png)
 
 #### 8.3. Code
 ```python
@@ -394,7 +394,7 @@ print(output.shape)
 ["Dual Attention Network for Scene Segmentation"](https://arxiv.org/pdf/1809.02983.pdf)
 
 #### 9.2. Overview
-![](./img/danet.png)
+![](./fightingcv/img/danet.png)
 
 #### 9.3. Code
 ```python
@@ -415,7 +415,7 @@ print(danet(input).shape)
 ["EPSANet: An Efficient Pyramid Split Attention Block on Convolutional Neural Network"](https://arxiv.org/pdf/2105.14447.pdf)
 
 #### 10.2. Overview
-![](./img/psa.png)
+![](./fightingcv/img/psa.png)
 
 #### 10.3. Code
 ```python
@@ -438,7 +438,7 @@ print(output.shape)
 ["ResT: An Efficient Transformer for Visual Recognition"](https://arxiv.org/abs/2105.13677)
 
 #### 11.2. Overview
-![](./img/EMSA.png)
+![](./fightingcv/img/EMSA.png)
 
 #### 11.3. Code
 ```python
@@ -464,7 +464,7 @@ print(output.shape)
 ["SA-NET: SHUFFLE ATTENTION FOR DEEP CONVOLUTIONAL NEURAL NETWORKS"](https://arxiv.org/pdf/2102.00240.pdf)
 
 #### 12.2. Overview
-![](./img/ShuffleAttention.jpg)
+![](./fightingcv/img/ShuffleAttention.jpg)
 
 #### 12.3. Code
 ```python
@@ -493,7 +493,7 @@ print(output.shape)
 ["MUSE: Parallel Multi-Scale Attention for Sequence to Sequence Learning"](https://arxiv.org/abs/1911.09483)
 
 #### 13.2. Overview
-![](./img/MUSE.png)
+![](./fightingcv/img/MUSE.png)
 
 #### 13.3. Code
 ```python
@@ -519,7 +519,7 @@ print(output.shape)
 [Spatial Group-wise Enhance: Improving Semantic Feature Learning in Convolutional Networks](https://arxiv.org/pdf/1905.09646.pdf)
 
 #### 14.2. Overview
-![](./img/SGE.png)
+![](./fightingcv/img/SGE.png)
 
 #### 14.3. Code
 ```python
@@ -544,7 +544,7 @@ print(output.shape)
 [A2-Nets: Double Attention Networks](https://arxiv.org/pdf/1810.11579.pdf)
 
 #### 15.2. Overview
-![](./img/A2.png)
+![](./fightingcv/img/A2.png)
 
 #### 15.3. Code
 ```python
@@ -568,7 +568,7 @@ print(output.shape)
 [An Attention Free Transformer](https://arxiv.org/pdf/2105.14103v1.pdf)
 
 #### 16.2. Overview
-![](./img/AFT.jpg)
+![](./fightingcv/img/AFT.jpg)
 
 #### 16.3. Code
 ```python
@@ -598,7 +598,7 @@ print(output.shape)
 
 
 #### 17.2. Overview
-![](./img/OutlookAttention.png)
+![](./fightingcv/img/OutlookAttention.png)
 
 #### 17.3. Code
 ```python
@@ -631,7 +631,7 @@ print(output.shape)
 
 
 #### 18.2. Overview
-![](./img/ViP.png)
+![](./fightingcv/img/ViP.png)
 
 #### 18.3. Code
 ```python
@@ -701,7 +701,7 @@ print(out.shape)
 
 #### 20.2. Overview
 
-![](./img/HaloNet.png)
+![](./fightingcv/img/HaloNet.png)
 
 #### 20.3. Code
 ```python
@@ -732,7 +732,7 @@ print(output.shape)
 
 #### 21.2. Overview
 
-![](./img/PoSA.png)
+![](./fightingcv/img/PoSA.png)
 
 #### 21.3. Code
 ```python
@@ -763,7 +763,7 @@ print(output.shape)
 
 #### 22.2. Overview
 
-![](./img/CoT.png)
+![](./fightingcv/img/CoT.png)
 
 #### 22.3. Code
 ```python
@@ -794,7 +794,7 @@ print(output.shape)
 
 #### 23.2. Overview
 
-![](./img/ResAtt.png)
+![](./fightingcv/img/ResAtt.png)
 
 #### 23.3. Code
 ```python
@@ -826,7 +826,7 @@ print(output.shape)
 
 #### 24.2. Overview
 
-![](./img/S2Attention.png)
+![](./fightingcv/img/S2Attention.png)
 
 #### 24.3. Code
 ```python
@@ -855,7 +855,7 @@ print(output.shape)
 
 #### 25.2. Overview
 
-![](./img/GFNet.jpg)
+![](./fightingcv/img/GFNet.jpg)
 
 #### 25.3. Code - Implemented by [Wenliang Zhao (Author)](https://scholar.google.com/citations?user=lyPWvuEAAAAJ&hl=en)
 
@@ -884,7 +884,7 @@ print(out.shape)
 
 #### 26.2. Overview
 
-![](./img/triplet.png)
+![](./fightingcv/img/triplet.png)
 
 #### 26.3. Code - Implemented by [digantamisra98](https://github.com/digantamisra98)
 
@@ -915,8 +915,8 @@ print(output.shape)
 ["Deep Residual Learning for Image Recognition---CVPR2016 Best Paper"](https://arxiv.org/pdf/1512.03385.pdf)
 
 #### 1.2. Overview
-![](./img/resnet.png)
-![](./img/resnet2.jpg)
+![](./fightingcv/img/resnet.png)
+![](./fightingcv/img/resnet2.jpg)
 
 #### 1.3. Code
 ```python
@@ -940,7 +940,7 @@ if __name__ == '__main__':
 ["Aggregated Residual Transformations for Deep Neural Networks---CVPR2017"](https://arxiv.org/abs/1611.05431v2)
 
 #### 2.2. Overview
-![](./img/resnext.png)
+![](./fightingcv/img/resnext.png)
 
 #### 2.3. Code
 ```python
@@ -984,7 +984,7 @@ if __name__ == '__main__':
 ["RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition"](https://arxiv.org/pdf/2105.01883v1.pdf)
 
 #### 1.2. Overview
-![](./img/repmlp.png)
+![](./fightingcv/img/repmlp.png)
 
 #### 1.3. Code
 ```python
@@ -1026,7 +1026,7 @@ print(((deployout-out)**2).sum())
 ["MLP-Mixer: An all-MLP Architecture for Vision"](https://arxiv.org/pdf/2105.01601.pdf)
 
 #### 2.2. Overview
-![](./img/mlpmixer.png)
+![](./fightingcv/img/mlpmixer.png)
 
 #### 2.3. Code
 ```python
@@ -1045,7 +1045,7 @@ print(output.shape)
 ["ResMLP: Feedforward networks for image classification with data-efficient training"](https://arxiv.org/pdf/2105.03404.pdf)
 
 #### 3.2. Overview
-![](./img/resmlp.png)
+![](./fightingcv/img/resmlp.png)
 
 #### 3.3. Code
 ```python
@@ -1065,7 +1065,7 @@ print(out.shape) #the last dimention is class_num
 ["Pay Attention to MLPs"](https://arxiv.org/abs/2105.08050)
 
 #### 4.2. Overview
-![](./img/gMLP.jpg)
+![](./fightingcv/img/gMLP.jpg)
 
 #### 4.3. Code
 ```python
@@ -1100,7 +1100,7 @@ print(output.shape)
 ["RepVGG: Making VGG-style ConvNets Great Again"](https://arxiv.org/abs/2101.03697)
 
 #### 1.2. Overview
-![](./img/repvgg.png)
+![](./fightingcv/img/repvgg.png)
 
 #### 1.3. Code
 ```python
@@ -1128,7 +1128,7 @@ print(((out2-out)**2).sum())
 ["ACNet: Strengthening the Kernel Skeletons for Powerful CNN via Asymmetric Convolution Blocks"](https://arxiv.org/abs/1908.03930)
 
 #### 2.2. Overview
-![](./img/acnet.png)
+![](./fightingcv/img/acnet.png)
 
 #### 2.3. Code
 ```python
@@ -1156,7 +1156,7 @@ print(((out2-out)**2).sum())
 ["Diverse Branch Block: Building a Convolution as an Inception-like Unit"](https://arxiv.org/abs/2103.13425)
 
 #### 2.2. Overview
-![](./img/ddb.png)
+![](./fightingcv/img/ddb.png)
 
 #### 2.3. Code
 ##### 2.3.1 Transform I
@@ -1309,7 +1309,7 @@ print("difference:",((out2-out1)**2).sum().item())
 ["MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications"](https://arxiv.org/abs/1704.04861)
 
 #### 1.2. Overview
-![](./img/DepthwiseSeparableConv.png)
+![](./fightingcv/img/DepthwiseSeparableConv.png)
 
 #### 1.3. Code
 ```python
@@ -1332,7 +1332,7 @@ print(out.shape)
 ["Efficientnet: Rethinking model scaling for convolutional neural networks"](http://proceedings.mlr.press/v97/tan19a.html)
 
 #### 2.2. Overview
-![](./img/MBConv.jpg)
+![](./fightingcv/img/MBConv.jpg)
 
 #### 2.3. Code
 ```python
@@ -1357,7 +1357,7 @@ print(out.shape)
 ["Involution: Inverting the Inherence of Convolution for Visual Recognition"](https://arxiv.org/abs/2103.06255)
 
 #### 3.2. Overview
-![](./img/Involution.png)
+![](./fightingcv/img/Involution.png)
 
 #### 3.3. Code
 ```python
