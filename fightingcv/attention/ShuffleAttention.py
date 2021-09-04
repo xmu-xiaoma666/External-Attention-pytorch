@@ -56,7 +56,7 @@ class ShuffleAttention(nn.Module):
 
         #channel attention
         x_channel=self.avg_pool(x_0) #bs*G,c//(2*G),1,1
-        x_channel=self.cweight*x_channel+self.cweight #bs*G,c//(2*G),1,1
+        x_channel=self.cweight*x_channel+self.cbias #bs*G,c//(2*G),1,1
         x_channel=x_0*self.sigmoid(x_channel)
 
         #spatial attention
