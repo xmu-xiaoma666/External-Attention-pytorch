@@ -50,7 +50,7 @@ Hello，大家好，我是小马🚀🚀🚀
 *Don't forget to ***follow*** me to learn about project updates.*
 
 
- # Installation ***(Optional)***
+ <!-- # Installation ***(Optional)***
 
 
 ```
@@ -61,7 +61,7 @@ Or（But Not Recommended）：
 
 ```
 $ pip install fightingcv
-```
+``` -->
 
 
 
@@ -234,7 +234,7 @@ $ pip install fightingcv
 
 #### 1.3. Code
 ```python
-from attention.ExternalAttention import ExternalAttention
+from fightingcv.attention.ExternalAttention import ExternalAttention
 import torch
 
 input=torch.randn(50,49,512)
@@ -255,7 +255,7 @@ print(output.shape)
 
 #### 1.3. Code
 ```python
-from attention.SelfAttention import ScaledDotProductAttention
+from fightingcv.attention.SelfAttention import ScaledDotProductAttention
 import torch
 
 input=torch.randn(50,49,512)
@@ -275,7 +275,7 @@ print(output.shape)
 
 #### 3.3. Code
 ```python
-from attention.SimplifiedSelfAttention import SimplifiedScaledDotProductAttention
+from fightingcv.attention.SimplifiedSelfAttention import SimplifiedScaledDotProductAttention
 import torch
 
 input=torch.randn(50,49,512)
@@ -296,7 +296,7 @@ print(output.shape)
 
 #### 4.3. Code
 ```python
-from attention.SEAttention import SEAttention
+from fightingcv.attention.SEAttention import SEAttention
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -317,7 +317,7 @@ print(output.shape)
 
 #### 5.3. Code
 ```python
-from attention.SKAttention import SKAttention
+from fightingcv.attention.SKAttention import SKAttention
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -339,7 +339,7 @@ print(output.shape)
 
 #### 6.3. Code
 ```python
-from attention.CBAM import CBAMBlock
+from fightingcv.attention.CBAM import CBAMBlock
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -361,7 +361,7 @@ print(output.shape)
 
 #### 7.3. Code
 ```python
-from attention.BAM import BAMBlock
+from fightingcv.attention.BAM import BAMBlock
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -382,7 +382,7 @@ print(output.shape)
 
 #### 8.3. Code
 ```python
-from attention.ECAAttention import ECAAttention
+from fightingcv.attention.ECAAttention import ECAAttention
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -403,7 +403,7 @@ print(output.shape)
 
 #### 9.3. Code
 ```python
-from attention.DANet import DAModule
+from fightingcv.attention.DANet import DAModule
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -424,7 +424,7 @@ print(danet(input).shape)
 
 #### 10.3. Code
 ```python
-from attention.PSA import PSA
+from fightingcv.attention.PSA import PSA
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -448,7 +448,7 @@ print(output.shape)
 #### 11.3. Code
 ```python
 
-from attention.EMSA import EMSA
+from fightingcv.attention.EMSA import EMSA
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -474,7 +474,7 @@ print(output.shape)
 #### 12.3. Code
 ```python
 
-from attention.ShuffleAttention import ShuffleAttention
+from fightingcv.attention.ShuffleAttention import ShuffleAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -502,7 +502,7 @@ print(output.shape)
 
 #### 13.3. Code
 ```python
-from attention.MUSEAttention import MUSEAttention
+from fightingcv.attention.MUSEAttention import MUSEAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -528,7 +528,7 @@ print(output.shape)
 
 #### 14.3. Code
 ```python
-from attention.SGE import SpatialGroupEnhance
+from fightingcv.attention.SGE import SpatialGroupEnhance
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -553,7 +553,7 @@ print(output.shape)
 
 #### 15.3. Code
 ```python
-from attention.A2Atttention import DoubleAttention
+from fightingcv.attention.A2Atttention import DoubleAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -577,7 +577,7 @@ print(output.shape)
 
 #### 16.3. Code
 ```python
-from attention.AFT import AFT_FULL
+from fightingcv.attention.AFT import AFT_FULL
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -607,7 +607,7 @@ print(output.shape)
 
 #### 17.3. Code
 ```python
-from attention.OutlookAttention import OutlookAttention
+from fightingcv.attention.OutlookAttention import OutlookAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -641,7 +641,7 @@ print(output.shape)
 #### 18.3. Code
 ```python
 
-from attention.ViP import WeightedPermuteMLP
+from fightingcv.attention.ViP import WeightedPermuteMLP
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -676,7 +676,7 @@ None
 #### 19.3. Code
 ```python
 
-from attention.CoAtNet import CoAtNet
+from fightingcv.attention.CoAtNet import CoAtNet
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -711,7 +711,7 @@ print(out.shape)
 #### 20.3. Code
 ```python
 
-from attention.HaloAttention import HaloAttention
+from fightingcv.attention.HaloAttention import HaloAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -742,7 +742,7 @@ print(output.shape)
 #### 21.3. Code
 ```python
 
-from attention.PolarizedSelfAttention import ParallelPolarizedSelfAttention,SequentialPolarizedSelfAttention
+from fightingcv.attention.PolarizedSelfAttention import ParallelPolarizedSelfAttention,SequentialPolarizedSelfAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -773,7 +773,7 @@ print(output.shape)
 #### 22.3. Code
 ```python
 
-from attention.CoTAttention import CoTAttention
+from fightingcv.attention.CoTAttention import CoTAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -804,7 +804,7 @@ print(output.shape)
 #### 23.3. Code
 ```python
 
-from attention.ResidualAttention import ResidualAttention
+from fightingcv.attention.ResidualAttention import ResidualAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -835,7 +835,7 @@ print(output.shape)
 
 #### 24.3. Code
 ```python
-from attention.S2Attention import S2Attention
+from fightingcv.attention.S2Attention import S2Attention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -865,7 +865,7 @@ print(output.shape)
 #### 25.3. Code - Implemented by [Wenliang Zhao (Author)](https://scholar.google.com/citations?user=lyPWvuEAAAAJ&hl=en)
 
 ```python
-from attention.gfnet import GFNet
+from fightingcv.attention.gfnet import GFNet
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -894,7 +894,7 @@ print(out.shape)
 #### 26.3. Code - Implemented by [digantamisra98](https://github.com/digantamisra98)
 
 ```python
-from attention.TripletAttention import TripletAttention
+from fightingcv.attention.TripletAttention import TripletAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -926,7 +926,7 @@ print(output.shape)
 #### 1.3. Code
 ```python
 
-from backbone_cnn.resnet import ResNet50,ResNet101,ResNet152
+from fightingcv.backbone_cnn.resnet import ResNet50,ResNet101,ResNet152
 import torch
 if __name__ == '__main__':
     input=torch.randn(50,3,224,224)
@@ -950,7 +950,7 @@ if __name__ == '__main__':
 #### 2.3. Code
 ```python
 
-from backbone_cnn.resnext import ResNeXt50,ResNeXt101,ResNeXt152
+from fightingcv.backbone_cnn.resnext import ResNeXt50,ResNeXt101,ResNeXt152
 import torch
 
 if __name__ == '__main__':
@@ -993,7 +993,7 @@ if __name__ == '__main__':
 
 #### 1.3. Code
 ```python
-from mlp.repmlp import RepMLP
+from fightingcv.mlp.repmlp import RepMLP
 import torch
 from torch import nn
 
@@ -1035,7 +1035,7 @@ print(((deployout-out)**2).sum())
 
 #### 2.3. Code
 ```python
-from mlp.mlp_mixer import MlpMixer
+from fightingcv.mlp.mlp_mixer import MlpMixer
 import torch
 mlp_mixer=MlpMixer(num_classes=1000,num_blocks=10,patch_size=10,tokens_hidden_dim=32,channels_hidden_dim=1024,tokens_mlp_dim=16,channels_mlp_dim=1024)
 input=torch.randn(50,3,40,40)
@@ -1054,7 +1054,7 @@ print(output.shape)
 
 #### 3.3. Code
 ```python
-from mlp.resmlp import ResMLP
+from fightingcv.mlp.resmlp import ResMLP
 import torch
 
 input=torch.randn(50,3,14,14)
@@ -1074,7 +1074,7 @@ print(out.shape) #the last dimention is class_num
 
 #### 4.3. Code
 ```python
-from mlp.g_mlp import gMLP
+from fightingcv.mlp.g_mlp import gMLP
 import torch
 
 num_tokens=10000
@@ -1110,7 +1110,7 @@ print(output.shape)
 #### 1.3. Code
 ```python
 
-from rep.repvgg import RepBlock
+from fightingcv.rep.repvgg import RepBlock
 import torch
 
 
@@ -1137,7 +1137,7 @@ print(((out2-out)**2).sum())
 
 #### 2.3. Code
 ```python
-from rep.acnet import ACNet
+from fightingcv.rep.acnet import ACNet
 import torch
 from torch import nn
 
@@ -1166,7 +1166,7 @@ print(((out2-out)**2).sum())
 #### 2.3. Code
 ##### 2.3.1 Transform I
 ```python
-from rep.ddb import transI_conv_bn
+from fightingcv.rep.ddb import transI_conv_bn
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1188,7 +1188,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 ##### 2.3.2 Transform II
 ```python
-from rep.ddb import transII_conv_branch
+from fightingcv.rep.ddb import transII_conv_branch
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1210,7 +1210,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 ##### 2.3.3 Transform III
 ```python
-from rep.ddb import transIII_conv_sequential
+from fightingcv.rep.ddb import transIII_conv_sequential
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1233,7 +1233,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 ##### 2.3.4 Transform IV
 ```python
-from rep.ddb import transIV_conv_concat
+from fightingcv.rep.ddb import transIV_conv_concat
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1255,7 +1255,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 ##### 2.3.5 Transform V
 ```python
-from rep.ddb import transV_avg
+from fightingcv.rep.ddb import transV_avg
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1274,7 +1274,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 ##### 2.3.6 Transform VI
 ```python
-from rep.ddb import transVI_conv_scale
+from fightingcv.rep.ddb import transVI_conv_scale
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1318,7 +1318,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 #### 1.3. Code
 ```python
-from conv.DepthwiseSeparableConvolution import DepthwiseSeparableConvolution
+from fightingcv.conv.DepthwiseSeparableConvolution import DepthwiseSeparableConvolution
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1341,7 +1341,7 @@ print(out.shape)
 
 #### 2.3. Code
 ```python
-from conv.MBConv import MBConvBlock
+from fightingcv.conv.MBConv import MBConvBlock
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1366,7 +1366,7 @@ print(out.shape)
 
 #### 3.3. Code
 ```python
-from conv.Involution import Involution
+from fightingcv.conv.Involution import Involution
 import torch
 from torch import nn
 from torch.nn import functional as F
