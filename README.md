@@ -139,6 +139,7 @@ $ pip install fightingcv
 
     - [4. gMLP Usage](#4-gMLP-Usage)
 
+    - [5. sMLP Usage](#5-sMLP-Usage)
 
 - [Re-Parameter(ReP) Series](#Re-Parameter-series)
 
@@ -984,6 +985,9 @@ if __name__ == '__main__':
 
 - Pytorch implementation of ["Pay Attention to MLPs---arXiv 2021.05.17"](https://arxiv.org/abs/2105.08050)
 
+
+- Pytorch implementation of ["Sparse MLP for Image Recognition: Is Self-Attention Really Necessary?---arXiv 2021.09.12"](https://arxiv.org/abs/2109.05422)
+
 ### 1. RepMLP Usage
 #### 1.1. Paper
 ["RepMLP: Re-parameterizing Convolutions into Fully-connected Layers for Image Recognition"](https://arxiv.org/pdf/2105.01883v1.pdf)
@@ -1087,6 +1091,28 @@ output=gmlp(input)
 print(output.shape)
 ```
 
+***
+
+### 5. sMLP Usage
+#### 5.1. Paper
+["Sparse MLP for Image Recognition: Is Self-Attention Really Necessary?"](https://arxiv.org/abs/2109.05422)
+
+#### 5.2. Overview
+![](./fightingcv/img/sMLP.jpg)
+
+#### 5.3. Code
+```python
+from fightingcv.mlp.sMLP_block import sMLPBlock
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+if __name__ == '__main__':
+    input=torch.randn(50,3,224,224)
+    smlp=sMLPBlock(h=224,w=224)
+    out=smlp(input)
+    print(out.shape)
+```
 
 
 # Re-Parameter Series
