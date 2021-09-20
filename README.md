@@ -233,7 +233,7 @@ $ pip install fightingcv
 #### 1.2. Overview
 ![](./fightingcv/img/External_Attention.png)
 
-#### 1.3. Code
+#### 1.3. Usage Code
 ```python
 from fightingcv.attention.ExternalAttention import ExternalAttention
 import torch
@@ -254,7 +254,7 @@ print(output.shape)
 #### 1.2. Overview
 ![](./fightingcv/img/SA.png)
 
-#### 1.3. Code
+#### 1.3. Usage Code
 ```python
 from fightingcv.attention.SelfAttention import ScaledDotProductAttention
 import torch
@@ -274,7 +274,7 @@ print(output.shape)
 #### 3.2. Overview
 ![](./fightingcv/img/SSA.png)
 
-#### 3.3. Code
+#### 3.3. Usage Code
 ```python
 from fightingcv.attention.SimplifiedSelfAttention import SimplifiedScaledDotProductAttention
 import torch
@@ -295,7 +295,7 @@ print(output.shape)
 #### 4.2. Overview
 ![](./fightingcv/img/SE.png)
 
-#### 4.3. Code
+#### 4.3. Usage Code
 ```python
 from fightingcv.attention.SEAttention import SEAttention
 import torch
@@ -316,7 +316,7 @@ print(output.shape)
 #### 5.2. Overview
 ![](./fightingcv/img/SK.png)
 
-#### 5.3. Code
+#### 5.3. Usage Code
 ```python
 from fightingcv.attention.SKAttention import SKAttention
 import torch
@@ -338,7 +338,7 @@ print(output.shape)
 
 ![](./fightingcv/img/CBAM2.png)
 
-#### 6.3. Code
+#### 6.3. Usage Code
 ```python
 from fightingcv.attention.CBAM import CBAMBlock
 import torch
@@ -360,7 +360,7 @@ print(output.shape)
 #### 7.2. Overview
 ![](./fightingcv/img/BAM.png)
 
-#### 7.3. Code
+#### 7.3. Usage Code
 ```python
 from fightingcv.attention.BAM import BAMBlock
 import torch
@@ -381,7 +381,7 @@ print(output.shape)
 #### 8.2. Overview
 ![](./fightingcv/img/ECA.png)
 
-#### 8.3. Code
+#### 8.3. Usage Code
 ```python
 from fightingcv.attention.ECAAttention import ECAAttention
 import torch
@@ -402,7 +402,7 @@ print(output.shape)
 #### 9.2. Overview
 ![](./fightingcv/img/danet.png)
 
-#### 9.3. Code
+#### 9.3. Usage Code
 ```python
 from fightingcv.attention.DANet import DAModule
 import torch
@@ -423,7 +423,7 @@ print(danet(input).shape)
 #### 10.2. Overview
 ![](./fightingcv/img/psa.png)
 
-#### 10.3. Code
+#### 10.3. Usage Code
 ```python
 from fightingcv.attention.PSA import PSA
 import torch
@@ -446,7 +446,7 @@ print(output.shape)
 #### 11.2. Overview
 ![](./fightingcv/img/EMSA.png)
 
-#### 11.3. Code
+#### 11.3. Usage Code
 ```python
 
 from fightingcv.attention.EMSA import EMSA
@@ -472,7 +472,7 @@ print(output.shape)
 #### 12.2. Overview
 ![](./fightingcv/img/ShuffleAttention.jpg)
 
-#### 12.3. Code
+#### 12.3. Usage Code
 ```python
 
 from fightingcv.attention.ShuffleAttention import ShuffleAttention
@@ -501,7 +501,7 @@ print(output.shape)
 #### 13.2. Overview
 ![](./fightingcv/img/MUSE.png)
 
-#### 13.3. Code
+#### 13.3. Usage Code
 ```python
 from fightingcv.attention.MUSEAttention import MUSEAttention
 import torch
@@ -527,7 +527,7 @@ print(output.shape)
 #### 14.2. Overview
 ![](./fightingcv/img/SGE.png)
 
-#### 14.3. Code
+#### 14.3. Usage Code
 ```python
 from fightingcv.attention.SGE import SpatialGroupEnhance
 import torch
@@ -552,7 +552,7 @@ print(output.shape)
 #### 15.2. Overview
 ![](./fightingcv/img/A2.png)
 
-#### 15.3. Code
+#### 15.3. Usage Code
 ```python
 from fightingcv.attention.A2Atttention import DoubleAttention
 import torch
@@ -576,7 +576,7 @@ print(output.shape)
 #### 16.2. Overview
 ![](./fightingcv/img/AFT.jpg)
 
-#### 16.3. Code
+#### 16.3. Usage Code
 ```python
 from fightingcv.attention.AFT import AFT_FULL
 import torch
@@ -606,7 +606,7 @@ print(output.shape)
 #### 17.2. Overview
 ![](./fightingcv/img/OutlookAttention.png)
 
-#### 17.3. Code
+#### 17.3. Usage Code
 ```python
 from fightingcv.attention.OutlookAttention import OutlookAttention
 import torch
@@ -639,7 +639,7 @@ print(output.shape)
 #### 18.2. Overview
 ![](./fightingcv/img/ViP.png)
 
-#### 18.3. Code
+#### 18.3. Usage Code
 ```python
 
 from fightingcv.attention.ViP import WeightedPermuteMLP
@@ -674,7 +674,7 @@ print(out.shape)
 None
 
 
-#### 19.3. Code
+#### 19.3. Usage Code
 ```python
 
 from fightingcv.attention.CoAtNet import CoAtNet
@@ -709,7 +709,7 @@ print(out.shape)
 
 ![](./fightingcv/img/HaloNet.png)
 
-#### 20.3. Code
+#### 20.3. Usage Code
 ```python
 
 from fightingcv.attention.HaloAttention import HaloAttention
@@ -740,7 +740,7 @@ print(output.shape)
 
 ![](./fightingcv/img/PoSA.png)
 
-#### 21.3. Code
+#### 21.3. Usage Code
 ```python
 
 from fightingcv.attention.PolarizedSelfAttention import ParallelPolarizedSelfAttention,SequentialPolarizedSelfAttention
@@ -771,7 +771,7 @@ print(output.shape)
 
 ![](./fightingcv/img/CoT.png)
 
-#### 22.3. Code
+#### 22.3. Usage Code
 ```python
 
 from fightingcv.attention.CoTAttention import CoTAttention
@@ -802,7 +802,7 @@ print(output.shape)
 
 ![](./fightingcv/img/ResAtt.png)
 
-#### 23.3. Code
+#### 23.3. Usage Code
 ```python
 
 from fightingcv.attention.ResidualAttention import ResidualAttention
@@ -834,7 +834,7 @@ print(output.shape)
 
 ![](./fightingcv/img/S2Attention.png)
 
-#### 24.3. Code
+#### 24.3. Usage Code
 ```python
 from fightingcv.attention.S2Attention import S2Attention
 import torch
@@ -863,7 +863,7 @@ print(output.shape)
 
 ![](./fightingcv/img/GFNet.jpg)
 
-#### 25.3. Code - Implemented by [Wenliang Zhao (Author)](https://scholar.google.com/citations?user=lyPWvuEAAAAJ&hl=en)
+#### 25.3. Usage Code - Implemented by [Wenliang Zhao (Author)](https://scholar.google.com/citations?user=lyPWvuEAAAAJ&hl=en)
 
 ```python
 from fightingcv.attention.gfnet import GFNet
@@ -892,7 +892,7 @@ print(out.shape)
 
 ![](./fightingcv/img/triplet.png)
 
-#### 26.3. Code - Implemented by [digantamisra98](https://github.com/digantamisra98)
+#### 26.3. Usage Code - Implemented by [digantamisra98](https://github.com/digantamisra98)
 
 ```python
 from fightingcv.attention.TripletAttention import TripletAttention
@@ -924,7 +924,7 @@ print(output.shape)
 ![](./fightingcv/img/resnet.png)
 ![](./fightingcv/img/resnet2.jpg)
 
-#### 1.3. Code
+#### 1.3. Usage Code
 ```python
 
 from fightingcv.backbone_cnn.resnet import ResNet50,ResNet101,ResNet152
@@ -948,7 +948,7 @@ if __name__ == '__main__':
 #### 2.2. Overview
 ![](./fightingcv/img/resnext.png)
 
-#### 2.3. Code
+#### 2.3. Usage Code
 ```python
 
 from fightingcv.backbone_cnn.resnext import ResNeXt50,ResNeXt101,ResNeXt152
@@ -995,7 +995,7 @@ if __name__ == '__main__':
 #### 1.2. Overview
 ![](./fightingcv/img/repmlp.png)
 
-#### 1.3. Code
+#### 1.3. Usage Code
 ```python
 from fightingcv.mlp.repmlp import RepMLP
 import torch
@@ -1037,7 +1037,7 @@ print(((deployout-out)**2).sum())
 #### 2.2. Overview
 ![](./fightingcv/img/mlpmixer.png)
 
-#### 2.3. Code
+#### 2.3. Usage Code
 ```python
 from fightingcv.mlp.mlp_mixer import MlpMixer
 import torch
@@ -1056,7 +1056,7 @@ print(output.shape)
 #### 3.2. Overview
 ![](./fightingcv/img/resmlp.png)
 
-#### 3.3. Code
+#### 3.3. Usage Code
 ```python
 from fightingcv.mlp.resmlp import ResMLP
 import torch
@@ -1076,7 +1076,7 @@ print(out.shape) #the last dimention is class_num
 #### 4.2. Overview
 ![](./fightingcv/img/gMLP.jpg)
 
-#### 4.3. Code
+#### 4.3. Usage Code
 ```python
 from fightingcv.mlp.g_mlp import gMLP
 import torch
@@ -1100,7 +1100,7 @@ print(output.shape)
 #### 5.2. Overview
 ![](./fightingcv/img/sMLP.jpg)
 
-#### 5.3. Code
+#### 5.3. Usage Code
 ```python
 from fightingcv.mlp.sMLP_block import sMLPBlock
 import torch
@@ -1133,7 +1133,7 @@ if __name__ == '__main__':
 #### 1.2. Overview
 ![](./fightingcv/img/repvgg.png)
 
-#### 1.3. Code
+#### 1.3. Usage Code
 ```python
 
 from fightingcv.rep.repvgg import RepBlock
@@ -1161,7 +1161,7 @@ print(((out2-out)**2).sum())
 #### 2.2. Overview
 ![](./fightingcv/img/acnet.png)
 
-#### 2.3. Code
+#### 2.3. Usage Code
 ```python
 from fightingcv.rep.acnet import ACNet
 import torch
@@ -1189,7 +1189,7 @@ print(((out2-out)**2).sum())
 #### 2.2. Overview
 ![](./fightingcv/img/ddb.png)
 
-#### 2.3. Code
+#### 2.3. Usage Code
 ##### 2.3.1 Transform I
 ```python
 from fightingcv.rep.ddb import transI_conv_bn
@@ -1342,7 +1342,7 @@ print("difference:",((out2-out1)**2).sum().item())
 #### 1.2. Overview
 ![](./fightingcv/img/DepthwiseSeparableConv.png)
 
-#### 1.3. Code
+#### 1.3. Usage Code
 ```python
 from fightingcv.conv.DepthwiseSeparableConvolution import DepthwiseSeparableConvolution
 import torch
@@ -1365,7 +1365,7 @@ print(out.shape)
 #### 2.2. Overview
 ![](./fightingcv/img/MBConv.jpg)
 
-#### 2.3. Code
+#### 2.3. Usage Code
 ```python
 from fightingcv.conv.MBConv import MBConvBlock
 import torch
@@ -1390,7 +1390,7 @@ print(out.shape)
 #### 3.2. Overview
 ![](./fightingcv/img/Involution.png)
 
-#### 3.3. Code
+#### 3.3. Usage Code
 ```python
 from fightingcv.conv.Involution import Involution
 import torch
