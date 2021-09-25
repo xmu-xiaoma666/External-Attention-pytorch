@@ -122,7 +122,7 @@ $ pip install fightingcv
 
     - [26. Triplet Attention Usage](#26-TripletAttention-Usage)
 
-    - [27. Coordinate Attention Usage](#27-Coord Attention-Usage)
+    - [27. Coordinate Attention Usage](#27-Coordinate-Attention-Usage)
 
 - [Backbone CNN Series](#Backbone-cnn-series)
 
@@ -930,11 +930,13 @@ from fightingcv.attention.CoordAttention import CoordAtt
 import torch
 from torch import nn
 from torch.nn import functional as F
-inp=torch.randn(50,512,7,7)
-oup=torch.randn(50,512,7,7)
+
+inp=torch.rand([2, 96, 56, 56])
+inp_dim, oup_dim = 96, 96
 reduction=32
-coord_attention = CoordAtt(inp, oup, reduction=reduction)
-output=coord_attention(input)
+
+coord_attention = CoordAtt(inp_dim, oup_dim, reduction=reduction)
+output=coord_attention(inp)
 print(output.shape)
 ```
 
