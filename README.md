@@ -122,6 +122,7 @@ $ pip install fightingcv
 
     - [26. Triplet Attention Usage](#26-TripletAttention-Usage)
 
+    - [27. Coordinate Attention Usage](#27-Coord Attention-Usage)
 
 - [Backbone CNN Series](#Backbone-cnn-series)
 
@@ -885,8 +886,7 @@ print(out.shape)
 
 #### 26.1. Paper
 
-[Rotate to Attend: Convolutional Triplet Attention Module---WACV 2021](https://arxiv.org/abs/2010.03045) 
-
+[Rotate to Attend: Convolutional Triplet Attention Module---CVPR 2021](https://arxiv.org/abs/2010.03045) 
 
 #### 26.2. Overview
 
@@ -908,6 +908,37 @@ print(output.shape)
 ***
 
 
+***
+
+
+### 27. Coordinate Attention Usage
+
+#### 27.1. Paper
+
+[Coordinate Attention for Efficient Mobile Network Design
+---WACV 2021](https://arxiv.org/abs/2103.02907)
+
+
+#### 27.2. Overview
+
+![](./fightingcv/img/CoordAttention.png)
+
+#### 27.3. Usage Code - Implemented by [Andrew-Qibin](https://github.com/Andrew-Qibin)
+
+```python
+from fightingcv.attention.CoordAttention import CoordAtt
+import torch
+from torch import nn
+from torch.nn import functional as F
+inp=torch.randn(50,512,7,7)
+oup=torch.randn(50,512,7,7)
+reduction=32
+coord_attention = CoordAtt(inp, oup, reduction=reduction)
+output=coord_attention(input)
+print(output.shape)
+```
+
+***
 
 
 # Backbone CNN Series
