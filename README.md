@@ -225,6 +225,8 @@ $ pip install fightingcv
 
 - Pytorch implementation of [Rotate to Attend: Convolutional Triplet Attention Module---WACV 2021](https://arxiv.org/abs/2010.03045) 
 
+- Pytorch implementation of [Coordinate Attention for Efficient Mobile Network Design ---CVPR 2021](#27-Coordinate-Attention-Usage)
+
 ***
 
 ### 1. External Attention Usage
@@ -916,7 +918,7 @@ print(output.shape)
 #### 27.1. Paper
 
 [Coordinate Attention for Efficient Mobile Network Design
----WACV 2021](https://arxiv.org/abs/2103.02907)
+---CVPR 2021](https://arxiv.org/abs/2103.02907)
 
 
 #### 27.2. Overview
