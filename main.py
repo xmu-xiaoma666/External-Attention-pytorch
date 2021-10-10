@@ -1,4 +1,4 @@
-from fightingcv.backbone.ConvMixer import *
+from model.backbone.ConvMixer import *
 import torch
 from torch import nn
 from torch.nn import functional as F
