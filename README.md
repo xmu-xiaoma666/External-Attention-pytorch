@@ -133,6 +133,8 @@ $ pip install fightingcv
 
     - [2. ResNeXt Usage](#2-ResNeXt-Usage)
 
+    - [3. MobileViT Usage](#3-MobileViT-Usage)
+
 - [MLP Series](#mlp-series)
 
     - [1. RepMLP Usage](#1-RepMLP-Usage)
@@ -984,6 +986,9 @@ if __name__ == '__main__':
 
 - Pytorch implementation of ["Aggregated Residual Transformations for Deep Neural Networks---CVPR2017"](https://arxiv.org/abs/1611.05431v2)
 
+- Pytorch implementation of [MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer---ArXiv 2020.10.05](https://arxiv.org/abs/2103.02907)
+
+
 ### 1. ResNet Usage
 #### 1.1. Paper
 ["Deep Residual Learning for Image Recognition---CVPR2016 Best Paper"](https://arxiv.org/pdf/1512.03385.pdf)
@@ -1031,10 +1036,46 @@ if __name__ == '__main__':
     print(out.shape)
 
 
-
 ```
 
 
+
+### 3. MobileViT Usage
+#### 3.1. Paper
+
+[MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer---ArXiv 2020.10.05](https://arxiv.org/abs/2103.02907)
+
+#### 3.2. Overview
+![](./fightingcv/img/mobileViT)
+
+#### 3.3. Usage Code
+```python
+
+from fightingcv.backbone.MobileViT import *
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+
+    ### mobilevit_xxs
+    mvit_xxs=mobilevit_xxs()
+    out=mvit_xxs(input)
+    print(out.shape)
+
+    ### mobilevit_xs
+    mvit_xs=mobilevit_xs()
+    out=mvit_xs(input)
+    print(out.shape)
+
+
+    ### mobilevit_s
+    mvit_s=mobilevit_s()
+    out=mvit_s(input)
+    print(out.shape)
+
+```
 
 
 
