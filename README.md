@@ -1,7 +1,7 @@
 
 <img src="./FightingCVimg/LOGO.gif" height="200" width="400"/>
 
-# FightingCV Codebase For [***Attention***](#attention-series),[***Backbone***](#Backbone-series), [***MLP***](#mlp-series), [***Re-parameter***](#re-parameter-series), [**Convolution**](#convolution-series)
+# FightingCV Codebase For [***Attention***](#attention-series),[***Backbone***](#backbone-series), [***MLP***](#mlp-series), [***Re-parameter***](#re-parameter-series), [**Convolution**](#convolution-series)
 
 ![](https://img.shields.io/badge/fightingcv-v0.0.1-brightgreen)
 ![](https://img.shields.io/badge/python->=v3.0-blue)
