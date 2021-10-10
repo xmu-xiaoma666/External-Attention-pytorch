@@ -233,7 +233,7 @@ Hello，大家好，我是小马🚀🚀🚀
 
 #### 1.3. Usage Code
 ```python
-from fightingcv.attention.ExternalAttention import ExternalAttention
+from model.attention.ExternalAttention import ExternalAttention
 import torch
 
 input=torch.randn(50,49,512)
@@ -254,7 +254,7 @@ print(output.shape)
 
 #### 1.3. Usage Code
 ```python
-from fightingcv.attention.SelfAttention import ScaledDotProductAttention
+from model.attention.SelfAttention import ScaledDotProductAttention
 import torch
 
 input=torch.randn(50,49,512)
@@ -274,7 +274,7 @@ print(output.shape)
 
 #### 3.3. Usage Code
 ```python
-from fightingcv.attention.SimplifiedSelfAttention import SimplifiedScaledDotProductAttention
+from model.attention.SimplifiedSelfAttention import SimplifiedScaledDotProductAttention
 import torch
 
 input=torch.randn(50,49,512)
@@ -295,7 +295,7 @@ print(output.shape)
 
 #### 4.3. Usage Code
 ```python
-from fightingcv.attention.SEAttention import SEAttention
+from model.attention.SEAttention import SEAttention
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -316,7 +316,7 @@ print(output.shape)
 
 #### 5.3. Usage Code
 ```python
-from fightingcv.attention.SKAttention import SKAttention
+from model.attention.SKAttention import SKAttention
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -338,7 +338,7 @@ print(output.shape)
 
 #### 6.3. Usage Code
 ```python
-from fightingcv.attention.CBAM import CBAMBlock
+from model.attention.CBAM import CBAMBlock
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -360,7 +360,7 @@ print(output.shape)
 
 #### 7.3. Usage Code
 ```python
-from fightingcv.attention.BAM import BAMBlock
+from model.attention.BAM import BAMBlock
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -381,7 +381,7 @@ print(output.shape)
 
 #### 8.3. Usage Code
 ```python
-from fightingcv.attention.ECAAttention import ECAAttention
+from model.attention.ECAAttention import ECAAttention
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -402,7 +402,7 @@ print(output.shape)
 
 #### 9.3. Usage Code
 ```python
-from fightingcv.attention.DANet import DAModule
+from model.attention.DANet import DAModule
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -423,7 +423,7 @@ print(danet(input).shape)
 
 #### 10.3. Usage Code
 ```python
-from fightingcv.attention.PSA import PSA
+from model.attention.PSA import PSA
 import torch
 
 input=torch.randn(50,512,7,7)
@@ -447,7 +447,7 @@ print(output.shape)
 #### 11.3. Usage Code
 ```python
 
-from fightingcv.attention.EMSA import EMSA
+from model.attention.EMSA import EMSA
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -473,7 +473,7 @@ print(output.shape)
 #### 12.3. Usage Code
 ```python
 
-from fightingcv.attention.ShuffleAttention import ShuffleAttention
+from model.attention.ShuffleAttention import ShuffleAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -501,7 +501,7 @@ print(output.shape)
 
 #### 13.3. Usage Code
 ```python
-from fightingcv.attention.MUSEAttention import MUSEAttention
+from model.attention.MUSEAttention import MUSEAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -527,7 +527,7 @@ print(output.shape)
 
 #### 14.3. Usage Code
 ```python
-from fightingcv.attention.SGE import SpatialGroupEnhance
+from model.attention.SGE import SpatialGroupEnhance
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -552,7 +552,7 @@ print(output.shape)
 
 #### 15.3. Usage Code
 ```python
-from fightingcv.attention.A2Atttention import DoubleAttention
+from model.attention.A2Atttention import DoubleAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -576,7 +576,7 @@ print(output.shape)
 
 #### 16.3. Usage Code
 ```python
-from fightingcv.attention.AFT import AFT_FULL
+from model.attention.AFT import AFT_FULL
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -606,7 +606,7 @@ print(output.shape)
 
 #### 17.3. Usage Code
 ```python
-from fightingcv.attention.OutlookAttention import OutlookAttention
+from model.attention.OutlookAttention import OutlookAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -640,7 +640,7 @@ print(output.shape)
 #### 18.3. Usage Code
 ```python
 
-from fightingcv.attention.ViP import WeightedPermuteMLP
+from model.attention.ViP import WeightedPermuteMLP
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -675,7 +675,7 @@ None
 #### 19.3. Usage Code
 ```python
 
-from fightingcv.attention.CoAtNet import CoAtNet
+from model.attention.CoAtNet import CoAtNet
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -710,7 +710,7 @@ print(out.shape)
 #### 20.3. Usage Code
 ```python
 
-from fightingcv.attention.HaloAttention import HaloAttention
+from model.attention.HaloAttention import HaloAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -741,7 +741,7 @@ print(output.shape)
 #### 21.3. Usage Code
 ```python
 
-from fightingcv.attention.PolarizedSelfAttention import ParallelPolarizedSelfAttention,SequentialPolarizedSelfAttention
+from model.attention.PolarizedSelfAttention import ParallelPolarizedSelfAttention,SequentialPolarizedSelfAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -772,7 +772,7 @@ print(output.shape)
 #### 22.3. Usage Code
 ```python
 
-from fightingcv.attention.CoTAttention import CoTAttention
+from model.attention.CoTAttention import CoTAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -803,7 +803,7 @@ print(output.shape)
 #### 23.3. Usage Code
 ```python
 
-from fightingcv.attention.ResidualAttention import ResidualAttention
+from model.attention.ResidualAttention import ResidualAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -834,7 +834,7 @@ print(output.shape)
 
 #### 24.3. Usage Code
 ```python
-from fightingcv.attention.S2Attention import S2Attention
+from model.attention.S2Attention import S2Attention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -864,7 +864,7 @@ print(output.shape)
 #### 25.3. Usage Code - Implemented by [Wenliang Zhao (Author)](https://scholar.google.com/citations?user=lyPWvuEAAAAJ&hl=en)
 
 ```python
-from fightingcv.attention.gfnet import GFNet
+from model.attention.gfnet import GFNet
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -892,7 +892,7 @@ print(out.shape)
 #### 26.3. Usage Code - Implemented by [digantamisra98](https://github.com/digantamisra98)
 
 ```python
-from fightingcv.attention.TripletAttention import TripletAttention
+from model.attention.TripletAttention import TripletAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -920,7 +920,7 @@ print(output.shape)
 #### 27.3. Usage Code - Implemented by [Andrew-Qibin](https://github.com/Andrew-Qibin)
 
 ```python
-from fightingcv.attention.CoordAttention import CoordAtt
+from model.attention.CoordAttention import CoordAtt
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -951,7 +951,7 @@ print(output.shape)
 #### 28.3. Usage Code
 
 ```python
-from fightingcv.attention.MobileViTAttention import MobileViTAttention
+from model.attention.MobileViTAttention import MobileViTAttention
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -990,7 +990,7 @@ if __name__ == '__main__':
 #### 1.3. Usage Code
 ```python
 
-from fightingcv.backbone.resnet import ResNet50,ResNet101,ResNet152
+from model.backbone.resnet import ResNet50,ResNet101,ResNet152
 import torch
 if __name__ == '__main__':
     input=torch.randn(50,3,224,224)
@@ -1014,7 +1014,7 @@ if __name__ == '__main__':
 #### 2.3. Usage Code
 ```python
 
-from fightingcv.backbone.resnext import ResNeXt50,ResNeXt101,ResNeXt152
+from model.backbone.resnext import ResNeXt50,ResNeXt101,ResNeXt152
 import torch
 
 if __name__ == '__main__':
@@ -1041,7 +1041,7 @@ if __name__ == '__main__':
 #### 3.3. Usage Code
 ```python
 
-from fightingcv.backbone.MobileViT import *
+from model.backbone.MobileViT import *
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1080,7 +1080,7 @@ if __name__ == '__main__':
 #### 4.3. Usage Code
 ```python
 
-from fightingcv.backbone.ConvMixer import *
+from model.backbone.ConvMixer import *
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1122,7 +1122,7 @@ if __name__ == '__main__':
 
 #### 1.3. Usage Code
 ```python
-from fightingcv.mlp.repmlp import RepMLP
+from model.mlp.repmlp import RepMLP
 import torch
 from torch import nn
 
@@ -1164,7 +1164,7 @@ print(((deployout-out)**2).sum())
 
 #### 2.3. Usage Code
 ```python
-from fightingcv.mlp.mlp_mixer import MlpMixer
+from model.mlp.mlp_mixer import MlpMixer
 import torch
 mlp_mixer=MlpMixer(num_classes=1000,num_blocks=10,patch_size=10,tokens_hidden_dim=32,channels_hidden_dim=1024,tokens_mlp_dim=16,channels_mlp_dim=1024)
 input=torch.randn(50,3,40,40)
@@ -1183,7 +1183,7 @@ print(output.shape)
 
 #### 3.3. Usage Code
 ```python
-from fightingcv.mlp.resmlp import ResMLP
+from model.mlp.resmlp import ResMLP
 import torch
 
 input=torch.randn(50,3,14,14)
@@ -1203,7 +1203,7 @@ print(out.shape) #the last dimention is class_num
 
 #### 4.3. Usage Code
 ```python
-from fightingcv.mlp.g_mlp import gMLP
+from model.mlp.g_mlp import gMLP
 import torch
 
 num_tokens=10000
@@ -1227,7 +1227,7 @@ print(output.shape)
 
 #### 5.3. Usage Code
 ```python
-from fightingcv.mlp.sMLP_block import sMLPBlock
+from model.mlp.sMLP_block import sMLPBlock
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1261,7 +1261,7 @@ if __name__ == '__main__':
 #### 1.3. Usage Code
 ```python
 
-from fightingcv.rep.repvgg import RepBlock
+from model.rep.repvgg import RepBlock
 import torch
 
 
@@ -1288,7 +1288,7 @@ print(((out2-out)**2).sum())
 
 #### 2.3. Usage Code
 ```python
-from fightingcv.rep.acnet import ACNet
+from model.rep.acnet import ACNet
 import torch
 from torch import nn
 
@@ -1317,7 +1317,7 @@ print(((out2-out)**2).sum())
 #### 2.3. Usage Code
 ##### 2.3.1 Transform I
 ```python
-from fightingcv.rep.ddb import transI_conv_bn
+from model.rep.ddb import transI_conv_bn
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1339,7 +1339,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 ##### 2.3.2 Transform II
 ```python
-from fightingcv.rep.ddb import transII_conv_branch
+from model.rep.ddb import transII_conv_branch
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1361,7 +1361,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 ##### 2.3.3 Transform III
 ```python
-from fightingcv.rep.ddb import transIII_conv_sequential
+from model.rep.ddb import transIII_conv_sequential
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1384,7 +1384,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 ##### 2.3.4 Transform IV
 ```python
-from fightingcv.rep.ddb import transIV_conv_concat
+from model.rep.ddb import transIV_conv_concat
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1406,7 +1406,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 ##### 2.3.5 Transform V
 ```python
-from fightingcv.rep.ddb import transV_avg
+from model.rep.ddb import transV_avg
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1425,7 +1425,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 ##### 2.3.6 Transform VI
 ```python
-from fightingcv.rep.ddb import transVI_conv_scale
+from model.rep.ddb import transVI_conv_scale
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1469,7 +1469,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 #### 1.3. Usage Code
 ```python
-from fightingcv.conv.DepthwiseSeparableConvolution import DepthwiseSeparableConvolution
+from model.conv.DepthwiseSeparableConvolution import DepthwiseSeparableConvolution
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1492,7 +1492,7 @@ print(out.shape)
 
 #### 2.3. Usage Code
 ```python
-from fightingcv.conv.MBConv import MBConvBlock
+from model.conv.MBConv import MBConvBlock
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -1517,7 +1517,7 @@ print(out.shape)
 
 #### 3.3. Usage Code
 ```python
-from fightingcv.conv.Involution import Involution
+from model.conv.Involution import Involution
 import torch
 from torch import nn
 from torch.nn import functional as F
