@@ -124,6 +124,9 @@ $ pip install fightingcv
 
     - [27. Coordinate Attention Usage](#27-Coordinate-Attention-Usage)
 
+    - [28. MobileViT Attention Usage](#28-MobileViT-Attention-Usage)
+  
+
 - [Backbone CNN Series](#Backbone-cnn-series)
 
     - [1. ResNet Usage](#1-ResNet-Usage)
@@ -226,6 +229,8 @@ $ pip install fightingcv
 - Pytorch implementation of [Rotate to Attend: Convolutional Triplet Attention Module---WACV 2021](https://arxiv.org/abs/2010.03045) 
 
 - Pytorch implementation of [Coordinate Attention for Efficient Mobile Network Design ---CVPR 2021](https://arxiv.org/abs/2103.02907)
+
+- Pytorch implementation of [MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer---ArXiv 2020.10.05](https://arxiv.org/abs/2103.02907)
 
 ***
 
@@ -907,8 +912,6 @@ output=triplet(input)
 print(output.shape)
 ```
 
-***
-
 
 ***
 
@@ -917,8 +920,7 @@ print(output.shape)
 
 #### 27.1. Paper
 
-[Coordinate Attention for Efficient Mobile Network Design
----CVPR 2021](https://arxiv.org/abs/2103.02907)
+[Coordinate Attention for Efficient Mobile Network Design---CVPR 2021](https://arxiv.org/abs/2103.02907)
 
 
 #### 27.2. Overview
@@ -943,6 +945,37 @@ print(output.shape)
 ```
 
 ***
+
+
+### 28. MobileViT Attention Usage
+
+#### 28.1. Paper
+
+[MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer---ArXiv 2020.10.05](https://arxiv.org/abs/2103.02907)
+
+
+#### 28.2. Overview
+
+![](./fightingcv/img/MobileViTAttention.png)
+
+#### 28.3. Usage Code
+
+```python
+from fightingcv.attention.MobileViTAttention import MobileViTAttention
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+if __name__ == '__main__':
+    m=MobileViTAttention()
+    input=torch.randn(1,3,49,49)
+    output=m(input)
+    print(output.shape)  #output:(1,3,49,49)
+    
+```
+
+***
+
 
 
 # Backbone CNN Series

@@ -14,8 +14,8 @@ class PreNorm(nn.Module):
 class FeedForward(nn.Module):
     def __init__(self,dim,mlp_dim,dropout) :
         super().__init__()
-        self.net=nn.Sequetial(
-            nn.Lineqar(dim,mlp_dim),
+        self.net=nn.Sequential(
+            nn.Linear(dim,mlp_dim),
             nn.ReLU(),
             nn.Dropout(dropout),
             nn.Linear(mlp_dim,dim),
@@ -36,7 +36,7 @@ class Attention(nn.Module):
         self.attend=nn.Softmax(dim=-1)
         self.to_qkv=nn.Linear(dim,inner_dim*3,bias=False)
         
-        self.to_out=nn.Sequetial(
+        self.to_out=nn.Sequential(
             nn.Linear(inner_dim,dim),
             nn.Dropout(dropout)
         ) if project_out else nn.Identity()
@@ -58,7 +58,7 @@ class Transformer(nn.Module):
     def __init__(self,dim,depth,heads,head_dim,mlp_dim,dropout=0.):
         super().__init__()
         self.layers=nn.ModuleList([])
-        for _ in nn.range(depth):
+        for _ in range(depth):
             self.layers.append(nn.ModuleList([
                 PreNorm(dim,Attention(dim,heads,head_dim,dropout)),
                 PreNorm(dim,FeedForward(dim,mlp_dim,dropout))
@@ -79,7 +79,7 @@ class MobileViTAttention(nn.Module):
         self.conv1=nn.Conv2d(in_channel,in_channel,kernel_size=kernel_size,padding=kernel_size//2)
         self.conv2=nn.Conv2d(in_channel,dim,kernel_size=1)
 
-        self.trans=Transformer()
+        self.trans=Transformer(dim=dim,depth=3,heads=8,head_dim=64,mlp_dim=1024)
 
         self.conv3=nn.Conv2d(dim,in_channel,kernel_size=1)
         self.conv4=nn.Conv2d(2*in_channel,in_channel,kernel_size=kernel_size,padding=kernel_size//2)
