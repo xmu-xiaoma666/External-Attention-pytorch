@@ -1,11 +1,17 @@
 
 <img src="./FightingCVimg/LOGO.gif" height="200" width="400"/>
 
+
 # FightingCV Codebase For [***Attention***](#attention-series),[***Backbone***](#backbone-series), [***MLP***](#mlp-series), [***Re-parameter***](#re-parameter-series), [**Convolution**](#convolution-series)
 
 ![](https://img.shields.io/badge/fightingcv-v0.0.1-brightgreen)
 ![](https://img.shields.io/badge/python->=v3.0-blue)
 ![](https://img.shields.io/badge/pytorch->=v1.4-red)
+
+
+*If this project is helpful to you, welcome to give a ***star***.* 
+
+*Don't forget to ***follow*** me to learn about project updates.*
 
 Hello，大家好，我是小马🚀🚀🚀
 
@@ -40,28 +46,7 @@ Hello，大家好，我是小马🚀🚀🚀
 ![](./FightingCVimg/wechat.jpg)
 
 强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/sgNw6XFBPcD20Ef3ddfE1w)，可以快速了解到最新优质的干货资源。
-***
 
-
-
-
-*If this project is helpful to you, welcome to give a ***star***.* 
-
-*Don't forget to ***follow*** me to learn about project updates.*
-
-
- <!-- # Installation ***(Optional)***
-
-
-```
-$ pip install git+https://github.com/xmu-xiaoma666/External-Attention-pytorch
-```
-
-Or（But Not Recommended）：
-
-```
-$ pip install fightingcv
-``` -->
 
 
 
@@ -135,6 +120,7 @@ $ pip install fightingcv
 
     - [3. MobileViT Usage](#3-MobileViT-Usage)
 
+    - [4. ConvMixer Usage](#4-ConvMixer-Usage)
 - [MLP Series](#mlp-series)
 
     - [1. RepMLP Usage](#1-RepMLP-Usage)
@@ -988,6 +974,8 @@ if __name__ == '__main__':
 
 - Pytorch implementation of [MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer---ArXiv 2020.10.05](https://arxiv.org/abs/2103.02907)
 
+- Pytorch implementation of [Patches Are All You Need?---ICLR2022 (Under Review)](https://openreview.net/forum?id=TVHS5Y4dNvM)
+
 
 ### 1. ResNet Usage
 #### 1.1. Paper
@@ -1077,6 +1065,32 @@ if __name__ == '__main__':
 
 ```
 
+
+
+
+
+### 4. ConvMixer Usage
+#### 4.1. Paper
+[Patches Are All You Need?---ICLR2022 (Under Review)](https://openreview.net/forum?id=TVHS5Y4dNvM)
+#### 4.2. Overview
+![](./fightingcv/img/ConvMixer.png)
+
+#### 4.3. Usage Code
+```python
+
+from fightingcv.backbone.ConvMixer import *
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+if __name__ == '__main__':
+    x=torch.randn(1,3,224,224)
+    convmixer=ConvMixer(dim=512,depth=12)
+    out=convmixer(x)
+    print(out.shape)  #[1, 1000]
+
+
+```
 
 
 
