@@ -1,7 +1,7 @@
 
 <img src="./FightingCVimg/LOGO.gif" height="200" width="400"/>
 
-# FightingCV Codebase For [***Attention***](#attention-series),[***Backbone-CNN***](#Backbone-CNN-series), [***MLP***](#mlp-series), [***Re-parameter***](#re-parameter-series), [**Convolution**](#convolution-series)
+# FightingCV Codebase For [***Attention***](#attention-series),[***Backbone***](#Backbone-series), [***MLP***](#mlp-series), [***Re-parameter***](#re-parameter-series), [**Convolution**](#convolution-series)
 
 ![](https://img.shields.io/badge/fightingcv-v0.0.1-brightgreen)
 ![](https://img.shields.io/badge/python->=v3.0-blue)
@@ -127,7 +127,7 @@ $ pip install fightingcv
     - [28. MobileViT Attention Usage](#28-MobileViT-Attention-Usage)
   
 
-- [Backbone CNN Series](#Backbone-cnn-series)
+- [Backbone Series](#Backbone-series)
 
     - [1. ResNet Usage](#1-ResNet-Usage)
 
@@ -978,7 +978,7 @@ if __name__ == '__main__':
 
 
 
-# Backbone CNN Series
+# Backbone Series
 
 - Pytorch implementation of ["Deep Residual Learning for Image Recognition---CVPR2016 Best Paper"](https://arxiv.org/pdf/1512.03385.pdf)
 
@@ -995,7 +995,7 @@ if __name__ == '__main__':
 #### 1.3. Usage Code
 ```python
 
-from fightingcv.backbone_cnn.resnet import ResNet50,ResNet101,ResNet152
+from fightingcv.backbone.resnet import ResNet50,ResNet101,ResNet152
 import torch
 if __name__ == '__main__':
     input=torch.randn(50,3,224,224)
@@ -1019,7 +1019,7 @@ if __name__ == '__main__':
 #### 2.3. Usage Code
 ```python
 
-from fightingcv.backbone_cnn.resnext import ResNeXt50,ResNeXt101,ResNeXt152
+from fightingcv.backbone.resnext import ResNeXt50,ResNeXt101,ResNeXt152
 import torch
 
 if __name__ == '__main__':
