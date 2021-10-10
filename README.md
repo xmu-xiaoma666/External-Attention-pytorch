@@ -1046,7 +1046,7 @@ if __name__ == '__main__':
 [MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer---ArXiv 2020.10.05](https://arxiv.org/abs/2103.02907)
 
 #### 3.2. Overview
-![](./fightingcv/img/mobileViT)
+![](./fightingcv/img/mobileViT.jpg)
 
 #### 3.3. Usage Code
 ```python
