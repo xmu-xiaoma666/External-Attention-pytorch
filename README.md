@@ -150,6 +150,9 @@ Hello，大家好，我是小马🚀🚀🚀
     - [2. MBConv Usage](#2-MBConv-Usage)
 
     - [3. Involution Usage](#3-Involution-Usage)
+
+    - [4. DynamicConv Usage](#4-DynamicConv-Usage)
+
 ***
 
 
@@ -1458,6 +1461,9 @@ print("difference:",((out2-out1)**2).sum().item())
 
 - Pytorch implementation of ["Involution: Inverting the Inherence of Convolution for Visual Recognition---CVPR2021"](https://arxiv.org/abs/2103.06255)
 
+- Pytorch implementation of ["Dynamic Convolution: Attention over Convolution Kernels---CVPR2020 Oral"](https://arxiv.org/abs/1912.03458)
+
+
 ***
 
 ### 1. Depthwise Separable Convolution Usage
@@ -1530,3 +1536,27 @@ print(out.shape)
 
 ***
 
+
+### 4. DynamicConv Usage
+#### 4.1. Paper
+["Dynamic Convolution: Attention over Convolution Kernels"](https://arxiv.org/abs/1912.03458)
+
+#### 4.2. Overview
+![](./model/img/DynamicConv.png)
+
+#### 4.3. Usage Code
+```python
+from model.conv.DynamicConv import *
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+if __name__ == '__main__':
+    input=torch.randn(2,32,64,64)
+    m=DynamicConv(in_planes=32,out_planes=64,kernel_size=3,stride=1,padding=1,bias=False)
+    out=m(input)
+    print(out.shape) # 2,32,64,64
+
+```
+
+***

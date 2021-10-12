@@ -1,10 +1,10 @@
-from model.backbone.ConvMixer import *
+from model.conv.DynamicConv import *
 import torch
 from torch import nn
 from torch.nn import functional as F
 
 if __name__ == '__main__':
-    x=torch.randn(1,3,224,224)
-    convmixer=ConvMixer(dim=512,depth=12)
-    out=convmixer(x)
-    print(out.shape)  #[1, 1000]
+    input=torch.randn(2,32,64,64)
+    m=DynamicConv(in_planes=32,out_planes=64,kernel_size=3,stride=1,padding=1,bias=False)
+    out=m(input)
+    print(out.shape) # 2,32,64,64
