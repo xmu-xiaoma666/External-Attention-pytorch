@@ -27,7 +27,7 @@ Hello，大家好，我是小马🚀🚀🚀
 能力有限，**不喜轻喷**！！！
 
 ***For All：***
-本项目就是要实现一个既能**让深度学习小白也能搞懂**，又能**服务科研和工业社区**的代码库。作为[【论文复现项目】](https://github.com/xmu-xiaoma666/FightingCV-Paper-Reading)的补充，本项目的宗旨是从代码角度，实现🚀**让世界上没有难读的论文**🚀。
+本项目就是要实现一个既能**让深度学习小白也能搞懂**，又能**服务科研和工业社区**的代码库。作为[【论文解析项目】](https://github.com/xmu-xiaoma666/FightingCV-Paper-Reading)的补充，本项目的宗旨是从代码角度，实现🚀**让世界上没有难读的论文**🚀。
 
 （同时也非常欢迎各位科研工作者将自己的工作的核心代码整理到本项目中，推动科研社区的发展，会在readme中注明代码的作者~）
 
@@ -123,6 +123,8 @@ Hello，大家好，我是小马🚀🚀🚀
     - [3. MobileViT Usage](#3-MobileViT-Usage)
 
     - [4. ConvMixer Usage](#4-ConvMixer-Usage)
+
+
 - [MLP Series](#mlp-series)
 
     - [1. RepMLP Usage](#1-RepMLP-Usage)
@@ -152,6 +154,8 @@ Hello，大家好，我是小马🚀🚀🚀
     - [3. Involution Usage](#3-Involution-Usage)
 
     - [4. DynamicConv Usage](#4-DynamicConv-Usage)
+
+    - [5. CondConv Usage](#5-CondConv-Usage)
 
 ***
 
@@ -1463,6 +1467,7 @@ print("difference:",((out2-out1)**2).sum().item())
 
 - Pytorch implementation of ["Dynamic Convolution: Attention over Convolution Kernels---CVPR2020 Oral"](https://arxiv.org/abs/1912.03458)
 
+- Pytorch implementation of ["CondConv: Conditionally Parameterized Convolutions for Efficient Inference---NeurIPS2019"](https://arxiv.org/abs/1904.04971)
 
 ***
 
@@ -1556,6 +1561,31 @@ if __name__ == '__main__':
     m=DynamicConv(in_planes=32,out_planes=64,kernel_size=3,stride=1,padding=1,bias=False)
     out=m(input)
     print(out.shape) # 2,32,64,64
+
+```
+
+***
+
+
+### 5. CondConv Usage
+#### 5.1. Paper
+["CondConv: Conditionally Parameterized Convolutions for Efficient Inference"](https://arxiv.org/abs/1904.04971)
+
+#### 5.2. Overview
+![](./model/img/CondConv.png)
+
+#### 5.3. Usage Code
+```python
+from model.conv.CondConv import *
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+if __name__ == '__main__':
+    input=torch.randn(2,32,64,64)
+    m=CondConv(in_planes=32,out_planes=64,kernel_size=3,stride=1,padding=1,bias=False)
+    out=m(input)
+    print(out.shape)
 
 ```
 
