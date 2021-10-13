@@ -10,7 +10,7 @@ def conv_bn(inp,oup,kernel_size=3,stride=1):
     return nn.Sequential(
         nn.Conv2d(inp,oup,kernel_size=kernel_size,stride=stride,padding=kernel_size//2),
         nn.BatchNorm2d(oup),
-        nn.ReLU()
+        nn.SiLU()
     )
 
 class PreNorm(nn.Module):
@@ -26,7 +26,7 @@ class FeedForward(nn.Module):
         super().__init__()
         self.net=nn.Sequential(
             nn.Linear(dim,mlp_dim),
-            nn.ReLU(),
+            nn.SiLU(),
             nn.Dropout(dropout),
             nn.Linear(mlp_dim,dim),
             nn.Dropout(dropout)
@@ -125,7 +125,7 @@ class MV2Block(nn.Module):
             self.conv=nn.Sequential(
                 nn.Conv2d(hidden_dim,hidden_dim,kernel_size=3,stride=self.stride,padding=1,groups=hidden_dim,bias=False),
                 nn.BatchNorm2d(hidden_dim),
-                nn.ReLU(),
+                nn.SiLU(),
                 nn.Conv2d(hidden_dim,out,kernel_size=1,stride=1,bias=False),
                 nn.BatchNorm2d(out)
             )
@@ -133,12 +133,12 @@ class MV2Block(nn.Module):
             self.conv=nn.Sequential(
                 nn.Conv2d(inp,hidden_dim,kernel_size=1,stride=1,bias=False),
                 nn.BatchNorm2d(hidden_dim),
-                nn.ReLU(),
+                nn.SiLU(),
                 nn.Conv2d(hidden_dim,hidden_dim,kernel_size=3,stride=1,padding=1,groups=hidden_dim,bias=False),
                 nn.BatchNorm2d(hidden_dim),
-                nn.ReLU(),
+                nn.SiLU(),
                 nn.Conv2d(hidden_dim,out,kernel_size=1,stride=1,bias=False),
-                nn.ReLU(),
+                nn.SiLU(),
                 nn.BatchNorm2d(out)
             )
     def forward(self,x):
