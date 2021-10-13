@@ -1,4 +1,4 @@
-from torch import nn, sqrt
+from torch import nn
 import torch
 import sys
 from math import sqrt
