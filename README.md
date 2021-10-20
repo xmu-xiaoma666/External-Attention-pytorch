@@ -988,7 +988,7 @@ if __name__ == '__main__':
 
 #### 29.2. Overview
 
-![](./model/img/ParNet.png.png)
+![](./model/img/ParNet.png)
 
 #### 29.3. Usage Code
 
