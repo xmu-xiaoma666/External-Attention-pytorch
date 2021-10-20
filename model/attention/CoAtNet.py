@@ -3,8 +3,8 @@ import torch
 import sys
 from math import sqrt
 sys.path.append('.')
-from conv.MBConv import MBConvBlock
-from attention.SelfAttention import ScaledDotProductAttention
+from model.conv.MBConv import MBConvBlock
+from model.attention.SelfAttention import ScaledDotProductAttention
 
 class CoAtNet(nn.Module):
     def __init__(self,in_ch,image_size,out_chs=[64,96,192,384,768]):
