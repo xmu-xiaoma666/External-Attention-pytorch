@@ -112,6 +112,9 @@ Hello，大家好，我是小马🚀🚀🚀
     - [27. Coordinate Attention Usage](#27-Coordinate-Attention-Usage)
 
     - [28. MobileViT Attention Usage](#28-MobileViT-Attention-Usage)
+
+    - [29. ParNet Attention Usage](#29-ParNet-Attention-Usage)
+
   
 
 - [Backbone Series](#Backbone-series)
@@ -227,7 +230,9 @@ Hello，大家好，我是小马🚀🚀🚀
 
 - Pytorch implementation of [Coordinate Attention for Efficient Mobile Network Design ---CVPR 2021](https://arxiv.org/abs/2103.02907)
 
-- Pytorch implementation of [MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer---ArXiv 2020.10.05](https://arxiv.org/abs/2103.02907)
+- Pytorch implementation of [MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer---ArXiv 2021.10.05](https://arxiv.org/abs/2103.02907)
+
+- Pytorch implementation of [Non-deep Networks---ArXiv 2021.10.20](https://arxiv.org/abs/2110.07641)
 
 ***
 
@@ -948,7 +953,7 @@ print(output.shape)
 
 #### 28.1. Paper
 
-[MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer---ArXiv 2020.10.05](https://arxiv.org/abs/2103.02907)
+[MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer---ArXiv 2021.10.05](https://arxiv.org/abs/2103.02907)
 
 
 #### 28.2. Overview
@@ -968,6 +973,36 @@ if __name__ == '__main__':
     input=torch.randn(1,3,49,49)
     output=m(input)
     print(output.shape)  #output:(1,3,49,49)
+    
+```
+
+***
+
+
+### 29. ParNet Attention Usage
+
+#### 29.1. Paper
+
+[Non-deep Networks---ArXiv 2021.10.20](https://arxiv.org/abs/2110.07641)
+
+
+#### 29.2. Overview
+
+![](./model/img/ParNet.png.png)
+
+#### 29.3. Usage Code
+
+```python
+from model.attention.ParNetAttention import *
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+if __name__ == '__main__':
+    input=torch.randn(50,512,7,7)
+    pna = ParNetAttention(channel=512)
+    output=pna(input)
+    print(output.shape) #50,512,7,7
     
 ```
 
