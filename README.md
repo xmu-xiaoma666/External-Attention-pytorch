@@ -117,6 +117,7 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [29. ParNet Attention Usage](#29-ParNet-Attention-Usage)
 
+    - [30. UFO Attention Usage](#30-UFO-Attention-Usage)
   
 
 - [Backbone Series](#Backbone-series)
@@ -235,6 +236,8 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [MobileViT: Light-weight, General-purpose, and Mobile-friendly Vision Transformer---ArXiv 2021.10.05](https://arxiv.org/abs/2103.02907)
 
 - Pytorch implementation of [Non-deep Networks---ArXiv 2021.10.20](https://arxiv.org/abs/2110.07641)
+
+- Pytorch implementation of [UFO-ViT: High Performance Linear Vision Transformer without Softmax---ArXiv 2021.09.29](https://arxiv.org/abs/2110.07641)
 
 ***
 
@@ -1010,6 +1013,35 @@ if __name__ == '__main__':
 
 ***
 
+
+### 30. UFO Attention Usage
+
+#### 30.1. Paper
+
+[UFO-ViT: High Performance Linear Vision Transformer without Softmax---ArXiv 2021.09.29](https://arxiv.org/abs/2110.07641)
+
+
+#### 30.2. Overview
+
+![](./model/img/UFO.png)
+
+#### 30.3. Usage Code
+
+```python
+from model.attention.UFOAttention import *
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+if __name__ == '__main__':
+    input=torch.randn(50,49,512)
+    ufo = UFOAttention(d_model=512, d_k=512, d_v=512, h=8)
+    output=ufo(input,input,input)
+    print(output.shape) #[50, 49, 512]
+    
+```
+
+***
 
 
 # Backbone Series
