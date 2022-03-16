@@ -15,6 +15,8 @@
 
 -------
 
+- **😄 😄 😄 I am looking for jobs for 2023, my interest is multi-modal pretraining, video-text retrieval, computer vision or other feilds about multi modality!!! Welcome to chat with me by wechat(id:mayiwei1998)**
+
 Hello，大家好，我是小马🚀🚀🚀
 
 ***For 小白（Like Me）：***
