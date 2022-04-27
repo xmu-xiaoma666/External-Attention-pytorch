@@ -15,8 +15,8 @@
 
 -------
 
-- **😄 😄 😄 I am looking for jobs for 2023, my interest is multi-modal pretraining, video-text retrieval, computer vision or other feilds about multi modality!!! Welcome to chat with me by wechat(id:mayiwei1998)**
-- **😄 😄 😄 我正在寻找2023年的工作，我的兴趣是多模态预训练、视频文本检索、计算机视觉或其他关于多模态的领域！！！欢迎大家通过微信与我聊天（id:mayiwei1998）**
+<!-- - **😄 😄 😄 I am looking for jobs for 2023, my interest is multi-modal pretraining, video-text retrieval, computer vision or other feilds about multi modality!!! Welcome to chat with me by wechat(id:mayiwei1998)**
+- **😄 😄 😄 我正在寻找2023年的工作，我的兴趣是多模态预训练、视频文本检索、计算机视觉或其他关于多模态的领域！！！欢迎大家通过微信与我聊天（id:mayiwei1998）** -->
 
 Hello，大家好，我是小马🚀🚀🚀
 
@@ -36,7 +36,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
 
 
-## 公众号 & 微信交流群
+
+<!-- ## 公众号 & 微信交流群
 
 欢迎大家关注公众号：**FightingCV**
 
@@ -50,7 +51,7 @@ Hello，大家好，我是小马🚀🚀🚀
 **每天在群里分享一些近期的论文和解析**，欢迎大家一起**学习交流**哈~~~
 
 
-![](./FightingCVimg/wechat.jpg)
+![](./FightingCVimg/wechat.jpg) -->
 
 强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/sgNw6XFBPcD20Ef3ddfE1w)，可以快速了解到最新优质的干货资源。
 
