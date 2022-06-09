@@ -123,6 +123,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [30. UFO Attention Usage](#30-UFO-Attention-Usage)
   
+    - [31. MobileViTv2 Attention Usage](#31-MobileViTv2-Attention-Usage)
+  
 
 - [Backbone Series](#Backbone-series)
 
@@ -242,6 +244,11 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [Non-deep Networks---ArXiv 2021.10.20](https://arxiv.org/abs/2110.07641)
 
 - Pytorch implementation of [UFO-ViT: High Performance Linear Vision Transformer without Softmax---ArXiv 2021.09.29](https://arxiv.org/abs/2109.14382)
+
+- Pytorch implementation of [Separable Self-attention for Mobile Vision Transformers---ArXiv 2022.06.06](https://arxiv.org/abs/2206.02680)
+
+
+
 
 ***
 
@@ -1044,6 +1051,36 @@ if __name__ == '__main__':
     print(output.shape) #[50, 49, 512]
     
 ```
+
+-
+
+### 31. MobileViTv2 Attention Usage
+
+#### 31.1. Paper
+
+[Separable Self-attention for Mobile Vision Transformers---ArXiv 2022.06.06](https://arxiv.org/abs/2206.02680)
+
+
+#### 31.2. Overview
+
+![](./model/img/UFO.png)
+
+#### 31.3. Usage Code
+
+```python
+from model.attention.UFOAttention import *
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+if __name__ == '__main__':
+    input=torch.randn(50,49,512)
+    ufo = UFOAttention(d_model=512, d_k=512, d_v=512, h=8)
+    output=ufo(input,input,input)
+    print(output.shape) #[50, 49, 512]
+    
+```
+
 
 ***
 
