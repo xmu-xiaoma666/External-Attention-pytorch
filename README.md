@@ -1063,7 +1063,7 @@ if __name__ == '__main__':
 
 #### 31.2. Overview
 
-![](./model/img/UFO.png)
+![](./model/img/MobileViTv2.png)
 
 #### 31.3. Usage Code
 
