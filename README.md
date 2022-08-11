@@ -122,10 +122,11 @@ Hello，大家好，我是小马🚀🚀🚀
     - [29. ParNet Attention Usage](#29-ParNet-Attention-Usage)
 
     - [30. UFO Attention Usage](#30-UFO-Attention-Usage)
-  
-    - [31. MobileViTv2 Attention Usage](#31-MobileViTv2-Attention-Usage)
 
-    - [32. ACmix Attention Usage](#32-Acmix-Attention-Usage)
+    - [31. ACmix Attention Usage](#31-Acmix-Attention-Usage)
+  
+    - [32. MobileViTv2 Attention Usage](#32-MobileViTv2-Attention-Usage)
+
   
 
 - [Backbone Series](#Backbone-series)
@@ -249,7 +250,7 @@ Hello，大家好，我是小马🚀🚀🚀
 
 - Pytorch implementation of [Separable Self-attention for Mobile Vision Transformers---ArXiv 2022.06.06](https://arxiv.org/abs/2206.02680)
 
-
+- Pytorch implementation of [On the Integration of Self-Attention and Convolution---ArXiv 2022.03.14](https://arxiv.org/pdf/2111.14556.pdf)
 
 
 ***
@@ -1056,18 +1057,38 @@ if __name__ == '__main__':
 
 -
 
-### 31. MobileViTv2 Attention Usage
+### 31. ACmix Attention Usage
 
 #### 31.1. Paper
+
+[On the Integration of Self-Attention and Convolution](https://arxiv.org/pdf/2111.14556.pdf)
+
+#### 31.2. Usage Code
+
+```python
+from model.attention.ACmix import ACmix
+import torch
+
+if __name__ == '__main__':
+    input=torch.randn(50,256,7,7)
+    acmix = ACmix(in_planes=256, out_planes=256)
+    output=acmix(input)
+    print(output.shape)
+    
+```
+
+### 32. MobileViTv2 Attention Usage
+
+#### 32.1. Paper
 
 [Separable Self-attention for Mobile Vision Transformers---ArXiv 2022.06.06](https://arxiv.org/abs/2206.02680)
 
 
-#### 31.2. Overview
+#### 32.2. Overview
 
 ![](./model/img/MobileViTv2.png)
 
-#### 31.3. Usage Code
+#### 32.3. Usage Code
 
 ```python
 from model.attention.MobileViTv2Attention import MobileViTv2Attention
@@ -1079,26 +1100,6 @@ if __name__ == '__main__':
     input=torch.randn(50,49,512)
     sa = MobileViTv2Attention(d_model=512)
     output=sa(input)
-    print(output.shape)
-    
-```
-
-### 32. ACmix Attention Usage
-
-#### 32.1. Paper
-
-[On the Integration of Self-Attention and Convolution](https://arxiv.org/pdf/2111.14556v1.pdf)
-
-#### 32.2. Usage Code
-
-```python
-from model.attention.ACmix import ACmix
-import torch
-
-if __name__ == '__main__':
-    input=torch.randn(50,256,7,7)
-    acmix = ACmix(in_planes=256, out_planes=256)
-    output=acmix(input)
     print(output.shape)
     
 ```
