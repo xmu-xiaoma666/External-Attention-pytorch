@@ -124,6 +124,8 @@ Hello，大家好，我是小马🚀🚀🚀
     - [30. UFO Attention Usage](#30-UFO-Attention-Usage)
   
     - [31. MobileViTv2 Attention Usage](#31-MobileViTv2-Attention-Usage)
+
+    - [32. ACmix Attention Usage](#32-Acmix-Attention-Usage)
   
 
 - [Backbone Series](#Backbone-series)
@@ -1068,16 +1070,36 @@ if __name__ == '__main__':
 #### 31.3. Usage Code
 
 ```python
-from model.attention.UFOAttention import *
+from model.attention.MobileViTv2Attention import MobileViTv2Attention
 import torch
 from torch import nn
 from torch.nn import functional as F
 
 if __name__ == '__main__':
     input=torch.randn(50,49,512)
-    ufo = UFOAttention(d_model=512, d_k=512, d_v=512, h=8)
-    output=ufo(input,input,input)
-    print(output.shape) #[50, 49, 512]
+    sa = MobileViTv2Attention(d_model=512)
+    output=sa(input)
+    print(output.shape)
+    
+```
+
+### 32. ACmix Attention Usage
+
+#### 32.1. Paper
+
+[On the Integration of Self-Attention and Convolution](https://arxiv.org/pdf/2111.14556v1.pdf)
+
+#### 32.2. Usage Code
+
+```python
+from model.attention.ACmix import ACmix
+import torch
+
+if __name__ == '__main__':
+    input=torch.randn(50,256,7,7)
+    acmix = ACmix(in_planes=256, out_planes=256)
+    output=acmix(input)
+    print(output.shape)
     
 ```
 
