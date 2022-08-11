@@ -139,6 +139,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [4. ConvMixer Usage](#4-ConvMixer-Usage)
 
+    - [5. ShuffleTransformer Usage](#5-ShuffleTransformer-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -251,6 +253,8 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [Separable Self-attention for Mobile Vision Transformers---ArXiv 2022.06.06](https://arxiv.org/abs/2206.02680)
 
 - Pytorch implementation of [On the Integration of Self-Attention and Convolution---ArXiv 2022.03.14](https://arxiv.org/pdf/2111.14556.pdf)
+
+- Pytorch implementation of [Shuffle Transformer: Rethinking Spatial Shuffle for Vision Transformer---ArXiv 2021.06.07](https://arxiv.org/abs/2106.03650)
 
 
 ***
@@ -1230,6 +1234,27 @@ if __name__ == '__main__':
     convmixer=ConvMixer(dim=512,depth=12)
     out=convmixer(x)
     print(out.shape)  #[1, 1000]
+
+
+```
+
+### 5. ShuffleTransformer Usage
+#### 5.1. Paper
+[Shuffle Transformer: Rethinking Spatial Shuffle for Vision Transformer](https://arxiv.org/pdf/2106.03650.pdf)
+
+#### 5.2. Usage Code
+```python
+
+from model.backbone.ShuffleTransformer import ShuffleTransformer
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    sft = ShuffleTransformer()
+    output=sft(input)
+    print(output.shape)
 
 
 ```
