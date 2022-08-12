@@ -145,6 +145,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [7. HATNet Usage](#7-HATNet-Usage)
 
+    - [8. CoaT Usage](#7-CoaT-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -263,6 +265,8 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [ConTNet: Why not use convolution and transformer at the same time?---ArXiv 2021.04.27](https://arxiv.org/abs/2104.13497)
 
 - Pytorch implementation of [Vision Transformers with Hierarchical Attention---ArXiv 2022.06.15](https://arxiv.org/abs/2106.03180)
+
+- Pytorch implementation of [Co-Scale Conv-Attentional Image Transformers---ArXiv 2021.08.26](https://arxiv.org/abs/2104.06399)
 
 
 ***
@@ -1288,7 +1292,7 @@ if __name__ == "__main__":
 
 ```
 
-### 7 Usage
+### 7 HATNet Usage
 #### 7.1. Paper
 [Vision Transformers with Hierarchical Attention](https://arxiv.org/abs/2106.03180)
 
@@ -1310,7 +1314,24 @@ if __name__ == '__main__':
 
 ```
 
+### 8 CoaT Usage
+#### 8.1. Paper
+[Co-Scale Conv-Attentional Image Transformers](https://arxiv.org/abs/2104.06399)
 
+#### 8.2. Usage Code
+```python
+
+from model.backbone.CoaT import CoaT
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = CoaT(patch_size=4, embed_dims=[152, 152, 152, 152], serial_depths=[2, 2, 2, 2], parallel_depth=6, num_heads=8, mlp_ratios=[4, 4, 4, 4])
+    output=model(input)
+    print(output.shape) # torch.Size([1, 1000])
+
+```
 
 
 
