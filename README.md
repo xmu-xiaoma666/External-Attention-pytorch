@@ -143,6 +143,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [6. ConTNet Usage](#5-ConTNet-Usage)
 
+    - [7. HATNet Usage](#7-HATNet-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -259,6 +261,8 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [Shuffle Transformer: Rethinking Spatial Shuffle for Vision Transformer---ArXiv 2021.06.07](https://arxiv.org/abs/2106.03650)
 
 - Pytorch implementation of [ConTNet: Why not use convolution and transformer at the same time?---ArXiv 2021.04.27](https://arxiv.org/abs/2104.13497)
+
+- Pytorch implementation of [Vision Transformers with Hierarchical Attention---ArXiv 2022.06.15](https://arxiv.org/abs/2106.03180)
 
 
 ***
@@ -1280,6 +1284,28 @@ if __name__ == "__main__":
     input = torch.randn(1, 3, 224, 224)
     out = model(input)
     print(out.shape)
+
+
+```
+
+### 7 Usage
+#### 7.1. Paper
+[Vision Transformers with Hierarchical Attention](https://arxiv.org/abs/2106.03180)
+
+#### 7.2. Usage Code
+```python
+
+from model.backbone.HATNet import HATNet
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    hat = HATNet(dims=[48, 96, 240, 384], head_dim=48, expansions=[8, 8, 4, 4],
+        grid_sizes=[8, 7, 7, 1], ds_ratios=[8, 4, 2, 1], depths=[2, 2, 6, 3])
+    output=hat(input)
+    print(output.shape)
 
 
 ```
