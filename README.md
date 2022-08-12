@@ -149,6 +149,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [9. PVT Usage](#9-PVT-Usage)
 
+    - [10. CPVT Usage](#9-CPVT-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -270,7 +272,7 @@ Hello，大家好，我是小马🚀🚀🚀
 
 - Pytorch implementation of [Co-Scale Conv-Attentional Image Transformers---ArXiv 2021.08.26](https://arxiv.org/abs/2104.06399)
 
-- Pytorch implementation of [PVT v2: Improved Baselines with Pyramid Vision Transformer---ArXiv 2022.06.30](https://arxiv.org/abs/2106.13797)
+- Pytorch implementation of [Conditional Positional Encodings for Vision Transformers---ArXiv 2021.03.18](https://arxiv.org/abs/2102.10882)
 
 
 ***
@@ -1353,6 +1355,28 @@ if __name__ == '__main__':
     model = PyramidVisionTransformer(
         patch_size=4, embed_dims=[64, 128, 320, 512], num_heads=[1, 2, 5, 8], mlp_ratios=[8, 8, 4, 4], qkv_bias=True,
         norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=[2, 2, 2, 2], sr_ratios=[8, 4, 2, 1])
+    output=model(input)
+    print(output.shape)
+
+```
+
+
+### 10 CPVT Usage
+#### 10.1. Paper
+[Conditional Positional Encodings for Vision Transformers](https://arxiv.org/abs/2102.10882)
+
+#### 10.2. Usage Code
+```python
+
+from model.backbone.CPVT import CPVTV2
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = CPVTV2(
+        patch_size=4, embed_dims=[64, 128, 320, 512], num_heads=[1, 2, 5, 8], mlp_ratios=[8, 8, 4, 4], qkv_bias=True,
+        norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=[3, 4, 6, 3], sr_ratios=[8, 4, 2, 1])
     output=model(input)
     print(output.shape)
 
