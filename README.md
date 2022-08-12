@@ -149,7 +149,9 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [9. PVT Usage](#9-PVT-Usage)
 
-    - [10. CPVT Usage](#9-CPVT-Usage)
+    - [10. CPVT Usage](#10-CPVT-Usage)
+
+    - [11. PIT Usage](#11-PIT-Usage)
 
 
 - [MLP Series](#mlp-series)
@@ -272,9 +274,9 @@ Hello，大家好，我是小马🚀🚀🚀
 
 - Pytorch implementation of [Co-Scale Conv-Attentional Image Transformers---ArXiv 2021.08.26](https://arxiv.org/abs/2104.06399)
 
-- Pytorch implementation of [Conditional Positional Encodings for Vision Transformers---ArXiv 2021.03.18](https://arxiv.org/abs/2102.10882)
+- Pytorch implementation of [Conditional Positional Encodings for Vision Transformers](https://arxiv.org/abs/2102.10882)
 
-
+- Pytorch implementation of [Rethinking Spatial Dimensions of Vision Transformers---ICCV 2021](https://arxiv.org/abs/2103.16302)
 ***
 
 ### 1. External Attention Usage
@@ -1381,6 +1383,34 @@ if __name__ == '__main__':
     print(output.shape)
 
 ```
+
+### 11 PIT Usage
+#### 11.1. Paper
+[Rethinking Spatial Dimensions of Vision Transformers](https://arxiv.org/abs/2103.16302)
+
+#### 11.2. Usage Code
+```python
+
+from model.backbone.PIT import PoolingTransformer
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = PoolingTransformer(
+        image_size=224,
+        patch_size=14,
+        stride=7,
+        base_dims=[64, 64, 64],
+        depth=[3, 6, 4],
+        heads=[4, 8, 16],
+        mlp_ratio=4
+    )
+    output=model(input)
+    print(output.shape)
+
+```
+
 
 
 
