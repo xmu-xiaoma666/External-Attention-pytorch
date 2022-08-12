@@ -141,11 +141,13 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [5. ShuffleTransformer Usage](#5-ShuffleTransformer-Usage)
 
-    - [6. ConTNet Usage](#5-ConTNet-Usage)
+    - [6. ConTNet Usage](#6-ConTNet-Usage)
 
     - [7. HATNet Usage](#7-HATNet-Usage)
 
-    - [8. CoaT Usage](#7-CoaT-Usage)
+    - [8. CoaT Usage](#8-CoaT-Usage)
+
+    - [9. PVT Usage](#9-PVT-Usage)
 
 
 - [MLP Series](#mlp-series)
@@ -267,6 +269,8 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [Vision Transformers with Hierarchical Attention---ArXiv 2022.06.15](https://arxiv.org/abs/2106.03180)
 
 - Pytorch implementation of [Co-Scale Conv-Attentional Image Transformers---ArXiv 2021.08.26](https://arxiv.org/abs/2104.06399)
+
+- Pytorch implementation of [PVT v2: Improved Baselines with Pyramid Vision Transformer---ArXiv 2022.06.30](https://arxiv.org/abs/2106.13797)
 
 
 ***
@@ -1330,6 +1334,27 @@ if __name__ == '__main__':
     model = CoaT(patch_size=4, embed_dims=[152, 152, 152, 152], serial_depths=[2, 2, 2, 2], parallel_depth=6, num_heads=8, mlp_ratios=[4, 4, 4, 4])
     output=model(input)
     print(output.shape) # torch.Size([1, 1000])
+
+```
+
+### 9 PVT Usage
+#### 9.1. Paper
+[PVT v2: Improved Baselines with Pyramid Vision Transformer](https://arxiv.org/pdf/2106.13797.pdf)
+
+#### 9.2. Usage Code
+```python
+
+from model.backbone.PVT import PyramidVisionTransformer
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = PyramidVisionTransformer(
+        patch_size=4, embed_dims=[64, 128, 320, 512], num_heads=[1, 2, 5, 8], mlp_ratios=[8, 8, 4, 4], qkv_bias=True,
+        norm_layer=partial(nn.LayerNorm, eps=1e-6), depths=[2, 2, 2, 2], sr_ratios=[8, 4, 2, 1])
+    output=model(input)
+    print(output.shape)
 
 ```
 
