@@ -159,6 +159,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [14. DViT Usage](#14-DViT-Usage)
 
+    - [15. CeiT Usage](#15-CeiT-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -289,6 +291,8 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [Transformer in Transformer---NeurIPS 2021](https://arxiv.org/abs/2103.00112)
 
 - Pytorch implementation of [DeepViT: Towards Deeper Vision Transformer](https://arxiv.org/abs/2103.11886)
+
+- Pytorch implementation of [Incorporating Convolution Designs into Visual Transformers](https://arxiv.org/abs/2103.11816)
 ***
 
 ### 1. External Attention Usage
@@ -1500,6 +1504,34 @@ if __name__ == '__main__':
         mlp_ratio=3, 
         qkv_bias=True,
         norm_layer=partial(nn.LayerNorm, eps=1e-6),
+        )
+    output=model(input)
+    print(output.shape)
+
+```
+
+### 15 CeiT Usage
+#### 15.1. Paper
+[Incorporating Convolution Designs into Visual Transformers](https://arxiv.org/abs/2103.11816)
+
+#### 15.2. Usage Code
+```python
+
+from model.backbone.CeiT import CeIT
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = CeIT(
+        hybrid_backbone=Image2Tokens(),
+        patch_size=4, 
+        embed_dim=192, 
+        depth=12, 
+        num_heads=3, 
+        mlp_ratio=4, 
+        qkv_bias=True,
+        norm_layer=partial(nn.LayerNorm, eps=1e-6)
         )
     output=model(input)
     print(output.shape)
