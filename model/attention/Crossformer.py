@@ -628,4 +628,4 @@ if __name__ == '__main__':
         merge_size=[[2, 4], [2,4], [2, 4]]
     )
     output=model(input)
-    print(output[0].shape)
+    print(output.shape)
