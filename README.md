@@ -157,6 +157,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [13. TnT Usage](#13-TnT-Usage)
 
+    - [14. DViT Usage](#14-DViT-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -285,6 +287,8 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [CrossViT: Cross-Attention Multi-Scale Vision Transformer for Image Classification---ICCV 2021](https://arxiv.org/abs/2103.14899)
 
 - Pytorch implementation of [Transformer in Transformer---NeurIPS 2021](https://arxiv.org/abs/2103.00112)
+
+- Pytorch implementation of [DeepViT: Towards Deeper Vision Transformer](https://arxiv.org/abs/2103.11886)
 ***
 
 ### 1. External Attention Usage
@@ -1448,10 +1452,10 @@ if __name__ == "__main__":
 ```
 
 ### 13 TnT Usage
-#### 12.1. Paper
+#### 13.1. Paper
 [Transformer in Transformer](https://arxiv.org/abs/2103.00112)
 
-#### 12.2. Usage Code
+#### 13.2. Usage Code
 ```python
 
 from model.backbone.TnT import TNT
@@ -1470,6 +1474,33 @@ if __name__ == '__main__':
         inner_num_heads=4, 
         qkv_bias=False,
         inner_stride=4)
+    output=model(input)
+    print(output.shape)
+
+```
+
+### 14 DViT Usage
+#### 14.1. Paper
+[DeepViT: Towards Deeper Vision Transformer](https://arxiv.org/abs/2103.11886)
+
+#### 14.2. Usage Code
+```python
+
+from model.backbone.DViT import DeepVisionTransformer
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = DeepVisionTransformer(
+        patch_size=16, embed_dim=384, 
+        depth=[False] * 16, 
+        apply_transform=[False] * 0 + [True] * 32, 
+        num_heads=12, 
+        mlp_ratio=3, 
+        qkv_bias=True,
+        norm_layer=partial(nn.LayerNorm, eps=1e-6),
+        )
     output=model(input)
     print(output.shape)
 
