@@ -171,6 +171,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [20. LeViT Usage](#20-LeViT-Usage)
 
+    - [21. VOLO Usage](#21-VOLO-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -316,6 +318,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
 
 - Pytorch implementation of [LeViT: a Vision Transformer in ConvNet’s Clothing for Faster Inference](https://arxiv.org/abs/2104.01136)
+
+- Pytorch implementation of [VOLO: Vision Outlooker for Visual Recognition](https://arxiv.org/abs/2106.13112)
 ***
 
 
@@ -1689,6 +1693,32 @@ if __name__ == '__main__':
         model.eval()
         output = model(input)
         print(output.shape)
+
+```
+
+### 21 VOLO Usage
+#### 20.1. Paper
+[VOLO: Vision Outlooker for Visual Recognition](https://arxiv.org/abs/2106.13112)
+
+#### 20.2. Usage Code
+```python
+
+from model.backbone.VOLO import VOLO
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = VOLO([4, 4, 8, 2],
+                 embed_dims=[192, 384, 384, 384],
+                 num_heads=[6, 12, 12, 12],
+                 mlp_ratios=[3, 3, 3, 3],
+                 downsamples=[True, False, False, False],
+                 outlook_attention=[True, False, False, False ],
+                 post_layers=['ca', 'ca'],
+                 )
+    output=model(input)
+    print(output[0].shape)
 
 ```
 
