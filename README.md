@@ -163,7 +163,9 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [16. ConViT Usage](#16-ConViT-Usage)
 
-    - [17. CaiT Usage](#16-CaiT-Usage)
+    - [17. CaiT Usage](#17-CaiT-Usage)
+
+    - [18. PatchConvnet Usage](#18-PatchConvnet-Usage)
 
 
 - [MLP Series](#mlp-series)
@@ -301,6 +303,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
 - Pytorch implementation of [ConViT: Improving Vision Transformers with Soft Convolutional Inductive Biases](https://arxiv.org/abs/2103.10697)
 ***
+
+- Pytorch implementation of [Augmenting Convolutional networks with attention-based aggregation](https://arxiv.org/abs/2112.13692)
 
 - Pytorch implementation of [Going deeper with Image Transformers---ICCV 2021 (Oral)](https://arxiv.org/abs/2103.17239)
 ***
@@ -1599,6 +1603,38 @@ if __name__ == '__main__':
     print(output.shape)
 
 ```
+
+### 18 PatchConvnet Usage
+#### 18.1. Paper
+[Augmenting Convolutional networks with attention-based aggregation](https://arxiv.org/abs/2112.13692)
+
+#### 18.2. Usage Code
+```python
+
+from model.backbone.PatchConvnet import PatchConvnet
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = PatchConvnet(
+        patch_size=16,
+        embed_dim=384,
+        depth=60,
+        num_heads=1,
+        qkv_bias=True,
+        norm_layer=partial(nn.LayerNorm, eps=1e-6),
+        Patch_layer=ConvStem,
+        Attention_block=Conv_blocks_se,
+        depth_token_only=1,
+        mlp_ratio_clstk=3.0,
+    )
+    output=model(input)
+    print(output.shape)
+
+```
+
+
 
 
 
