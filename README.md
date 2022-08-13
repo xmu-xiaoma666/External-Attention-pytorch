@@ -1705,10 +1705,10 @@ if __name__ == '__main__':
 ```
 
 ### 21 VOLO Usage
-#### 20.1. Paper
+#### 21.1. Paper
 [VOLO: Vision Outlooker for Visual Recognition](https://arxiv.org/abs/2106.13112)
 
-#### 20.2. Usage Code
+#### 21.2. Usage Code
 ```python
 
 from model.backbone.VOLO import VOLO
