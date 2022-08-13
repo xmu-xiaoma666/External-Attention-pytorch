@@ -190,6 +190,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [5. sMLP Usage](#5-sMLP-Usage)
 
+    - [6. vip-mlp Usage](#6-vip-mlp-Usage)
+
 - [Re-Parameter(ReP) Series](#Re-Parameter-series)
 
     - [1. RepVGG Usage](#1-RepVGG-Usage)
@@ -1918,6 +1920,32 @@ if __name__ == '__main__':
     smlp=sMLPBlock(h=224,w=224)
     out=smlp(input)
     print(out.shape)
+```
+
+### 6. vip-mlp Usage
+#### 6.1. Paper
+["Vision Permutator: A Permutable MLP-Like Architecture for Visual Recognition"](https://arxiv.org/abs/2106.12368)
+
+#### 6.2. Usage Code
+```python
+from model.mlp.vip-mlp import VisionPermutator
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = VisionPermutator(
+        layers=[4, 3, 8, 3], 
+        embed_dims=[384, 384, 384, 384], 
+        patch_size=14, 
+        transitions=[False, False, False, False],
+        segment_dim=[16, 16, 16, 16], 
+        mlp_ratios=[3, 3, 3, 3], 
+        mlp_fn=WeightedPermuteMLP
+    )
+    output=model(input)
+    print(output.shape)
 ```
 
 
