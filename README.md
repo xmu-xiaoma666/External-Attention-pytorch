@@ -153,6 +153,10 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [11. PIT Usage](#11-PIT-Usage)
 
+    - [12. CrossViT Usage](#12-CrossViT-Usage)
+
+    - [13. TnT Usage](#13-TnT-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -277,6 +281,10 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [Conditional Positional Encodings for Vision Transformers](https://arxiv.org/abs/2102.10882)
 
 - Pytorch implementation of [Rethinking Spatial Dimensions of Vision Transformers---ICCV 2021](https://arxiv.org/abs/2103.16302)
+
+- Pytorch implementation of [CrossViT: Cross-Attention Multi-Scale Vision Transformer for Image Classification---ICCV 2021](https://arxiv.org/abs/2103.14899)
+
+- Pytorch implementation of [Transformer in Transformer---NeurIPS 2021](https://arxiv.org/abs/2103.00112)
 ***
 
 ### 1. External Attention Usage
@@ -1411,6 +1419,61 @@ if __name__ == '__main__':
 
 ```
 
+### 12 CrossViT Usage
+#### 12.1. Paper
+[CrossViT: Cross-Attention Multi-Scale Vision Transformer for Image Classification](https://arxiv.org/abs/2103.14899)
+
+#### 12.2. Usage Code
+```python
+
+from model.backbone.CrossViT import VisionTransformer
+import torch
+from torch import nn
+
+if __name__ == "__main__":
+    input=torch.randn(1,3,224,224)
+    model = VisionTransformer(
+        img_size=[240, 224],
+        patch_size=[12, 16], 
+        embed_dim=[192, 384], 
+        depth=[[1, 4, 0], [1, 4, 0], [1, 4, 0]],
+        num_heads=[6, 6], 
+        mlp_ratio=[4, 4, 1], 
+        qkv_bias=True,
+        norm_layer=partial(nn.LayerNorm, eps=1e-6)
+    )
+    output=model(input)
+    print(output.shape)
+
+```
+
+### 13 TnT Usage
+#### 12.1. Paper
+[Transformer in Transformer](https://arxiv.org/abs/2103.00112)
+
+#### 12.2. Usage Code
+```python
+
+from model.backbone.TnT import TNT
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = TNT(
+        img_size=224, 
+        patch_size=16, 
+        outer_dim=384, 
+        inner_dim=24, 
+        depth=12,
+        outer_num_heads=6, 
+        inner_num_heads=4, 
+        qkv_bias=False,
+        inner_stride=4)
+    output=model(input)
+    print(output.shape)
+
+```
 
 
 
