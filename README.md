@@ -172,6 +172,8 @@ Hello，大家好，我是小马🚀🚀🚀
     - [20. LeViT Usage](#20-LeViT-Usage)
 
     - [21. VOLO Usage](#21-VOLO-Usage)
+    
+    - [22. Container Usage](#22-Container-Usage)
 
 
 - [MLP Series](#mlp-series)
@@ -320,6 +322,8 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [LeViT: a Vision Transformer in ConvNet’s Clothing for Faster Inference](https://arxiv.org/abs/2104.01136)
 
 - Pytorch implementation of [VOLO: Vision Outlooker for Visual Recognition](https://arxiv.org/abs/2106.13112)
+
+- Pytorch implementation of [Container: Context Aggregation Network---NeuIPS 2021](https://arxiv.org/abs/2106.01401)
 ***
 
 
@@ -1719,6 +1723,33 @@ if __name__ == '__main__':
                  )
     output=model(input)
     print(output[0].shape)
+
+```
+
+### 22 Container Usage
+#### 22.1. Paper
+[Container: Context Aggregation Network](https://arxiv.org/abs/2106.01401)
+
+#### 22.2. Usage Code
+```python
+
+from model.backbone.Container import VisionTransformer
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = VisionTransformer(
+        img_size=[224, 56, 28, 14], 
+        patch_size=[4, 2, 2, 2], 
+        embed_dim=[64, 128, 320, 512], 
+        depth=[3, 4, 8, 3], 
+        num_heads=16, 
+        mlp_ratio=[8, 8, 4, 4], 
+        qkv_bias=True,
+        norm_layer=partial(nn.LayerNorm, eps=1e-6))
+    output=model(input)
+    print(output.shape)
 
 ```
 
