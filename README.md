@@ -163,6 +163,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [16. ConViT Usage](#16-ConViT-Usage)
 
+    - [17. CaiT Usage](#16-CaiT-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -298,6 +300,9 @@ Hello，大家好，我是小马🚀🚀🚀
 ***
 
 - Pytorch implementation of [ConViT: Improving Vision Transformers with Soft Convolutional Inductive Biases](https://arxiv.org/abs/2103.10697)
+***
+
+- Pytorch implementation of [Going deeper with Image Transformers---ICCV 2021 (Oral)](https://arxiv.org/abs/2103.17239)
 ***
 
 ### 1. External Attention Usage
@@ -1559,6 +1564,36 @@ if __name__ == '__main__':
     model = VisionTransformer(
         num_heads=16,
         norm_layer=partial(nn.LayerNorm, eps=1e-6)
+        )
+    output=model(input)
+    print(output.shape)
+
+```
+
+### 17 CaiT Usage
+#### 17.1. Paper
+[Going deeper with Image Transformers](https://arxiv.org/abs/2103.17239)
+
+#### 17.2. Usage Code
+```python
+
+from model.backbone.CaiT import CaiT
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = CaiT(
+        img_size= 224,
+        patch_size=16, 
+        embed_dim=192, 
+        depth=24, 
+        num_heads=4, 
+        mlp_ratio=4, 
+        qkv_bias=True,
+        norm_layer=partial(nn.LayerNorm, eps=1e-6),
+        init_scale=1e-5,
+        depth_token_only=2
         )
     output=model(input)
     print(output.shape)
