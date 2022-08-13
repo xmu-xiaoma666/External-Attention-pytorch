@@ -167,6 +167,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [18. PatchConvnet Usage](#18-PatchConvnet-Usage)
 
+    - [19. DeiT Usage](#18-DeiT-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -307,6 +309,8 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [Augmenting Convolutional networks with attention-based aggregation](https://arxiv.org/abs/2112.13692)
 
 - Pytorch implementation of [Going deeper with Image Transformers---ICCV 2021 (Oral)](https://arxiv.org/abs/2103.17239)
+
+- Pytorch implementation of [Training data-efficient image transformers & distillation through attention---ICML 2021](https://arxiv.org/abs/2012.12877)
 ***
 
 ### 1. External Attention Usage
@@ -1631,6 +1635,33 @@ if __name__ == '__main__':
     )
     output=model(input)
     print(output.shape)
+
+```
+
+### 19 DeiT Usage
+#### 19.1. Paper
+[Training data-efficient image transformers & distillation through attention](https://arxiv.org/abs/2012.12877)
+
+#### 19.2. Usage Code
+```python
+
+from model.backbone.DeiT import DistilledVisionTransformer
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = DistilledVisionTransformer(
+        patch_size=16, 
+        embed_dim=384, 
+        depth=12, 
+        num_heads=6, 
+        mlp_ratio=4, 
+        qkv_bias=True,
+        norm_layer=partial(nn.LayerNorm, eps=1e-6)
+        )
+    output=model(input)
+    print(output[0].shape)
 
 ```
 
