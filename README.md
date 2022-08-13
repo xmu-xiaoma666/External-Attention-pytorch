@@ -169,6 +169,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [19. DeiT Usage](#19-DeiT-Usage)
 
+    - [20. LeViT Usage](#20-LeViT-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -304,14 +306,18 @@ Hello，大家好，我是小马🚀🚀🚀
 ***
 
 - Pytorch implementation of [ConViT: Improving Vision Transformers with Soft Convolutional Inductive Biases](https://arxiv.org/abs/2103.10697)
-***
+
 
 - Pytorch implementation of [Augmenting Convolutional networks with attention-based aggregation](https://arxiv.org/abs/2112.13692)
 
 - Pytorch implementation of [Going deeper with Image Transformers---ICCV 2021 (Oral)](https://arxiv.org/abs/2103.17239)
 
 - Pytorch implementation of [Training data-efficient image transformers & distillation through attention---ICML 2021](https://arxiv.org/abs/2012.12877)
+
+
+- Pytorch implementation of [LeViT: a Vision Transformer in ConvNet’s Clothing for Faster Inference](https://arxiv.org/abs/2104.01136)
 ***
+
 
 ### 1. External Attention Usage
 #### 1.1. Paper
@@ -1662,6 +1668,27 @@ if __name__ == '__main__':
         )
     output=model(input)
     print(output[0].shape)
+
+```
+
+### 20 LeViT Usage
+#### 20.1. Paper
+[LeViT: a Vision Transformer in ConvNet’s Clothing for Faster Inference](https://arxiv.org/abs/2104.01136)
+
+#### 20.2. Usage Code
+```python
+
+from model.backbone.LeViT import *
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    for name in specification:
+        input=torch.randn(1,3,224,224)
+        model = globals()[name](fuse=True, pretrained=False)
+        model.eval()
+        output = model(input)
+        print(output.shape)
 
 ```
 
