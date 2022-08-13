@@ -167,7 +167,7 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [18. PatchConvnet Usage](#18-PatchConvnet-Usage)
 
-    - [19. DeiT Usage](#18-DeiT-Usage)
+    - [19. DeiT Usage](#19-DeiT-Usage)
 
 
 - [MLP Series](#mlp-series)
