@@ -133,6 +133,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [35. MOATransformer Attention Usage](#35-MOATransformer-Attention-Usage)
 
+    - [36. CrissCrossAttention Attention Usage](#36-CrissCrossAttention-Attention-Usage)
+
   
 
 - [Backbone Series](#Backbone-series)
@@ -301,6 +303,8 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [CROSSFORMER: A VERSATILE VISION TRANSFORMER HINGING ON CROSS-SCALE ATTENTION---ICLR 2022](https://arxiv.org/pdf/2108.00154.pdf)
 
 - Pytorch implementation of [Aggregating Global Features into Local Vision Transformer](https://arxiv.org/abs/2201.12903)
+
+- Pytorch implementation of [CCNet: Criss-Cross Attention for Semantic Segmentation](https://arxiv.org/abs/1811.11721)
 ***
 
 
@@ -1268,6 +1272,26 @@ if __name__ == '__main__':
     )
     output=model(input)
     print(output.shape)
+    
+```
+
+### 36. CrissCrossAttention Attention Usage
+
+#### 36.1. Paper
+
+[CCNet: Criss-Cross Attention for Semantic Segmentation](https://arxiv.org/abs/1811.11721)
+
+#### 36.2. Usage Code
+
+```python
+from model.attention.CrissCrossAttention import CrissCrossAttention
+import torch
+
+if __name__ == '__main__':
+    input=torch.randn(3, 64, 7, 7)
+    model = CrissCrossAttention(64)
+    outputs = model(input)
+    print(outputs.shape)
     
 ```
 
