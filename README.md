@@ -131,6 +131,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [34. CrossFormer Attention Usage](#34-CrossFormer-Attention-Usage)
 
+    - [35. MOATransformer Attention Usage](#35-MOATransformer-Attention-Usage)
+
   
 
 - [Backbone Series](#Backbone-series)
@@ -338,6 +340,8 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [Vision Transformer with Deformable Attention---CVPR 2022](https://arxiv.org/abs/2201.00520)
 
 - Pytorch implementation of [CROSSFORMER: A VERSATILE VISION TRANSFORMER HINGING ON CROSS-SCALE ATTENTION---ICLR 2022](https://arxiv.org/pdf/2108.00154.pdf)
+
+- Pytorch implementation of [Aggregating Global Features into Local Vision Transformer](https://arxiv.org/abs/2201.12903)
 ***
 
 
@@ -1265,6 +1269,43 @@ if __name__ == '__main__':
         patch_norm=True,
         use_checkpoint=False,
         merge_size=[[2, 4], [2,4], [2, 4]]
+    )
+    output=model(input)
+    print(output.shape)
+    
+```
+
+### 35. MOATransformer Attention Usage
+
+#### 35.1. Paper
+
+[Aggregating Global Features into Local Vision Transformer](https://arxiv.org/abs/2201.12903)
+
+#### 35.2. Usage Code
+
+```python
+from model.attention.MOATransformer import MOATransformer
+import torch
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = MOATransformer(
+        img_size=224,
+        patch_size=4,
+        in_chans=3,
+        num_classes=1000,
+        embed_dim=96,
+        depths=[2, 2, 6],
+        num_heads=[3, 6, 12],
+        window_size=14,
+        mlp_ratio=4.,
+        qkv_bias=True,
+        qk_scale=None,
+        drop_rate=0.0,
+        drop_path_rate=0.1,
+        ape=False,
+        patch_norm=True,
+        use_checkpoint=False
     )
     output=model(input)
     print(output.shape)
