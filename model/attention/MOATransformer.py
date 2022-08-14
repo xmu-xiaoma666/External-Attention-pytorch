@@ -729,6 +729,7 @@ class MOATransformer(nn.Module):
 # --------------------------------------------------------
 # Adopted from Swin Transformer
 # Modified by Krushi Patel
+# print(sum(p.numel() for p in model.parameters() if p.requires_grad), 'parameters')
 # --------------------------------------------------------
 
 if __name__ == '__main__':
