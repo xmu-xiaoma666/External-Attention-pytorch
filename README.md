@@ -135,7 +135,7 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [36. CrissCrossAttention Attention Usage](#36-CrissCrossAttention-Attention-Usage)
 
-  
+    - [37. Axial_attention Attention Usage](#37-Axial_attention-Attention-Usage)
 
 - [Backbone Series](#Backbone-series)
 
@@ -305,6 +305,8 @@ Hello，大家好，我是小马🚀🚀🚀
 - Pytorch implementation of [Aggregating Global Features into Local Vision Transformer](https://arxiv.org/abs/2201.12903)
 
 - Pytorch implementation of [CCNet: Criss-Cross Attention for Semantic Segmentation](https://arxiv.org/abs/1811.11721)
+
+- Pytorch implementation of [Axial Attention in Multidimensional Transformers](https://arxiv.org/abs/1912.12180)
 ***
 
 
@@ -1290,6 +1292,30 @@ import torch
 if __name__ == '__main__':
     input=torch.randn(3, 64, 7, 7)
     model = CrissCrossAttention(64)
+    outputs = model(input)
+    print(outputs.shape)
+    
+```
+
+### 37. Axial_attention Attention Usage
+
+#### 37.1. Paper
+
+[Axial Attention in Multidimensional Transformers](https://arxiv.org/abs/1912.12180)
+
+#### 37.2. Usage Code
+
+```python
+from model.attention.Axial_attention import AxialImageTransformer
+import torch
+
+if __name__ == '__main__':
+    input=torch.randn(3, 128, 7, 7)
+    model = AxialImageTransformer(
+        dim = 128,
+        depth = 12,
+        reversible = True
+    )
     outputs = model(input)
     print(outputs.shape)
     
