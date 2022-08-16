@@ -8,15 +8,27 @@
 ![](https://img.shields.io/badge/python->=v3.0-blue)
 ![](https://img.shields.io/badge/pytorch->=v1.4-red)
 
+<!--
 -------
 *If this project is helpful to you, welcome to give a ***star***.* 
 
 *Don't forget to ***follow*** me to learn about project updates.*
 
+-->
+
 -------
 
-<!-- - **😄 😄 😄 I am looking for jobs for 2023, my interest is multi-modal pretraining, video-text retrieval, computer vision or other feilds about multi modality!!! Welcome to chat with me by wechat(id:mayiwei1998)**
-- **😄 😄 😄 我正在寻找2023年的工作，我的兴趣是多模态预训练、视频文本检索、计算机视觉或其他关于多模态的领域！！！欢迎大家通过微信与我聊天（id:mayiwei1998）** -->
+
+🔥🔥🔥 **重磅！！！作为项目补充，最近全新开源了一个目标检测代码库 [YOLOAir](https://github.com/iscyy/yoloair)，里面在目标检测算法中集成了各种Attention机制，代码简洁易读，欢迎大家来玩呀！**
+
+🔥🔥🔥 **As a supplement to the project, a object detection codebase [YOLOAir](https://github.com/iscyy/yoloair) has recently been newly opened, which integrates various attention mechanisms in the object detection algorithm. The code is simple and easy to read. Welcome to play and star🌟!**
+
+
+![image](https://user-images.githubusercontent.com/33897496/184842641-986bbdbc-fd29-47dc-917d-039e8cdcda3b.png)
+
+
+
+-------
 
 Hello，大家好，我是小马🚀🚀🚀
 
@@ -33,6 +45,8 @@ Hello，大家好，我是小马🚀🚀🚀
 本项目就是要实现一个既能**让深度学习小白也能搞懂**，又能**服务科研和工业社区**的代码库。作为[**FightingCV公众号**](https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA)的补充，本项目的宗旨是从代码角度，实现🚀**让世界上没有难读的论文**🚀。
 
 （同时也非常欢迎各位科研工作者将自己的工作的核心代码整理到本项目中，推动科研社区的发展，会在readme中注明代码的作者~）
+
+
 
 
 
