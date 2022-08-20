@@ -11,16 +11,16 @@ English | [简体中文](./README.md)
 
 <!--
 -------
-*If this project is helpful to you, welcome to give a ***star***.* 
+*If this project is helpful to you, welcome to give a*star***.* 
 
-*Don't forget to ***follow*** me to learn about project updates.*
+*Don't forget to*follow*me to learn about project updates.*
 
 -->
 
 -------
 
 
-🔥🔥🔥 **As a supplement to the project, a object detection codebase [YOLOAir](https://github.com/iscyy/yoloair) has recently been newly opened, which integrates various attention mechanisms in the object detection algorithm. The code is simple and easy to read. Welcome to play and star🌟!**
+🔥🔥🔥As a supplement to the project, a object detection codebase [YOLOAir](https://github.com/iscyy/yoloair) has recently been newly opened, which integrates various attention mechanisms in the object detection algorithm. The code is simple and easy to read. Welcome to play and star🌟!**
 
 
 ![image](https://user-images.githubusercontent.com/33897496/184842902-9acff374-b3e7-401a-80fd-9d484e40c637.png)
@@ -32,16 +32,16 @@ English | [简体中文](./README.md)
 Hello, everyone, I'm Xiaoma 🚀🚀🚀
 
 ***For beginners (like me):***
-Recently, I found a problem when reading the paper. Sometimes the core idea of the paper is very simple, and the core code may be just a dozen lines. However, when I open the source code of the author's release, I find that the proposed module is embedded in the task framework such as classification, detection and segmentation, resulting in redundant code. For me who is not familiar with the specific task framework, * * it is difficult to find the core code * *, resulting in some difficulties in understanding the paper and network ideas.
+Recently, I found a problem when reading the paper. Sometimes the core idea of the paper is very simple, and the core code may be just a dozen lines. However, when I open the source code of the author's release, I find that the proposed module is embedded in the task framework such as classification, detection and segmentation, resulting in redundant code. For me who is not familiar with the specific task framework, it is difficult to find the core code, resulting in some difficulties in understanding the paper and network ideas.
 
 ***For advanced (like you):***
-If the basic units conv, FC and RNN are regarded as small Lego blocks, and the structures transformer and RESNET are regarded as LEGO castles that have been built. The modules provided by this project are LEGO components with complete semantic information** Let scientific researchers avoid repeatedly building wheels * *, just think about how to use these "LEGO components" to build more colorful works.
+If the basic units conv, FC and RNN are regarded as small Lego blocks, and the structures transformer and RESNET are regarded as LEGO castles that have been built. The modules provided by this project are LEGO components with complete semantic informationLet scientific researchers avoid repeatedly building wheels, just think about how to use these "LEGO components" to build more colorful works.
 
 ***For proficient (may be like you):***
-Limited capacity, * * do not like light spraying * *!!!
+Limited capacity, do not like light spraying!!!
 
 ***For All：***
-This project aims to realize a code base that can * * make beginners of deep learning understand * * and * * serve scientific research and industrial communities * *. As [* * fightingcv wechat official account * *]（ https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA ）The purpose of this project is to achieve 🚀** Let there be no hard to read papers in the world** 🚀。
+This project aims to realize a code base that can make beginners of deep learning understand and serve scientific research and industrial communities. As [fightingcv wechat official account]( https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA )The purpose of this project is to achieve 🚀Let there be no hard to read papers in the world🚀。
 (at the same time, we also welcome all scientific researchers to sort out the core code of their work into this project, promote the development of the scientific research community, and indicate the author of the code in readme ~)
 
 
@@ -52,22 +52,22 @@ This project aims to realize a code base that can * * make beginners of deep lea
 
 
 
-Welcome to pay attention to official account: * * fightingcv**
+Welcome to pay attention to wechat official account: **fightingcv**
 
 
 
-The official account * * shares * * papers, algorithms and codes * * every day * * Oh~
+The official account shares papers, algorithms and codes every day Oh~
 
 
 
 
-**Share some recent papers and analysis * * in the group every day. Welcome to * * study and exchange * * ha~~~
+**Share some recent papers and analysis in the group every day. Welcome to study and exchange ha~~~
 
-(if you can't add it, you can add wechat: * * 775629340 * *, remember the remarks [* * company / school + direction + ID * *])
+(if you can't add it, you can add wechat: **775629340**, remember the remarks **[company / school + direction + ID])**
 
 ![](./FightingCVimg/wechat.jpg)
 
-We strongly recommend that you pay attention to [* * Zhihu * *]（ https://www.zhihu.com/people/jason-14-58-38/posts ）Account number and [* * fightingcv Wechat official account * *]（ https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA ）Can quickly learn about the latest high-quality dry goods resources.
+We strongly recommend that you pay attention to [Zhihu]( https://www.zhihu.com/people/jason-14-58-38/posts )Account number and **[fightingcv Wechat official account**]( https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA )** to quickly learn about the latest high-quality dry goods resources.
 
 
 
