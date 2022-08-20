@@ -1,0 +1,3 @@
+[console_scripts]
+huggingface-cli = huggingface_hub.commands.huggingface_cli:main
+

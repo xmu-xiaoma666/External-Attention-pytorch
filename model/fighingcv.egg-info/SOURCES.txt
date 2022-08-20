@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+model/fighingcv.egg-info/PKG-INFO
+model/fighingcv.egg-info/SOURCES.txt
+model/fighingcv.egg-info/dependency_links.txt
+model/fighingcv.egg-info/entry_points.txt
+model/fighingcv.egg-info/requires.txt
+model/fighingcv.egg-info/top_level.txt

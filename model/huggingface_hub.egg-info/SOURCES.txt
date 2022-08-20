@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+model/huggingface_hub.egg-info/PKG-INFO
+model/huggingface_hub.egg-info/SOURCES.txt
+model/huggingface_hub.egg-info/dependency_links.txt
+model/huggingface_hub.egg-info/entry_points.txt
+model/huggingface_hub.egg-info/requires.txt
+model/huggingface_hub.egg-info/top_level.txt
