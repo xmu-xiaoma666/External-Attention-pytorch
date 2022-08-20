@@ -1,9 +1,9 @@
 
 <img src="./FightingCVimg/LOGO.gif" height="200" width="400"/>
 
-简体中文 | [English](./README_EN.md)
+English | [简体中文](./README.md)
 
-# FightingCV 代码库， 包含 [***Attention***](#attention-series),[***Backbone***](#backbone-series), [***MLP***](#mlp-series), [***Re-parameter***](#re-parameter-series), [**Convolution**](#convolution-series)
+# FightingCV Codebase For [***Attention***](#attention-series),[***Backbone***](#backbone-series), [***MLP***](#mlp-series), [***Re-parameter***](#re-parameter-series), [**Convolution**](#convolution-series)
 
 ![](https://img.shields.io/badge/fightingcv-v0.0.1-brightgreen)
 ![](https://img.shields.io/badge/python->=v3.0-blue)
@@ -20,9 +20,7 @@
 -------
 
 
-🔥🔥🔥 **重磅！！！作为项目补充，最近全新开源了一个目标检测代码库 [YOLOAir](https://github.com/iscyy/yoloair)，里面在目标检测算法中集成了各种Attention机制，代码简洁易读，欢迎大家来玩呀！**
-
-
+🔥🔥🔥 **As a supplement to the project, a object detection codebase [YOLOAir](https://github.com/iscyy/yoloair) has recently been newly opened, which integrates various attention mechanisms in the object detection algorithm. The code is simple and easy to read. Welcome to play and star🌟!**
 
 
 ![image](https://user-images.githubusercontent.com/33897496/184842902-9acff374-b3e7-401a-80fd-9d484e40c637.png)
@@ -31,51 +29,51 @@
 
 -------
 
-Hello，大家好，我是小马🚀🚀🚀
+Hello, everyone, I'm Xiaoma 🚀🚀🚀
 
-***For 小白（Like Me）：***
-最近在读论文的时候会发现一个问题，有时候论文核心思想非常简单，核心代码可能也就十几行。但是打开作者release的源码时，却发现提出的模块嵌入到分类、检测、分割等任务框架中，导致代码比较冗余，对于特定任务框架不熟悉的我，**很难找到核心代码**，导致在论文和网络思想的理解上会有一定困难。
+***For beginners (like me):***
+Recently, I found a problem when reading the paper. Sometimes the core idea of the paper is very simple, and the core code may be just a dozen lines. However, when I open the source code of the author's release, I find that the proposed module is embedded in the task framework such as classification, detection and segmentation, resulting in redundant code. For me who is not familiar with the specific task framework, * * it is difficult to find the core code * *, resulting in some difficulties in understanding the paper and network ideas.
 
-***For 进阶者（Like You）：***
-如果把Conv、FC、RNN这些基本单元看做小的Lego积木，把Transformer、ResNet这些结构看成已经搭好的Lego城堡。那么本项目提供的模块就是一个个具有完整语义信息的Lego组件。**让科研工作者们避免反复造轮子**，只需思考如何利用这些“Lego组件”，搭建出更多绚烂多彩的作品。
+***For advanced (like you):***
+If the basic units conv, FC and RNN are regarded as small Lego blocks, and the structures transformer and RESNET are regarded as LEGO castles that have been built. The modules provided by this project are LEGO components with complete semantic information** Let scientific researchers avoid repeatedly building wheels * *, just think about how to use these "LEGO components" to build more colorful works.
 
-***For 大神（May Be Like You）：***
-能力有限，**不喜轻喷**！！！
+***For proficient (may be like you):***
+Limited capacity, * * do not like light spraying * *!!!
 
 ***For All：***
-本项目就是要实现一个既能**让深度学习小白也能搞懂**，又能**服务科研和工业社区**的代码库。作为[**FightingCV公众号**](https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA)的补充，本项目的宗旨是从代码角度，实现🚀**让世界上没有难读的论文**🚀。
-
-（同时也非常欢迎各位科研工作者将自己的工作的核心代码整理到本项目中，推动科研社区的发展，会在readme中注明代码的作者~）
-
+This project aims to realize a code base that can * * make beginners of deep learning understand * * and * * serve scientific research and industrial communities * *. As [* * fightingcv wechat official account * *]（ https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA ）The purpose of this project is to achieve 🚀** Let there be no hard to read papers in the world** 🚀。
+(at the same time, we also welcome all scientific researchers to sort out the core code of their work into this project, promote the development of the scientific research community, and indicate the author of the code in readme ~)
 
 
 
 
 
-## 公众号 & 微信交流群
-
-欢迎大家关注公众号：**FightingCV**
-
-公众号**每天**都会进行**论文、算法和代码的干货分享**哦~
+## Wechat Official account &  communication group
 
 
-<!-- 已建立**机器学习/深度学习算法/计算机视觉/多模态交流群**微信交流群！
 
-（加不进去可以加微信：**775629340**，记得备注【**公司/学校+方向+ID**】） -->
+Welcome to pay attention to official account: * * fightingcv**
 
-**每天在群里分享一些近期的论文和解析**，欢迎大家一起**学习交流**哈~~~
-（加不进去可以加微信：**775629340**，记得备注【**公司/学校+方向+ID**】）
+
+
+The official account * * shares * * papers, algorithms and codes * * every day * * Oh~
+
+
+
+
+**Share some recent papers and analysis * * in the group every day. Welcome to * * study and exchange * * ha~~~
+
+(if you can't add it, you can add wechat: * * 775629340 * *, remember the remarks [* * company / school + direction + ID * *])
 
 ![](./FightingCVimg/wechat.jpg)
 
-强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA)，可以快速了解到最新优质的干货资源。
-
+We strongly recommend that you pay attention to [* * Zhihu * *]（ https://www.zhihu.com/people/jason-14-58-38/posts ）Account number and [* * fightingcv Wechat official account * *]（ https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA ）Can quickly learn about the latest high-quality dry goods resources.
 
 
 
 ***
 
-# 目录
+# Contents
 
 - [Attention Series](#attention-series)
     - [1. External Attention Usage](#1-external-attention-usage)
