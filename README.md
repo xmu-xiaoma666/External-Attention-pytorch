@@ -25,7 +25,7 @@
 
 
 
-![image](https://user-images.githubusercontent.com/33897496/184842902-9acff374-b3e7-401a-80fd-9d484e40c637.png)
+<!-- ![image](https://user-images.githubusercontent.com/33897496/184842902-9acff374-b3e7-401a-80fd-9d484e40c637.png) -->
 
 
 
@@ -52,23 +52,24 @@ Hello，大家好，我是小马🚀🚀🚀
 
 
 
-## 公众号 & 微信交流群
+## 技术交流 <img title="" src="https://user-images.githubusercontent.com/48054808/157800467-2a9946ad-30d1-49a9-b9db-ba33413d9c90.png" alt="" width="20">
 
 欢迎大家关注公众号：**FightingCV**
 
-公众号**每天**都会进行**论文、算法和代码的干货分享**哦~
 
 
-<!-- 已建立**机器学习/深度学习算法/计算机视觉/多模态交流群**微信交流群！
+| FightingCV公众号 | 小助手微信 （备注【**公司/学校+方向+ID**】）|
+:-------------------------:|:-------------------------:
+<img src='./FightingCVimg/FightingCV.jpg' width='200px'>  |  <img src='./FightingCVimg/xiaozhushou.jpg' width='200px'> 
 
-（加不进去可以加微信：**775629340**，记得备注【**公司/学校+方向+ID**】） -->
+- 公众号**每天**都会进行**论文、算法和代码的干货分享**哦~
 
-**每天在群里分享一些近期的论文和解析**，欢迎大家一起**学习交流**哈~~~
+- **交流群每天分享一些最新的论文和解析**，欢迎大家一起**学习交流**哈~~~
 （加不进去可以加微信：**775629340**，记得备注【**公司/学校+方向+ID**】）
 
-![](./FightingCVimg/wechat.jpg)
+<!-- ![](./FightingCVimg/wechat.jpg) -->
 
-强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA)，可以快速了解到最新优质的干货资源。
+- 强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA)，可以快速了解到最新优质的干货资源。
 
 
 
