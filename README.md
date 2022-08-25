@@ -201,6 +201,8 @@ Hello，大家好，我是小马🚀🚀🚀
 
     - [23. CMT Usage](#23-CMT-Usage)
 
+    - [24. EfficientFormer Usage](#24-EfficientFormer-Usage)
+
 
 - [MLP Series](#mlp-series)
 
@@ -1389,6 +1391,8 @@ if __name__ == '__main__':
 
 - Pytorch implementation of [Vision Transformer with Deformable Attention---CVPR 2022](https://arxiv.org/abs/2201.00520)
 
+- Pytorch implementation of [EfficientFormer: Vision Transformers at MobileNet Speed](https://arxiv.org/abs/2206.01191)
+
 
 ### 1. ResNet Usage
 #### 1.1. Paper
@@ -1966,6 +1970,30 @@ from torch import nn
 if __name__ == '__main__':
     input=torch.randn(1,3,224,224)
     model = CMT_Tiny()
+    output=model(input)
+    print(output[0].shape)
+
+```
+
+### 24 EfficientFormer Usage
+#### 24.1. Paper
+[EfficientFormer: Vision Transformers at MobileNet Speed](https://arxiv.org/abs/2206.01191)
+
+#### 24.2. Usage Code
+```python
+
+from model.backbone.EfficientFormer import EfficientFormer
+import torch
+from torch import nn
+
+if __name__ == '__main__':
+    input=torch.randn(1,3,224,224)
+    model = EfficientFormer(
+        layers=EfficientFormer_depth['l1'],
+        embed_dims=EfficientFormer_width['l1'],
+        downsamples=[True, True, True, True],
+        vit_num=1,
+    )
     output=model(input)
     print(output[0].shape)
 
