@@ -20,16 +20,6 @@
 -------
 
 
-🔥🔥🔥 **重磅！！！作为项目补充，最近全新开源了一个目标检测代码库 [YOLOAir](https://github.com/iscyy/yoloair)，里面在目标检测算法中集成了各种Attention机制，代码简洁易读，欢迎大家来玩呀！**
-
-
-
-
-<!-- ![image](https://user-images.githubusercontent.com/33897496/184842902-9acff374-b3e7-401a-80fd-9d484e40c637.png) -->
-
-
-
--------
 
 Hello，大家好，我是小马🚀🚀🚀
 
@@ -72,6 +62,18 @@ Hello，大家好，我是小马🚀🚀🚀
 - 强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA)，可以快速了解到最新优质的干货资源。
 
 
+-------
+
+🔥🔥🔥 **重磅！！！作为项目补充，最近全新开源了一个目标检测代码库 [YOLOAir](https://github.com/iscyy/yoloair)，里面在目标检测算法中集成了各种Attention机制，代码简洁易读，欢迎大家来玩呀！**
+
+
+
+
+<!-- ![image](https://user-images.githubusercontent.com/33897496/184842902-9acff374-b3e7-401a-80fd-9d484e40c637.png) -->
+
+
+
+-------
 
 
 ***
