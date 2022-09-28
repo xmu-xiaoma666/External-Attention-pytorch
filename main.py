@@ -8,3 +8,4 @@ if __name__ == '__main__':
     sa = MobileViTv2Attention(d_model=512)
     output=sa(input)
     print(output.shape)
+ 
