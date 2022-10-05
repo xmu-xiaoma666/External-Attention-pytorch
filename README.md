@@ -61,6 +61,36 @@ Hello，大家好，我是小马🚀🚀🚀
 - 强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA)，可以快速了解到最新优质的干货资源。
 
 
+
+
+## 项目推荐
+
+-------
+
+
+🔥🔥🔥 重磅！！！作为项目补充，更多论文层面的解析，可以关注新开源的项目 **[FightingCV-Paper-Reading](https://github.com/xmu-xiaoma666/FightingCV-Paper-Reading)** ，里面汇集和整理了各大顶会顶刊的论文解析
+
+
+
+🔥🔥🔥重磅！！！ 最近为大家整理了网上的各种AI相关的视频教程和必读论文 **[FightingCV-Course
+](https://github.com/xmu-xiaoma666/FightingCV-Course)**
+
+
+🔥🔥🔥 重磅！！！最近全新开源了一个 **[YOLOAir](https://github.com/iscyy/yoloair)** 目标检测代码库 ，里面集成了多种YOLO模型，包括YOLOv5, YOLOv7,YOLOR, YOLOX,YOLOv4, YOLOv3以及其他YOLO模型，还包括多种现有Attention机制。
+
+![acff451cb342be80bff0963e0a03138](https://user-images.githubusercontent.com/33897496/187075538-746de6eb-308e-4e42-b9f9-939904c9a7f9.jpg)
+
+
+
+🔥🔥🔥 **ECCV2022论文汇总：[ECCV2022-Paper-List](https://github.com/xmu-xiaoma666/ECCV2022-Paper-List/blob/master/README.md)**
+
+
+<!-- ![image](https://user-images.githubusercontent.com/33897496/184842902-9acff374-b3e7-401a-80fd-9d484e40c637.png) -->
+
+
+
+
+
 -------
 
 
@@ -228,6 +258,7 @@ Hello，大家好，我是小马🚀🚀🚀
     - [5. CondConv Usage](#5-CondConv-Usage)
 
 ***
+
 
 
 # Attention Series
@@ -2504,25 +2535,3 @@ if __name__ == '__main__':
     print(out.shape)
 
 ```
-
-
-## 项目推荐
-
--------
-
-
-🔥🔥🔥 重磅！！！作为项目补充，更多论文层面的解析，可以关注新开源的项目 **[FightingCV-Paper-Reading](https://github.com/xmu-xiaoma666/FightingCV-Paper-Reading)** ，里面汇集和整理了各大顶会顶刊的论文解析
-
-
-🔥🔥🔥 重磅！！！最近全新开源了一个 **[YOLOAir](https://github.com/iscyy/yoloair)** 目标检测代码库 ，里面集成了多种YOLO模型，包括YOLOv5, YOLOv7,YOLOR, YOLOX,YOLOv4, YOLOv3以及其他YOLO模型，还包括多种现有Attention机制。
-
-![acff451cb342be80bff0963e0a03138](https://user-images.githubusercontent.com/33897496/187075538-746de6eb-308e-4e42-b9f9-939904c9a7f9.jpg)
-
-
-
-🔥🔥🔥 **ECCV2022论文汇总：[ECCV2022-Paper-List](https://github.com/xmu-xiaoma666/ECCV2022-Paper-List/blob/master/README.md)**
-
-<!-- ![image](https://user-images.githubusercontent.com/33897496/184842902-9acff374-b3e7-401a-80fd-9d484e40c637.png) -->
-
-
-
