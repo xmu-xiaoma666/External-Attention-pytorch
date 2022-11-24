@@ -40,7 +40,6 @@ Hello，大家好，我是小马🚀🚀🚀
 
 
 <!--
-
 ## 技术交流 <img title="" src="https://user-images.githubusercontent.com/48054808/157800467-2a9946ad-30d1-49a9-b9db-ba33413d9c90.png" alt="" width="20">
 
 欢迎大家关注公众号：**FightingCV**
@@ -56,10 +55,8 @@ Hello，大家好，我是小马🚀🚀🚀
 - **交流群每天分享一些最新的论文和解析**，欢迎大家一起**学习交流**哈~~~
 （加不进去可以加微信：**775629340**，记得备注【**公司/学校+方向+ID**】）
 
-<!-- ![](./FightingCVimg/wechat.jpg) -->
 
 - 强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA)，可以快速了解到最新优质的干货资源。
-
 -->
 
 -------
