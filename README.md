@@ -39,7 +39,6 @@ Hello，大家好，我是小马🚀🚀🚀
 
 
 
-<!--
 ## 技术交流 <img title="" src="https://user-images.githubusercontent.com/48054808/157800467-2a9946ad-30d1-49a9-b9db-ba33413d9c90.png" alt="" width="20">
 
 欢迎大家关注公众号：**FightingCV**
@@ -57,7 +56,6 @@ Hello，大家好，我是小马🚀🚀🚀
 
 
 - 强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA)，可以快速了解到最新优质的干货资源。
--->
 
 -------
 
