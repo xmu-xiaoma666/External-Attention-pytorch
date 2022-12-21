@@ -175,3 +175,10 @@ class MobileNetV3(nn.Module):
     @torch.jit.ignore
     def get_classifier(self):
         return self.classifier
+    
+    def reset_classifier(self, num_classes, global_pool='avg'):
+        self.num_classes = num_classes
+        # cannot meaningfully change pooling of efficient head after creation
+        self.global_pool = SelectAdaptivePool2d(pool_type=global_pool)
+        self.flatten = nn.Flatten(1) if global_pool else nn.Identity()  # don't flatten if pooling disabled
+        self.classifier = Linear(self.num_features, num_classes) if num_classes > 0 else nn.Identity()
