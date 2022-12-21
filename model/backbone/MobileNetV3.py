@@ -681,3 +681,9 @@ def lcnet_075(pretrained=False, **kwargs):
     """ PP-LCNet 1.0"""
     model = _gen_lcnet('lcnet_075', 0.75, pretrained=pretrained, **kwargs)
     return model
+
+@register_model
+def lcnet_100(pretrained=False, **kwargs):
+    """ PP-LCNet 1.0"""
+    model = _gen_lcnet('lcnet_100', 1.0, pretrained=pretrained, **kwargs)
+    return model
