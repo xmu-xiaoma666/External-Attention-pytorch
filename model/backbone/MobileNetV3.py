@@ -103,3 +103,15 @@ default_cfgs = {
     ),
     "lcnet_150": _cfg(),
 }
+
+class MobileNetV3(nn.Module):
+    """ MobiletNet-V3
+    Based on my EfficientNet implementation and building blocks, this model utilizes the MobileNet-v3 specific
+    'efficient head', where global pooling is done before the head convolution without a final batch-norm
+    layer before the classifier.
+    Paper: `Searching for MobileNetV3` - https://arxiv.org/abs/1905.02244
+    Other architectures utilizing MobileNet-V3 efficient head that are supported by this impl include:
+      * HardCoRe-NAS - https://arxiv.org/abs/2102.11646 (defn in hardcorenas.py uses this class)
+      * FBNet-V3 - https://arxiv.org/abs/2006.02049
+      * LCNet - https://arxiv.org/abs/2109.15099
+    """
