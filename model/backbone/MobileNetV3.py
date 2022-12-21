@@ -171,3 +171,7 @@ class MobileNetV3(nn.Module):
     @torch.jit.ignore
     def set_grad_checkpointing(self, enable=True):
         self.grad_checkpointing = enable
+        
+    @torch.jit.ignore
+    def get_classifier(self):
+        return self.classifier
