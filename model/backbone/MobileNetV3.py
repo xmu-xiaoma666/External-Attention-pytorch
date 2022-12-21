@@ -645,3 +645,9 @@ def tf_mobilenetv3_small_minimal_100(pretrained=False, **kwargs):
     kwargs['pad_type'] = 'same'
     model = _gen_mobilenet_v3('tf_mobilenetv3_small_minimal_100', 1.0, pretrained=pretrained, **kwargs)
     return model
+
+@register_model
+def fbnetv3_b(pretrained=False, **kwargs):
+    """ FBNetV3-B """
+    model = _gen_fbnetv3('fbnetv3_b', pretrained=pretrained, **kwargs)
+    return model
