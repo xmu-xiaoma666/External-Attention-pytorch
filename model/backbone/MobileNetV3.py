@@ -160,3 +160,10 @@ class MobileNetV3(nn.Module):
         layers.extend([self.global_pool, self.conv_head, self.act2])
         layers.extend([nn.Flatten(), nn.Dropout(self.drop_rate), self.classifier])
         return nn.Sequential(*layers)
+    
+    @torch.jit.ignore
+    def group_matcher(self, coarse=False):
+        return dict(
+            stem=r'^conv_stem|bn1',
+            blocks=r'^blocks\.(\d+)' if coarse else r'^blocks\.(\d+)\.(\d+)'
+        )
