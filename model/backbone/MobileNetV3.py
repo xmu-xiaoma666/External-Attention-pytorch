@@ -283,3 +283,38 @@ def _create_mnv3(variant, pretrained=False, **kwargs):
     if features_only:
         model.default_cfg = pretrained_cfg_for_features(model.default_cfg)
     return model
+
+def _gen_mobilenet_v3_rw(variant, channel_multiplier=1.0, pretrained=False, **kwargs):
+    """Creates a MobileNet-V3 model.
+    Ref impl: ?
+    Paper: https://arxiv.org/abs/1905.02244
+    Args:
+      channel_multiplier: multiplier to number of channels per layer.
+    """
+    arch_def = [
+        # stage 0, 112x112 in
+        ['ds_r1_k3_s1_e1_c16_nre_noskip'],  # relu
+        # stage 1, 112x112 in
+        ['ir_r1_k3_s2_e4_c24_nre', 'ir_r1_k3_s1_e3_c24_nre'],  # relu
+        # stage 2, 56x56 in
+        ['ir_r3_k5_s2_e3_c40_se0.25_nre'],  # relu
+        # stage 3, 28x28 in
+        ['ir_r1_k3_s2_e6_c80', 'ir_r1_k3_s1_e2.5_c80', 'ir_r2_k3_s1_e2.3_c80'],  # hard-swish
+        # stage 4, 14x14in
+        ['ir_r2_k3_s1_e6_c112_se0.25'],  # hard-swish
+        # stage 5, 14x14in
+        ['ir_r3_k5_s2_e6_c160_se0.25'],  # hard-swish
+        # stage 6, 7x7 in
+        ['cn_r1_k1_s1_c960'],  # hard-swish
+    ]
+    model_kwargs = dict(
+        block_args=decode_arch_def(arch_def),
+        head_bias=False,
+        round_chs_fn=partial(round_channels, multiplier=channel_multiplier),
+        norm_layer=partial(nn.BatchNorm2d, **resolve_bn_args(kwargs)),
+        act_layer=resolve_act_layer(kwargs, 'hard_swish'),
+        se_layer=partial(SqueezeExcite, gate_layer='hard_sigmoid'),
+        **kwargs,
+    )
+    model = _create_mnv3(variant, pretrained, **model_kwargs)
+    return model
