@@ -213,7 +213,7 @@ class WindowAttention(nn.Module):
         x = self.proj_drop(x)
         return x
 
-
+#
 class SwinTransformerBlock(nn.Module):
     r""" Swin Transformer Block.
     Args:
