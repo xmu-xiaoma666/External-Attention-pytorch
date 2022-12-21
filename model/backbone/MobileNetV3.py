@@ -588,3 +588,12 @@ def mobilenetv3_small_100(pretrained=False, **kwargs):
     """ MobileNet V3 """
     model = _gen_mobilenet_v3('mobilenetv3_small_100', 1.0, pretrained=pretrained, **kwargs)
     return model
+
+@register_model
+def mobilenetv3_rw(pretrained=False, **kwargs):
+    """ MobileNet V3 """
+    if pretrained:
+        # pretrained model trained with non-default BN epsilon
+        kwargs['bn_eps'] = BN_EPS_TF_DEFAULT
+    model = _gen_mobilenet_v3_rw('mobilenetv3_rw', 1.0, pretrained=pretrained, **kwargs)
+    return model
