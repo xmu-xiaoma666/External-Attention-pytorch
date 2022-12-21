@@ -203,3 +203,8 @@ class MobileNetV3(nn.Module):
             if self.drop_rate > 0.:
                 x = F.dropout(x, p=self.drop_rate, training=self.training)
             return self.classifier(x)
+        
+    def forward(self, x):
+        x = self.forward_features(x)
+        x = self.forward_head(x)
+        return x
