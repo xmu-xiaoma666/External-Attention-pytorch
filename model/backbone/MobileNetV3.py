@@ -412,3 +412,64 @@ def _gen_mobilenet_v3(variant, channel_multiplier=1.0, pretrained=False, **kwarg
     )
     model = _create_mnv3(variant, pretrained, **model_kwargs)
     return model
+
+def _gen_fbnetv3(variant, channel_multiplier=1.0, pretrained=False, **kwargs):
+    """ FBNetV3
+    Paper: `FBNetV3: Joint Architecture-Recipe Search using Predictor Pretraining`
+        - https://arxiv.org/abs/2006.02049
+    FIXME untested, this is a preliminary impl of some FBNet-V3 variants.
+    """
+    vl = variant.split('_')[-1]
+    if vl in ('a', 'b'):
+        stem_size = 16
+        arch_def = [
+            ['ds_r2_k3_s1_e1_c16'],
+            ['ir_r1_k5_s2_e4_c24', 'ir_r3_k5_s1_e2_c24'],
+            ['ir_r1_k5_s2_e5_c40_se0.25', 'ir_r4_k5_s1_e3_c40_se0.25'],
+            ['ir_r1_k5_s2_e5_c72', 'ir_r4_k3_s1_e3_c72'],
+            ['ir_r1_k3_s1_e5_c120_se0.25', 'ir_r5_k5_s1_e3_c120_se0.25'],
+            ['ir_r1_k3_s2_e6_c184_se0.25', 'ir_r5_k5_s1_e4_c184_se0.25', 'ir_r1_k5_s1_e6_c224_se0.25'],
+            ['cn_r1_k1_s1_c1344'],
+        ]
+    elif vl == 'd':
+        stem_size = 24
+        arch_def = [
+            ['ds_r2_k3_s1_e1_c16'],
+            ['ir_r1_k3_s2_e5_c24', 'ir_r5_k3_s1_e2_c24'],
+            ['ir_r1_k5_s2_e4_c40_se0.25', 'ir_r4_k3_s1_e3_c40_se0.25'],
+            ['ir_r1_k3_s2_e5_c72', 'ir_r4_k3_s1_e3_c72'],
+            ['ir_r1_k3_s1_e5_c128_se0.25', 'ir_r6_k5_s1_e3_c128_se0.25'],
+            ['ir_r1_k3_s2_e6_c208_se0.25', 'ir_r5_k5_s1_e5_c208_se0.25', 'ir_r1_k5_s1_e6_c240_se0.25'],
+            ['cn_r1_k1_s1_c1440'],
+        ]
+    elif vl == 'g':
+        stem_size = 32
+        arch_def = [
+            ['ds_r3_k3_s1_e1_c24'],
+            ['ir_r1_k5_s2_e4_c40', 'ir_r4_k5_s1_e2_c40'],
+            ['ir_r1_k5_s2_e4_c56_se0.25', 'ir_r4_k5_s1_e3_c56_se0.25'],
+            ['ir_r1_k5_s2_e5_c104', 'ir_r4_k3_s1_e3_c104'],
+            ['ir_r1_k3_s1_e5_c160_se0.25', 'ir_r8_k5_s1_e3_c160_se0.25'],
+            ['ir_r1_k3_s2_e6_c264_se0.25', 'ir_r6_k5_s1_e5_c264_se0.25', 'ir_r2_k5_s1_e6_c288_se0.25'],
+            ['cn_r1_k1_s1_c1728'],
+        ]
+    else:
+        raise NotImplemented
+    round_chs_fn = partial(round_channels, multiplier=channel_multiplier, round_limit=0.95)
+    se_layer = partial(SqueezeExcite, gate_layer='hard_sigmoid', rd_round_fn=round_chs_fn)
+    act_layer = resolve_act_layer(kwargs, 'hard_swish')
+    model_kwargs = dict(
+        block_args=decode_arch_def(arch_def),
+        num_features=1984,
+        head_bias=False,
+        stem_size=stem_size,
+        round_chs_fn=round_chs_fn,
+        se_from_exp=False,
+        norm_layer=partial(nn.BatchNorm2d, **resolve_bn_args(kwargs)),
+        act_layer=act_layer,
+        se_layer=se_layer,
+        **kwargs,
+    )
+    model = _create_mnv3(variant, pretrained, **model_kwargs)
+    return model
+
