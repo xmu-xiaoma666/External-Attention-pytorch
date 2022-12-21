@@ -562,3 +562,11 @@ def mobilenetv3_large_100_miil(pretrained=False, **kwargs):
     """
     model = _gen_mobilenet_v3('mobilenetv3_large_100_miil', 1.0, pretrained=pretrained, **kwargs)
     return 
+
+@register_model
+def mobilenetv3_large_100_miil_in21k(pretrained=False, **kwargs):
+    """ MobileNet V3, 21k pretraining
+    Weights taken from: https://github.com/Alibaba-MIIL/ImageNet21K
+    """
+    model = _gen_mobilenet_v3('mobilenetv3_large_100_miil_in21k', 1.0, pretrained=pretrained, **kwargs)
+    return model
