@@ -248,3 +248,21 @@ class MobileNetV3Features(nn.Module):
         if feature_location != 'bottleneck':
             hooks = self.feature_info.get_dicts(keys=('module', 'hook_type'))
             self.feature_hooks = FeatureHooks(hooks, self.named_modules())
+            
+    def forward(self, x) -> List[torch.Tensor]:
+        x = self.conv_stem(x)
+        x = self.bn1(x)
+        x = self.act1(x)
+        if self.feature_hooks is None:
+            features = []
+            if 0 in self._stage_out_idx:
+                features.append(x)  # add stem out
+            for i, b in enumerate(self.blocks):
+                x = b(x)
+                if i + 1 in self._stage_out_idx:
+                    features.append(x)
+            return features
+        else:
+            self.blocks(x)
+            out = self.feature_hooks.get_output(x.device)
+            return list(out.values())
