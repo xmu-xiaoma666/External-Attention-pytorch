@@ -115,3 +115,41 @@ class MobileNetV3(nn.Module):
       * FBNet-V3 - https://arxiv.org/abs/2006.02049
       * LCNet - https://arxiv.org/abs/2109.15099
     """
+    
+    def __init__(
+            self, block_args, num_classes=1000, in_chans=3, stem_size=16, fix_stem=False, num_features=1280,
+            head_bias=True, pad_type='', act_layer=None, norm_layer=None, se_layer=None, se_from_exp=True,
+            round_chs_fn=round_channels, drop_rate=0., drop_path_rate=0., global_pool='avg'):
+        super(MobileNetV3, self).__init__()
+        act_layer = act_layer or nn.ReLU
+        norm_layer = norm_layer or nn.BatchNorm2d
+        norm_act_layer = get_norm_act_layer(norm_layer, act_layer)
+        se_layer = se_layer or SqueezeExcite
+        self.num_classes = num_classes
+        self.num_features = num_features
+        self.drop_rate = drop_rate
+        self.grad_checkpointing = False
+
+        # Stem
+        if not fix_stem:
+            stem_size = round_chs_fn(stem_size)
+        self.conv_stem = create_conv2d(in_chans, stem_size, 3, stride=2, padding=pad_type)
+        self.bn1 = norm_act_layer(stem_size, inplace=True)
+
+        # Middle stages (IR/ER/DS Blocks)
+        builder = EfficientNetBuilder(
+            output_stride=32, pad_type=pad_type, round_chs_fn=round_chs_fn, se_from_exp=se_from_exp,
+            act_layer=act_layer, norm_layer=norm_layer, se_layer=se_layer, drop_path_rate=drop_path_rate)
+        self.blocks = nn.Sequential(*builder(stem_size, block_args))
+        self.feature_info = builder.features
+        head_chs = builder.in_chs
+
+        # Head + Pooling
+        self.global_pool = SelectAdaptivePool2d(pool_type=global_pool)
+        num_pooled_chs = head_chs * self.global_pool.feat_mult()
+        self.conv_head = create_conv2d(num_pooled_chs, self.num_features, 1, padding=pad_type, bias=head_bias)
+        self.act2 = act_layer(inplace=True)
+        self.flatten = nn.Flatten(1) if global_pool else nn.Identity()  # don't flatten if pooling disabled
+        self.classifier = Linear(self.num_features, num_classes) if num_classes > 0 else nn.Identity()
+
+        efficientnet_init_weights(self)
