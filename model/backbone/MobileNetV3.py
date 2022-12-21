@@ -167,3 +167,7 @@ class MobileNetV3(nn.Module):
             stem=r'^conv_stem|bn1',
             blocks=r'^blocks\.(\d+)' if coarse else r'^blocks\.(\d+)\.(\d+)'
         )
+    
+    @torch.jit.ignore
+    def set_grad_checkpointing(self, enable=True):
+        self.grad_checkpointing = enable
