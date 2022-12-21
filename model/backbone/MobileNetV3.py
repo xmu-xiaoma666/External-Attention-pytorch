@@ -214,3 +214,37 @@ class MobileNetV3Features(nn.Module):
     A work-in-progress feature extraction module for MobileNet-V3 to use as a backbone for segmentation
     and object detection models.
     """
+    
+    def __init__(
+            self, block_args, out_indices=(0, 1, 2, 3, 4), feature_location='bottleneck', in_chans=3,
+            stem_size=16, fix_stem=False, output_stride=32, pad_type='', round_chs_fn=round_channels,
+            se_from_exp=True, act_layer=None, norm_layer=None, se_layer=None, drop_rate=0., drop_path_rate=0.):
+        super(MobileNetV3Features, self).__init__()
+        act_layer = act_layer or nn.ReLU
+        norm_layer = norm_layer or nn.BatchNorm2d
+        se_layer = se_layer or SqueezeExcite
+        self.drop_rate = drop_rate
+
+        # Stem
+        if not fix_stem:
+            stem_size = round_chs_fn(stem_size)
+        self.conv_stem = create_conv2d(in_chans, stem_size, 3, stride=2, padding=pad_type)
+        self.bn1 = norm_layer(stem_size)
+        self.act1 = act_layer(inplace=True)
+
+        # Middle stages (IR/ER/DS Blocks)
+        builder = EfficientNetBuilder(
+            output_stride=output_stride, pad_type=pad_type, round_chs_fn=round_chs_fn, se_from_exp=se_from_exp,
+            act_layer=act_layer, norm_layer=norm_layer, se_layer=se_layer,
+            drop_path_rate=drop_path_rate, feature_location=feature_location)
+        self.blocks = nn.Sequential(*builder(stem_size, block_args))
+        self.feature_info = FeatureInfo(builder.features, out_indices)
+        self._stage_out_idx = {v['stage']: i for i, v in enumerate(self.feature_info) if i in out_indices}
+
+        efficientnet_init_weights(self)
+
+        # Register feature extraction hooks with FeatureHooks helper
+        self.feature_hooks = None
+        if feature_location != 'bottleneck':
+            hooks = self.feature_info.get_dicts(keys=('module', 'hook_type'))
+            self.feature_hooks = FeatureHooks(hooks, self.named_modules())
