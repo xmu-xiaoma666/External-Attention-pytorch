@@ -266,3 +266,20 @@ class MobileNetV3Features(nn.Module):
             self.blocks(x)
             out = self.feature_hooks.get_output(x.device)
             return list(out.values())
+        
+def _create_mnv3(variant, pretrained=False, **kwargs):
+    features_only = False
+    model_cls = MobileNetV3
+    kwargs_filter = None
+    if kwargs.pop('features_only', False):
+        features_only = True
+        kwargs_filter = ('num_classes', 'num_features', 'head_conv', 'head_bias', 'global_pool')
+        model_cls = MobileNetV3Features
+    model = build_model_with_cfg(
+        model_cls, variant, pretrained,
+        pretrained_strict=not features_only,
+        kwargs_filter=kwargs_filter,
+        **kwargs)
+    if features_only:
+        model.default_cfg = pretrained_cfg_for_features(model.default_cfg)
+    return model
