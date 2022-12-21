@@ -582,3 +582,9 @@ def mobilenetv3_small_075(pretrained=False, **kwargs):
     """ MobileNet V3 """
     model = _gen_mobilenet_v3('mobilenetv3_small_075', 0.75, pretrained=pretrained, **kwargs)
     return model
+
+@register_model
+def mobilenetv3_small_100(pretrained=False, **kwargs):
+    """ MobileNet V3 """
+    model = _gen_mobilenet_v3('mobilenetv3_small_100', 1.0, pretrained=pretrained, **kwargs)
+    return model
