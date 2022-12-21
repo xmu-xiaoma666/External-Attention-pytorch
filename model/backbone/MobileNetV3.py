@@ -182,3 +182,12 @@ class MobileNetV3(nn.Module):
         self.global_pool = SelectAdaptivePool2d(pool_type=global_pool)
         self.flatten = nn.Flatten(1) if global_pool else nn.Identity()  # don't flatten if pooling disabled
         self.classifier = Linear(self.num_features, num_classes) if num_classes > 0 else nn.Identity()
+        
+    def forward_features(self, x):
+        x = self.conv_stem(x)
+        x = self.bn1(x)
+        if self.grad_checkpointing and not torch.jit.is_scripting():
+            x = checkpoint_seq(self.blocks, x, flatten=True)
+        else:
+            x = self.blocks(x)
+        return x
