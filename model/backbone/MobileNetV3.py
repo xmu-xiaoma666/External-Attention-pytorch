@@ -651,3 +651,9 @@ def fbnetv3_b(pretrained=False, **kwargs):
     """ FBNetV3-B """
     model = _gen_fbnetv3('fbnetv3_b', pretrained=pretrained, **kwargs)
     return model
+
+@register_model
+def fbnetv3_d(pretrained=False, **kwargs):
+    """ FBNetV3-D """
+    model = _gen_fbnetv3('fbnetv3_d', pretrained=pretrained, **kwargs)
+    return model
