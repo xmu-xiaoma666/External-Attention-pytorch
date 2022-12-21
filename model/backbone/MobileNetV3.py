@@ -208,3 +208,9 @@ class MobileNetV3(nn.Module):
         x = self.forward_features(x)
         x = self.forward_head(x)
         return x
+    
+class MobileNetV3Features(nn.Module):
+    """ MobileNetV3 Feature Extractor
+    A work-in-progress feature extraction module for MobileNet-V3 to use as a backbone for segmentation
+    and object detection models.
+    """
