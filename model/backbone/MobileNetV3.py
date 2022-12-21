@@ -664,3 +664,9 @@ def fbnetv3_g(pretrained=False, **kwargs):
     model = _gen_fbnetv3('fbnetv3_g', pretrained=pretrained, **kwargs)
     return model
 
+@register_model
+def lcnet_035(pretrained=False, **kwargs):
+    """ PP-LCNet 0.35"""
+    model = _gen_lcnet('lcnet_035', 0.35, pretrained=pretrained, **kwargs)
+    return model
+
