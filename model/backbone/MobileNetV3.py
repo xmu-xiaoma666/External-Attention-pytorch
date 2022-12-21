@@ -543,3 +543,9 @@ def _gen_lcnet(variant, channel_multiplier=1.0, pretrained=False, **kwargs):
     model = _create_mnv3(variant, pretrained, **model_kwargs)
     return model
 
+@register_model
+def mobilenetv3_large_075(pretrained=False, **kwargs):
+    """ MobileNet V3 """
+    model = _gen_mobilenet_v3('mobilenetv3_large_075', 0.75, pretrained=pretrained, **kwargs)
+    return 
+
