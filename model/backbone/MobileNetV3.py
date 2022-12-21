@@ -153,3 +153,10 @@ class MobileNetV3(nn.Module):
         self.classifier = Linear(self.num_features, num_classes) if num_classes > 0 else nn.Identity()
 
         efficientnet_init_weights(self)
+        
+    def as_sequential(self):
+        layers = [self.conv_stem, self.bn1]
+        layers.extend(self.blocks)
+        layers.extend([self.global_pool, self.conv_head, self.act2])
+        layers.extend([nn.Flatten(), nn.Dropout(self.drop_rate), self.classifier])
+        return nn.Sequential(*layers)
