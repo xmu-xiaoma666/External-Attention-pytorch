@@ -109,7 +109,7 @@ def window_partition(x, window_size: int):
     windows = x.permute(0, 1, 3, 2, 4, 5).contiguous().view(-1, window_size, window_size, C)
     return windows
 
-
+ 
 @register_notrace_function  # reason: int argument is a Proxy
 def window_reverse(windows, window_size: int, H: int, W: int):
     """
