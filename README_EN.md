@@ -45,7 +45,7 @@ This project aims to realize a code base that can make beginners of deep learnin
 (at the same time, we also welcome all scientific researchers to sort out the core code of their work into this project, promote the development of the scientific research community, and indicate the author of the code in readme ~)
 
 
-
+<!--
 
 
 ## Wechat Official account &  communication group
@@ -69,7 +69,7 @@ The official account shares papers, algorithms and codes every day Oh~
 
 We strongly recommend that you pay attention to [Zhihu]( https://www.zhihu.com/people/jason-14-58-38/posts )Account number and **[fightingcv Wechat official account**]( https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA )** to quickly learn about the latest high-quality dry goods resources.
 
-
+-->
 
 ***
 
