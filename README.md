@@ -44,7 +44,7 @@ Hello，大家好，我是小马🚀🚀🚀
 欢迎大家关注公众号：**FightingCV**
 
 
-
+<!--
 | FightingCV公众号 | 小助手微信 （备注【**公司/学校+方向+ID**】）|
 :-------------------------:|:-------------------------:
 <img src='./FightingCVimg/FightingCV.jpg' width='200px'>  |  <img src='./FightingCVimg/xiaozhushou.jpg' width='200px'> 
@@ -56,6 +56,7 @@ Hello，大家好，我是小马🚀🚀🚀
 
 
 - 强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA)，可以快速了解到最新优质的干货资源。
+-->
 
 -------
 
