@@ -38,13 +38,14 @@ Hello，大家好，我是小马🚀🚀🚀
 
 
 
+<!--
 
 ## 技术交流 <img title="" src="https://user-images.githubusercontent.com/48054808/157800467-2a9946ad-30d1-49a9-b9db-ba33413d9c90.png" alt="" width="20">
 
 欢迎大家关注公众号：**FightingCV**
 
 
-<!--
+
 | FightingCV公众号 | 小助手微信 （备注【**公司/学校+方向+ID**】）|
 :-------------------------:|:-------------------------:
 <img src='./FightingCVimg/FightingCV.jpg' width='200px'>  |  <img src='./FightingCVimg/xiaozhushou.jpg' width='200px'> 
