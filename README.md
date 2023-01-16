@@ -2587,9 +2587,6 @@ if __name__ == '__main__':
 
 🔥🔥🔥 重磅！！！最近全新开源了一个 **[YOLOAir](https://github.com/iscyy/yoloair)** 目标检测代码库 ，里面集成了多种YOLO模型，包括YOLOv5, YOLOv7,YOLOR, YOLOX,YOLOv4, YOLOv3以及其他YOLO模型，还包括多种现有Attention机制。
 
-![acff451cb342be80bff0963e0a03138](https://user-images.githubusercontent.com/33897496/187075538-746de6eb-308e-4e42-b9f9-939904c9a7f9.jpg)
-
-
 
 🔥🔥🔥 **ECCV2022论文汇总：[ECCV2022-Paper-List](https://github.com/xmu-xiaoma666/ECCV2022-Paper-List/blob/master/README.md)**
 
