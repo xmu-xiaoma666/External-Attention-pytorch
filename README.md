@@ -283,6 +283,9 @@ if __name__ == '__main__':
 
     - [24. EfficientFormer Usage](#24-EfficientFormer-Usage)
 
+    - [25. ConvNeXtV2 Usage](#25-ConvNeXtV2-Usage)
+
+
 
 - [MLP Series](#mlp-series)
 
@@ -1474,6 +1477,8 @@ if __name__ == '__main__':
 
 - Pytorch implementation of [EfficientFormer: Vision Transformers at MobileNet Speed](https://arxiv.org/abs/2206.01191)
 
+- Pytorch implementation of [ConvNeXtV2: Co-designing and Scaling ConvNets with Masked Autoencoders](https://arxiv.org/abs/2301.00808)
+
 
 ### 1. ResNet Usage
 #### 1.1. Paper
@@ -2080,6 +2085,24 @@ if __name__ == '__main__':
 
 ```
 
+### 25 ConvNeXtV2 Usage
+#### 25.1. Paper
+[ConvNeXtV2: Co-designing and Scaling ConvNets with Masked Autoencoders](https://arxiv.org/abs/2301.00808)
+
+#### 25.2. Usage Code
+```python
+
+from model.backbone.convnextv2 import convnextv2_atto
+import torch
+from torch import nn
+
+if __name__ == "__main__":
+    model = convnextv2_atto()
+    input = torch.randn(1, 3, 224, 224)
+    out = model(input)
+    print(out.shape)
+
+```
 
 
 
