@@ -43,8 +43,8 @@ class DoubleAttention(nn.Module):
         B=self.convB(x) #b,c_n,h,w
         V=self.convV(x) #b,c_n,h,w
         tmpA=A.view(b,self.c_m,-1)
-        attention_maps=F.softmax(B.view(b,self.c_n,-1))
-        attention_vectors=F.softmax(V.view(b,self.c_n,-1))
+        attention_maps=F.softmax(B.view(b,self.c_n,-1), dim=1)
+        attention_vectors=F.softmax(V.view(b,self.c_n,-1), dim=1)
         # step 1: feature gating
         global_descriptors=torch.bmm(tmpA,attention_maps.permute(0,2,1)) #b.c_m,c_n
         # step 2: feature distribution
