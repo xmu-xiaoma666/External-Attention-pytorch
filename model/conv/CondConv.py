@@ -71,11 +71,11 @@ class CondConv(nn.Module):
         else:
             output=F.conv2d(x,weight=aggregate_weight,bias=None,stride=self.stride,padding=self.padding,groups=self.groups*bs,dilation=self.dilation)
         
-        output=output.view(bs,self.out_planes,h,w)
+        output=output.view(bs,self.out_planes, output.size(-2), output.size(-1))
         return output
 
 if __name__ == '__main__':
     input=torch.randn(2,32,64,64)
-    m=CondConv(in_planes=32,out_planes=64,kernel_size=3,stride=1,padding=1,bias=False)
+    m=CondConv(in_planes=32,out_planes=64,kernel_size=3,stride=2,padding=1,bias=False)
     out=m(input)
     print(out.shape)
