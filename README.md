@@ -205,6 +205,18 @@ if __name__ == '__main__':
 
     - [37. Axial_attention Attention Usage](#37-Axial_attention-Attention-Usage)
 
+    - [38. Frequency Channel Attention Usage](#38-Frequency-Channel-Attention-Usage)
+
+    - [39. Attention Augmented Convolutional Networks Usage](#39-Attention-Augmented-Convolutional-Networks-Usage)
+
+    - [40. Global Context Attention Usage](#40-Global-Context-Attention-Usage)
+
+    - [41. Linear Context Transform Attention Usage](#41-Linear-Context-Transform-Attention-Usage)
+
+    - [42. Gated Channel Transformation Usage](#42-Gated-Channel-Transformation-Usage)
+
+    - [43. Gaussian Context Attention Usage](#43-Gaussian-Context-Attention-Usage)
+
 - [Backbone Series](#Backbone-series)
 
     - [1. ResNet Usage](#1-ResNet-Usage)
@@ -427,10 +439,10 @@ print(output.shape)
 
 ### 3. Simplified Self Attention Usage
 #### 3.1. Paper
-[None]()
+[SimAM: A Simple, Parameter-Free Attention Module for Convolutional Neural Networks (ICML 2021)](https://proceedings.mlr.press/v139/yang21o/yang21o.pdf)
 
 #### 3.2. Overview
-![](./model/img/SSA.png)
+![](./model/img/SimAttention.png)
 
 #### 3.3. Usage Code
 ```python
@@ -1184,7 +1196,7 @@ if __name__ == '__main__':
     
 ```
 
--
+***
 
 ### 31. ACmix Attention Usage
 
@@ -1205,6 +1217,7 @@ if __name__ == '__main__':
     print(output.shape)
     
 ```
+***
 
 ### 32. MobileViTv2 Attention Usage
 
@@ -1232,6 +1245,7 @@ if __name__ == '__main__':
     print(output.shape)
     
 ```
+***
 
 ### 33. DAT Attention Usage
 
@@ -1276,6 +1290,7 @@ if __name__ == '__main__':
     print(output[0].shape)
     
 ```
+***
 
 ### 34. CrossFormer Attention Usage
 
@@ -1313,6 +1328,7 @@ if __name__ == '__main__':
     print(output.shape)
     
 ```
+***
 
 ### 35. MOATransformer Attention Usage
 
@@ -1350,6 +1366,7 @@ if __name__ == '__main__':
     print(output.shape)
     
 ```
+***
 
 ### 36. CrissCrossAttention Attention Usage
 
@@ -1370,6 +1387,7 @@ if __name__ == '__main__':
     print(outputs.shape)
     
 ```
+***
 
 ### 37. Axial_attention Attention Usage
 
@@ -1392,6 +1410,158 @@ if __name__ == '__main__':
     )
     outputs = model(input)
     print(outputs.shape)
+    
+```
+***
+
+### 38. Frequency Channel Attention Usage
+
+#### 38.1. Paper
+
+[FcaNet: Frequency Channel Attention Networks (ICCV 2021)](https://arxiv.org/abs/2012.11879)
+
+#### 38.2. Overview
+
+![](./model/img/FCANet.png)
+
+#### 38.3. Usage Code
+
+```python
+from model.attention.FCA import MultiSpectralAttentionLayer
+import torch
+
+if __name__ == "__main__":
+    input = torch.randn(32, 128, 64, 64) # (b, c, h, w)
+    fca_layer = MultiSpectralAttentionLayer(channel = 128, dct_h = 64, dct_w = 64, reduction = 16, freq_sel_method = 'top16')
+    output = fca_layer(input)
+    print(output.shape)
+    
+```
+***
+
+### 39. Attention Augmented Convolutional Networks Usage
+
+#### 39.1. Paper
+
+[Attention Augmented Convolutional Networks (ICCV 2019)](https://arxiv.org/abs/1904.09925)
+
+#### 39.2. Overview
+
+![](./model/img/AAAttention.png)
+
+#### 39.3. Usage Code
+
+```python
+from model.attention.AAAttention import AugmentedConv
+import torch
+
+if __name__ == "__main__":
+    input = torch.randn((16, 3, 32, 32))
+    augmented_conv = AugmentedConv(in_channels=3, out_channels=64, kernel_size=3, dk=40, dv=4, Nh=4, relative=True, stride=2, shape=16)
+    output = augmented_conv(input)
+    print(output.shape)
+    
+```
+***
+
+### 40. Global Context Attention Usage
+
+#### 40.1. Paper
+
+[GCNet: Non-local Networks Meet Squeeze-Excitation Networks and Beyond (ICCVW 2019 Best Paper)](https://arxiv.org/abs/1904.11492)
+
+[Global Context Networks (TPAMI 2020)](https://arxiv.org/abs/2012.13375)
+
+#### 40.2. Overview
+
+![](./model/img/GCNet.png)
+
+#### 40.3. Usage Code
+
+```python
+from model.attention.GCAttention import GCModule
+import torch
+
+if __name__ == "__main__":
+    input = torch.randn(16, 64, 32, 32)
+    gc_layer = GCModule(64)
+    output = gc_layer(input)
+    print(output.shape)
+    
+```
+***
+
+### 41. Linear Context Transform Attention Usage
+
+#### 41.1. Paper
+
+[Linear Context Transform Block (AAAI 2020)](https://arxiv.org/pdf/1909.03834v2)
+
+#### 41.2. Overview
+
+![](./model/img/LCTAttention.png)
+
+#### 41.3. Usage Code
+
+```python
+from model.attention.LCTAttention import LCT
+import torch
+
+if __name__ == "__main__":
+    x = torch.randn(16, 64, 32, 32)
+    attn = LCT(64, 8)
+    y = attn(x)
+    print(y.shape)
+    
+```
+***
+
+### 42. Gated Channel Transformation Usage
+
+#### 42.1. Paper
+
+[Gated Channel Transformation for Visual Recognition (CVPR 2020)](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_Gated_Channel_Transformation_for_Visual_Recognition_CVPR_2020_paper.pdf)
+
+#### 42.2. Overview
+
+![](./model/img/GCT.png)
+
+#### 42.3. Usage Code
+
+```python
+from model.attention.GCTAttention import GCT
+import torch
+
+if __name__ == "__main__":
+    input = torch.randn(16, 64, 32, 32)
+    gct_layer = GCT(64)
+    output = gct_layer(input)
+    print(output.shape)
+    
+```
+***
+
+### 43. Gaussian Context Attention Usage
+
+#### 43.1. Paper
+
+[Gaussian Context Transformer (CVPR 2021)](https://openaccess.thecvf.com//content/CVPR2021/papers/Ruan_Gaussian_Context_Transformer_CVPR_2021_paper.pdf)
+
+#### 43.2. Overview
+
+![](./model/img/GaussianCA.png)
+
+#### 43.3. Usage Code
+
+```python
+from model.attention.GaussianAttention import GCA
+import torch
+
+if __name__ == "__main__":
+    input = torch.randn(16, 64, 32, 32)
+    gca_layer = GCA(64)
+    output = gca_layer(input)
+    print(output.shape)
     
 ```
 
