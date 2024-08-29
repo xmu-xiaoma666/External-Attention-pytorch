@@ -35,6 +35,8 @@ Hello，大家好，我是小马🚀🚀🚀
 本项目致力于实现一个既能**让深度学习小白也能搞懂**，又能**服务科研和工业社区**的代码库。
 
 
+<!--
+
 作为[**FightingCV公众号**](https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA)和 **[FightingCV-Paper-Reading](https://github.com/xmu-xiaoma666/FightingCV-Paper-Reading)** 的补充，本项目的宗旨是从代码角度，实现🚀**让世界上没有难读的论文**🚀。
 
 
@@ -60,6 +62,9 @@ Hello，大家好，我是小马🚀🚀🚀
 
 
 - 强烈推荐大家关注[**知乎**](https://www.zhihu.com/people/jason-14-58-38/posts)账号和[**FightingCV公众号**](https://mp.weixin.qq.com/s/m9RiivbbDPdjABsTd6q8FA)，可以快速了解到最新优质的干货资源。
+
+-->
+
 
 -------
 
