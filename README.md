@@ -67,9 +67,10 @@ Hello，大家好，我是小马🚀🚀🚀
 
 -->
 
-## 新增
+## 🌟 Star History
 
-- 支持通过 pip 方式使用该代码库
+
+[![Star History Chart](https://api.star-history.com/svg?repos=xmu-xiaoma666/External-Attention-pytorch&type=Date)](https://star-history.com/#xmu-xiaoma666/External-Attention-pytorch&Date)
 
 ## 使用
 
